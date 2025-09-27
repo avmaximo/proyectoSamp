@@ -1227,3 +1227,34 @@ Console input: exit
 [21:29:26] --- Server Shutting Down.
 [21:29:26] plugin.mysql: Unloading plugin...
 [21:29:26] plugin.mysql: Plugin unloaded.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[15:10:42] filterscripts = ""  (string)
+[15:10:42] 
+[15:10:42] Server Plugins
+[15:10:42] --------------
+[15:10:42]  Loading plugin: mysql.dll
+[15:10:45]  >> plugin.mysql: R41-4 successfully loaded.
+[15:10:45]   Loaded.
+[15:10:45]  Loaded 1 plugins.
+
+[15:10:45] 
+[15:10:45] Filterscripts
+[15:10:45] ---------------
+[15:10:45]   Loaded 0 filterscripts.
+
+[15:10:45] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[15:10:45] Number of vehicle models: 0
+[15:11:01] --- Server Shutting Down.
