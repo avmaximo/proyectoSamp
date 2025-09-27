@@ -1,9 +1,6 @@
-samp-server.exe
-samp-npc.exe
+logs/plugins/mysql.log
+logs/warnings.log
+logs/log-core.log
+logs/errors.log
+gamemodes/sv.amx
 server_log.txt
-samp-license.txt
-log-core.dll
-LICENCE
-libmariadb.dll
-announce.exe
-/logs/
