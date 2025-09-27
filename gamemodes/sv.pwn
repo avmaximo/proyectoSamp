@@ -54,7 +54,7 @@ new MySQL:database;
 
 #define PASSWORD_MAX_CHARACTERS    (78)
 
-/*======================================= DEFINE DIALOGOS ==================================  :) :)*/
+/*======================================= DEFINE DIALOGOS ================================== */
 #define id_dialogos             100
 
 #define DIALOG_REGISTER_1      (id_dialogos+1)
