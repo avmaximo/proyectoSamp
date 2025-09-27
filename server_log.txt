@@ -1604,3 +1604,151 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 
 
 [16:11:40] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[16:13:24] filterscripts = ""  (string)
+[16:13:24] 
+[16:13:24] Server Plugins
+[16:13:24] --------------
+[16:13:24]  Loading plugin: mysql.dll
+[16:13:24]  >> plugin.mysql: R41-4 successfully loaded.
+[16:13:24]   Loaded.
+[16:13:24]  Loaded 1 plugins.
+
+[16:13:24] 
+[16:13:24] Filterscripts
+[16:13:24] ---------------
+[16:13:24]   Loaded 0 filterscripts.
+
+[16:13:24] 
+
+[MySQL]: Error al establecer conexión con la base de datos.
+
+
+[16:13:24] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[16:18:39] filterscripts = ""  (string)
+[16:18:39] 
+[16:18:39] Server Plugins
+[16:18:39] --------------
+[16:18:39]  Loading plugin: mysql.dll
+[16:18:39]  >> plugin.mysql: R41-4 successfully loaded.
+[16:18:39]   Loaded.
+[16:18:39]  Loaded 1 plugins.
+
+[16:18:39] 
+[16:18:39] Filterscripts
+[16:18:39] ---------------
+[16:18:39]   Loaded 0 filterscripts.
+
+[16:18:39] 
+
+[MySQL]: Error al establecer conexión con la base de datos.
+
+
+[16:18:39] Number of vehicle models: 0
+[16:18:50] --- Server Shutting Down.
+[16:18:50] plugin.mysql: Unloading plugin...
+[16:18:50] plugin.mysql: Plugin unloaded.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[16:25:16] filterscripts = ""  (string)
+[16:25:16] 
+[16:25:16] Server Plugins
+[16:25:16] --------------
+[16:25:16]  Loading plugin: mysql.dll
+[16:25:16]  >> plugin.mysql: R41-4 successfully loaded.
+[16:25:16]   Loaded.
+[16:25:16]  Loaded 1 plugins.
+
+[16:25:16] 
+[16:25:16] Filterscripts
+[16:25:16] ---------------
+[16:25:16]   Loaded 0 filterscripts.
+
+[16:25:16] 
+
+[MySQL]: Error al establecer conexión con la base de datos.
+
+
+[16:25:16] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[16:28:09] filterscripts = ""  (string)
+[16:28:09] 
+[16:28:09] Server Plugins
+[16:28:09] --------------
+[16:28:09]  Loading plugin: mysql.dll
+[16:28:09]  >> plugin.mysql: R41-4 successfully loaded.
+[16:28:09]   Loaded.
+[16:28:09]  Loaded 1 plugins.
+
+[16:28:09] 
+[16:28:09] Filterscripts
+[16:28:09] ---------------
+[16:28:09]   Loaded 0 filterscripts.
+
+[16:28:09] 
+
+[MySQL]: Error al establecer conexión con la base de datos.
+
+
+[16:28:09] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[16:32:37] filterscripts = ""  (string)
+[16:32:37] 
+[16:32:37] Server Plugins
+[16:32:37] --------------
+[16:32:37]  Loading plugin: mysql.dll
+[16:32:37]  >> plugin.mysql: R41-4 successfully loaded.
+[16:32:37]   Loaded.
+[16:32:37]  Loaded 1 plugins.
+
+[16:32:37] 
+[16:32:37] Filterscripts
+[16:32:37] ---------------
+[16:32:37]   Loaded 0 filterscripts.
+
+[16:32:37] 
+
+[MySQL]: Error al establecer conexión con la base de datos.
+
+
+[16:32:37] Number of vehicle models: 0
