@@ -1,7 +1,7 @@
 #include <a_samp>
 #include <a_mysql>
 
-// Colores básicos
+// Colores b?sicos
 #define COLOR_WHITE        "{FFFFFF}"
 #define COLOR_BLACK        "{000000}"
 #define COLOR_RED          "{FF0000}"
@@ -126,12 +126,12 @@ forward DatabaseConnect();
 public DatabaseConnect(){
     database = mysql_connect(DB_HOST, DB_USER, DB_PASS, DB_DATABASE);
 
-    if(database == MYSQL_INVALID_HANDLE || mysql_errno(database) != 0){ // Conexión fallida a la base de datos
-        print("\n\n[MySQL]: Error al establecer conexión con la base de datos.\n\n");
+    if(database == MYSQL_INVALID_HANDLE || mysql_errno(database) != 0){ // Conexi?n fallida a la base de datos
+        print("\n\n[MySQL]: Error al establecer conexi?n con la base de datos.\n\n");
         SetTimer("CerrarServidor", 10000, false);
     }
-    else{ // Conexión establecida correctamente
-        print("\n\n[MySQL]: Conexión con la base de datos MySQL concretada con éxito.\n[MySQL]: ON\n\n");
+    else{ // Conexi?n establecida correctamente
+        print("\n\n[MySQL]: Conexi?n con la base de datos MySQL concretada con ?xito.\n[MySQL]: ON\n\n");
         return 1;
     }
     return 0;
