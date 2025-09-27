@@ -1,7 +1,7 @@
 #include <a_samp>
 #include <a_mysql>
 
-// Colores b�sicos
+// Colores básicos
 #define COLOR_WHITE        "{FFFFFF}"
 #define COLOR_BLACK        "{000000}"
 #define COLOR_RED          "{FF0000}"
