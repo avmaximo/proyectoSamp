@@ -1227,3 +1227,90 @@ Console input: exit
 [21:29:26] --- Server Shutting Down.
 [21:29:26] plugin.mysql: Unloading plugin...
 [21:29:26] plugin.mysql: Plugin unloaded.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[15:10:19] filterscripts = ""  (string)
+[15:10:19] 
+[15:10:19] Server Plugins
+[15:10:19] --------------
+[15:10:19]  Loading plugin: mysql.dll
+[15:10:19]  >> plugin.mysql: R41-4 successfully loaded.
+[15:10:19]   Loaded.
+[15:10:19]  Loaded 1 plugins.
+
+[15:10:19] 
+[15:10:19] Filterscripts
+[15:10:19] ---------------
+[15:10:19]   Loaded 0 filterscripts.
+
+[15:10:19] 
+
+[MySQL]: Error al establecer conexión con la base de datos.
+
+
+[15:10:19] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[15:10:30] filterscripts = ""  (string)
+[15:10:30] 
+[15:10:30] Server Plugins
+[15:10:30] --------------
+[15:10:30]  Loading plugin: mysql.dll
+[15:10:30]  >> plugin.mysql: R41-4 successfully loaded.
+[15:10:30]   Loaded.
+[15:10:30]  Loaded 1 plugins.
+
+[15:10:30] 
+[15:10:30] Filterscripts
+[15:10:30] ---------------
+[15:10:30]   Loaded 0 filterscripts.
+
+[15:10:30] 
+
+[MySQL]: Error al establecer conexión con la base de datos.
+
+
+[15:10:30] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[15:10:59] filterscripts = ""  (string)
+[15:10:59] 
+[15:10:59] Server Plugins
+[15:10:59] --------------
+[15:10:59]  Loading plugin: mysql.dll
+[15:10:59]  >> plugin.mysql: R41-4 successfully loaded.
+[15:10:59]   Loaded.
+[15:10:59]  Loaded 1 plugins.
+
+[15:10:59] 
+[15:10:59] Filterscripts
+[15:10:59] ---------------
+[15:10:59]   Loaded 0 filterscripts.
+
+[15:10:59] 
+
+[MySQL]: Error al establecer conexión con la base de datos.
+
+
+[15:10:59] Number of vehicle models: 0
