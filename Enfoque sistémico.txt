@@ -1,0 +1,162 @@
+Esquema Sistémico Básico – Servidor RP + RPG
+1️⃣ Módulo de Jugador
+
+Objetivo: Controlar todos los datos y estados del jugador.
+
+Datos principales (uData / pData):
+
+Nombre del personaje
+
+Contraseña / cuenta
+
+Nivel de personaje (RPG)
+
+Experiencia / XP (RPG)
+
+Habilidades (conducción, puntería, medicina, fuerza)
+
+Dinero / Inventario
+
+Trabajo actual (RP)
+
+Estado de salud y armadura
+
+Posición en el mapa y vehículo actual
+
+Funciones:
+
+Login / Logout
+
+Guardar y cargar datos en MySQL
+
+Actualizar experiencia y nivel
+
+Cambiar habilidades y trabajo
+
+2️⃣ Módulo de Economía y Progresión (RPG)
+
+Objetivo: Gestionar dinero, niveles, habilidades y objetos.
+
+Submódulos:
+
+Dinero: salarios, ventas, robos, recompensas de misiones.
+
+Experiencia y niveles: subir de nivel según misiones o trabajos.
+
+Habilidades: mejorar con uso o entrenamiento.
+
+Inventario: armas, vehículos, objetos consumibles.
+
+Funciones:
+
+Añadir / quitar dinero
+
+Subir experiencia y nivel
+
+Gestionar items y vehículos
+
+3️⃣ Módulo de Trabajos y Roles (RP)
+
+Objetivo: Gestionar la actividad laboral y social del jugador.
+
+Ejemplos de roles:
+
+Policía, médico, taxista, bombero, político, criminal.
+
+Funciones:
+
+Aplicar reglas específicas de cada rol (ej.: policía puede arrestar, médico puede curar)
+
+Acceso a vehículos y herramientas del trabajo
+
+Misiones o tareas diarias según rol
+
+Registro de eventos sociales (arrestos, accidentes, emergencias)
+
+4️⃣ Módulo de Misiones y Eventos
+
+Objetivo: Proveer contenido dinámico y recompensas.
+
+Tipos de eventos:
+
+Misiones RPG: entregas, rescates, combates, entrenamiento.
+
+Eventos RP: manifestaciones, accidentes, investigaciones.
+
+Eventos globales: duplicar pagos, festivales, misiones especiales por tiempo limitado.
+
+Funciones:
+
+Crear misiones dinámicas
+
+Recompensar experiencia y dinero
+
+Notificar a jugadores y grupos específicos
+
+5️⃣ Módulo Social y Comunidad (RP)
+
+Objetivo: Gestionar interacción entre jugadores.
+
+Elementos:
+
+Chat / mensajes privados
+
+Grupos / facciones / familias
+
+Sistema de reputación (RP): respetar reglas de rol aumenta reputación
+
+Sistema judicial y penal (si existe policía)
+
+Funciones:
+
+Enviar mensajes y alertas
+
+Gestionar jerarquías y facciones
+
+Aplicar sanciones por mal rol (ej.: matar sin razón)
+
+6️⃣ Módulo de Vehículos y Mapa (RP + RPG)
+
+Objetivo: Gestionar transporte, propiedades y mapas.
+
+Elementos:
+
+Vehículos: legales e ilegales
+
+Propiedades: casas, negocios
+
+Puntos de interés: hospitales, comisarías, tiendas
+
+Sistema de transporte: taxi, ambulancia, policía
+
+Funciones:
+
+Spawn y des-spawn de vehículos
+
+Compra / venta de propiedades
+
+Teleport / spawn de jugadores a lugares permitidos
+
+7️⃣ Módulo Base de Datos (MySQL)
+
+Objetivo: Persistencia de información.
+
+Tablas sugeridas:
+
+usuarios: cuenta, contraseña, nivel, XP, habilidades
+
+personajes: nombre, rol, inventario, dinero
+
+vehiculos: propietario, tipo, posición
+
+propiedades: dueño, ubicación, precio
+
+eventos: activos, completados, recompensas
+
+Funciones:
+
+Guardar y cargar datos al conectar/desconectar
+
+Actualizar progresión y economía
+
+Registrar eventos y estadísticas
