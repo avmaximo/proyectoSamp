@@ -185,11 +185,15 @@
 [16:06:33] [ERROR] CConnection::CConnection - establishing connection to MySQL database failed: #2019 'Can't initialize character set unknown (path: compiled_in)'
 [16:06:33] [ERROR] CConnection::CConnection - establishing connection to MySQL database failed: #2019 'Can't initialize character set unknown (path: compiled_in)'
 [16:06:33] [ERROR] CConnection::CConnection - establishing connection to MySQL database failed: #2019 'Can't initialize character set unknown (path: compiled_in)'
+<<<<<<< HEAD
+[16:30:32] [WARNING] mysql_connect: no password specified
+=======
 [16:11:40] [WARNING] mysql_connect: no password specified
 [16:11:40] [ERROR] CConnection::CConnection - establishing connection to MySQL database failed: #2019 'Can't initialize character set unknown (path: compiled_in)'
 [16:11:40] [ERROR] CConnection::CConnection - establishing connection to MySQL database failed: #2019 'Can't initialize character set unknown (path: compiled_in)'
 [16:11:40] [ERROR] CConnection::CConnection - establishing connection to MySQL database failed: #2019 'Can't initialize character set unknown (path: compiled_in)'
 [16:11:40] [ERROR] CConnection::CConnection - establishing connection to MySQL database failed: #2019 'Can't initialize character set unknown (path: compiled_in)'
+<<<<<<< HEAD
 [16:13:24] [WARNING] mysql_connect: no password specified
 [16:13:24] [ERROR] CConnection::CConnection - establishing connection to MySQL database failed: #2019 'Can't initialize character set unknown (path: compiled_in)'
 [16:13:24] [ERROR] CConnection::CConnection - establishing connection to MySQL database failed: #2019 'Can't initialize character set unknown (path: compiled_in)'
@@ -223,3 +227,6 @@
 [16:32:37] [ERROR] CConnection::CConnection - establishing connection to MySQL database failed: #2019 'Can't initialize character set unknown (path: compiled_in)'
 [16:32:37] [ERROR] CConnection::CConnection - establishing connection to MySQL database failed: #2019 'Can't initialize character set unknown (path: compiled_in)'
 [16:32:37] [ERROR] CConnection::CConnection - establishing connection to MySQL database failed: #2019 'Can't initialize character set unknown (path: compiled_in)'
+=======
+>>>>>>> ee4f3f9ccd1722902bc5b36d7c6063a9f79469cf
+>>>>>>> 1e70f31465338fa8082cfc689407867c6a78b884
