@@ -1,7 +1,7 @@
 #include <a_samp>
 #include <a_mysql>
 
-// Colores básicos
+// Colores bï¿½sicos
 #define COLOR_WHITE        "{FFFFFF}"
 #define COLOR_BLACK        "{000000}"
 #define COLOR_RED          "{FF0000}"
@@ -111,8 +111,6 @@ public OnPlayerConnect(playerid){
 
 
 
-
-
     }
     cache_delete(ResultCache_);
     return 1;
@@ -128,12 +126,12 @@ forward DatabaseConnect();
 public DatabaseConnect(){
     database = mysql_connect(DB_HOST, DB_USER, DB_PASS, DB_DATABASE);
 
-    if(database == MYSQL_INVALID_HANDLE || mysql_errno(database) != 0){ // Conexión fallidaa la base de datos
-        print("\n\n[MySQL]: Error al establecer conexión con la base de datos.\n\n");
+    if(database == MYSQL_INVALID_HANDLE || mysql_errno(database) != 0){ // Conexiï¿½n fallidaa la base de datos
+        print("\n\n[MySQL]: Error al establecer conexiï¿½n con la base de datos.\n\n");
         SetTimer("CerrarServidor", 10000, false);
     }
-    else{ // Conexión establecida correctamente
-        print("\n\n[MySQL]: Conexión con la base de datos MySQL concretada con éxito.\n[MySQL]: ON\n\n");
+    else{ // Conexiï¿½n establecida correctamente
+        print("\n\n[MySQL]: Conexiï¿½n con la base de datos MySQL concretada con ï¿½xito.\n[MySQL]: ON\n\n");
         return 1;
     }
     return 0;
