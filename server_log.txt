@@ -1575,3 +1575,33 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 
 
 [16:06:33] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[16:30:32] filterscripts = ""  (string)
+[16:30:32] 
+[16:30:32] Server Plugins
+[16:30:32] --------------
+[16:30:32]  Loading plugin: mysql.dll
+[16:30:32]  >> plugin.mysql: R41-4 successfully loaded.
+[16:30:32]   Loaded.
+[16:30:32]  Loaded 1 plugins.
+
+[16:30:32] 
+[16:30:32] Filterscripts
+[16:30:32] ---------------
+[16:30:32]   Loaded 0 filterscripts.
+
+[16:30:32] 
+
+[MySQL]: Conexi?n con la base de datos MySQL concretada con ?xito.
+[MySQL]: ON
+
+
+[16:30:32] Number of vehicle models: 0
