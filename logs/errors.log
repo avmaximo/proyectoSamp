@@ -1,7 +1,0 @@
-<<<<<<< HEAD
-=======
-[16:11:40] [plugins/mysql] CConnection::CConnection - establishing connection to MySQL database failed: #2019 'Can't initialize character set unknown (path: compiled_in)'
-[16:11:40] [plugins/mysql] CConnection::CConnection - establishing connection to MySQL database failed: #2019 'Can't initialize character set unknown (path: compiled_in)'
-[16:11:40] [plugins/mysql] CConnection::CConnection - establishing connection to MySQL database failed: #2019 'Can't initialize character set unknown (path: compiled_in)'
-[16:11:40] [plugins/mysql] CConnection::CConnection - establishing connection to MySQL database failed: #2019 'Can't initialize character set unknown (path: compiled_in)'
->>>>>>> ee4f3f9ccd1722902bc5b36d7c6063a9f79469cf
