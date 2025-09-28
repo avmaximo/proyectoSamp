@@ -1778,7 +1778,10 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [16:32:37] Number of vehicle models: 0
 =======
 >>>>>>> ee4f3f9ccd1722902bc5b36d7c6063a9f79469cf
+<<<<<<< HEAD
+=======
 >>>>>>> 1e70f31465338fa8082cfc689407867c6a78b884
+>>>>>>> 827c27787f1c9824676e288274bfcf45fc63faa5
 
 ----------
 Loaded log file: "server_log.txt".
@@ -1788,6 +1791,23 @@ SA-MP Dedicated Server
 ----------------------
 v0.3.7-R2, (C)2005-2015 SA-MP Team
 
+<<<<<<< HEAD
+[16:32:35] filterscripts = ""  (string)
+[16:32:35] 
+[16:32:35] Server Plugins
+[16:32:35] --------------
+[16:32:35]  Loading plugin: mysql.dll
+[16:32:35]  >> plugin.mysql: R41-4 successfully loaded.
+[16:32:35]   Loaded.
+[16:32:35]  Loaded 1 plugins.
+
+[16:32:35] 
+[16:32:35] Filterscripts
+[16:32:35] ---------------
+[16:32:35]   Loaded 0 filterscripts.
+
+[16:32:35] 
+=======
 [16:41:46] filterscripts = ""  (string)
 [16:41:46] 
 [16:41:46] Server Plugins
@@ -2099,11 +2119,15 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [17:31:25]   Loaded 0 filterscripts.
 
 [17:31:25] 
+>>>>>>> 827c27787f1c9824676e288274bfcf45fc63faa5
 
 [MySQL]: Conexión con la base de datos MySQL concretada con éxito.
 [MySQL]: ON
 
 
+<<<<<<< HEAD
+[16:32:35] Number of vehicle models: 0
+=======
 [17:31:25] Number of vehicle models: 0
 
 ----------
@@ -5029,6 +5053,7 @@ Console input: exit
 
 [02:17:08] plugin.mysql: Unloading plugin...
 [02:17:08] plugin.mysql: Plugin unloaded.
+<<<<<<< HEAD
 
 ----------
 Loaded log file: "server_log.txt".
@@ -5743,3 +5768,6 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 
 [13:50:10] DEBUG: user_id 10, player_id 2
 [13:50:44] [part] max has left the server (0:1)
+=======
+>>>>>>> 827c27787f1c9824676e288274bfcf45fc63faa5
+>>>>>>> 3da20dcff7065fb15d05f9b51fddd357b0da84c6
