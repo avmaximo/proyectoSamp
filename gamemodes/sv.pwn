@@ -80,6 +80,11 @@ new const_pepper[20] = "XyZz7y12*ab";
 #define DIALOG_REGISTER_PLAYER_AGE      (id_dialogos+6)
 /*========================================================================================= */
 
+#define SPAWN_NONE        0
+#define SPAWN_INITIAL     1
+#define SPAWN_HOSPITAL    2
+#define SPAWN_NORMAL      3
+
 enum uData {
     uIdSQL,
     uName[MAX_PLAYER_NAME],
@@ -92,7 +97,10 @@ enum uData {
     aLevel,
 
     lastDialog,
-    isLoggedIn
+    isLoggedIn,
+    spawnState,
+
+    currentCharacterIdSQL // ID del personaje actual
 };
 
 enum pData {
@@ -106,10 +114,14 @@ enum pData {
     pLevel,
     pExp,
     pJob[2], // 0 y 1
-    Float:pPosX,Float:pPosY,Float:pPosZ,Float:pRot
+    Float:pPosX,Float:pPosY,Float:pPosZ,Float:pRot,
+    Float:pHealth,
+    Float:pArmor,
+    pInterior,
+    pDimension
 };
 
-new playerInfo[MAX_PLAYERS][pData], userInfo[MAX_PLAYERS][uData];
+new characterInfo[MAX_PLAYERS][pData], userInfo[MAX_PLAYERS][uData];
 
 main(){
     DatabaseConnect();
@@ -120,6 +132,7 @@ public OnGameModeInit(){
 }
 public OnPlayerConnect(playerid){
     modoLobby(playerid, 1);
+    userInfo[playerid][spawnState] = SPAWN_NONE;
     GetPlayerName(playerid, userInfo[playerid][uName], MAX_PLAYER_NAME);
     SetTimerEx("ClearChat", 400, false, "i", playerid);
     new DB_Query[256],Cache:ResultCache_;
@@ -144,7 +157,9 @@ public OnPlayerConnect(playerid){
 }
 
 public OnPlayerDisconnect(playerid, reason){
+    guardarCuenta(playerid);
     format(userInfo[playerid][uName], MAX_PLAYER_NAME, "");
+    
     return 1;
 }
 
@@ -182,7 +197,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 if(strfind(inputtext, " ") != -1){SendClientMessage(playerid, -1, COLOR_ERROR"Error: "COLOR_WHITE"El nombre no debe contener espacios.");}
                 return 1;
             }
-            format(playerInfo[playerid][pName], 20, "%s", inputtext);
+            format(characterInfo[playerid][pName], 20, "%s", inputtext);
             _cuadroRegistroPlayerLastname(playerid);
             return 1;
         }
@@ -200,7 +215,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 if(strfind(inputtext, " ") != -1){SendClientMessage(playerid, -1, COLOR_ERROR"Error: "COLOR_WHITE"El apellido no debe contener espacios.");}
                 return 1;
             }
-            format(playerInfo[playerid][pLastname], 20, "%s", inputtext);
+            format(characterInfo[playerid][pLastname], 20, "%s", inputtext);
             _cuadroRegistroPlayerGender(playerid);
             return 1;
         }
@@ -212,12 +227,12 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
     else if(dialogid == DIALOG_REGISTER_PLAYER_GENDER){
         if(response){
             if(listitem == 1){
-                playerInfo[playerid][pSkin] = FIRST_SKIN_MALE;
-                playerInfo[playerid][pGender] = 0;
+                characterInfo[playerid][pSkin] = FIRST_SKIN_MALE;
+                characterInfo[playerid][pGender] = 0;
             }
             else if(listitem == 2){
-                playerInfo[playerid][pSkin] = FIRST_SKIN_FEMALE;
-                playerInfo[playerid][pGender] = 1;
+                characterInfo[playerid][pSkin] = FIRST_SKIN_FEMALE;
+                characterInfo[playerid][pGender] = 1;
             }
             else{
                 _cuadroRegistroPlayerGender(playerid);
@@ -241,7 +256,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 else if(edad > 100){SendClientMessage(playerid, -1, COLOR_ERROR"Error: "COLOR_WHITE"La edad no debe superar los 100 años.");}
                 return 1;
             }
-            playerInfo[playerid][pAge] = edad;
+            characterInfo[playerid][pAge] = edad;
             _cuadroRegistroEmail(playerid);
             return 1;
         }
@@ -263,28 +278,34 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             }else{
                 format(userInfo[playerid][uMail], 60, "No especificado");
             }
-            // Aquí ya tendrías el REGISTRO COMPLETO
-
-            new _cacheMessage[148];
-            format(_cacheMessage, sizeof(_cacheMessage), "Prueba de datos: %s, %s, %s, %s",
-            userInfo[playerid][uName],
-            userInfo[playerid][uPassword],
-            userInfo[playerid][ph],
-            userInfo[playerid][uMail]
-            );
-            SendClientMessage(playerid, -1, _cacheMessage);
-
             new DB_Query[512];
             mysql_format(database, DB_Query, sizeof(DB_Query),
-                "INSERT INTO users (username,password,ph,email) VALUES ('%e','%e','%e','%e')",
+                "INSERT INTO users (username,password,ph,email,last_login,ip) VALUES ('%e','%e','%e','%e',NOW(),'%e')",
                 userInfo[playerid][uName],
                 userInfo[playerid][uPassword],
                 userInfo[playerid][ph],
-                userInfo[playerid][uMail]
+                userInfo[playerid][uMail],
+                userInfo[playerid][uIp]
             );
+
             mysql_tquery(database, DB_Query, "OnUserInsert", "i", playerid);
 
+
+            userInfo[playerid][spawnState] = SPAWN_INITIAL;
             modoLobby(playerid, 0);
+            
+            characterInfo[playerid][pMoney] = 1000;
+            characterInfo[playerid][pLevel] = 1;
+            characterInfo[playerid][pExp] = 0;
+            characterInfo[playerid][pPosX] = 1765.931274;
+            characterInfo[playerid][pPosY] = -1949.806640;
+            characterInfo[playerid][pPosZ] = 14.609554;
+            characterInfo[playerid][pRot] = 271.041625;
+            characterInfo[playerid][pHealth] = 100;
+            characterInfo[playerid][pArmor] = 0;
+            characterInfo[playerid][pInterior] = 0;
+            characterInfo[playerid][pDimension] = 0;
+
             SetTimerEx("SpawnPlayerEx", 200, false, "i", playerid);
             SendClientMessage(playerid, -1, COLOR_SUCCESS"¡Registro completado! Bienvenido a "COLOR_GOLD""NAME_SERVER"!");
             return 1;
@@ -315,23 +336,63 @@ public OnUserInsert(playerid)
 {
     userInfo[playerid][uIdSQL] = cache_insert_id(); // acá sí lo obtenés bien
 
-    // Ahora podés usarlo en el insert de players
-    new q2[256];
+    // Ahora podés usarlo en el insert de characters
+    new q2[512];
     mysql_format(database, q2, sizeof(q2),
-        "INSERT INTO players (user_id,name,lastname) VALUES (%d,'%e','%e')",
+        "INSERT INTO characters (user_id,name,lastname,gender,age,skin,level,money,bank,posX,posY,posZ,rot,health,armor,interior,dimension) VALUES (%d,'%e','%e',%d,%d,%d,1,1000,0,%.2f,%.2f,%.2f,%.2f,100,0,0,0)",
         userInfo[playerid][uIdSQL],
-        playerInfo[playerid][pName],
-        playerInfo[playerid][pLastname]
+        characterInfo[playerid][pName],
+        characterInfo[playerid][pLastname],
+        characterInfo[playerid][pGender],
+        characterInfo[playerid][pAge],
+        characterInfo[playerid][pSkin],
+        characterInfo[playerid][pPosX],
+        characterInfo[playerid][pPosY],
+        characterInfo[playerid][pPosZ],
+        characterInfo[playerid][pRot]
     );
     mysql_tquery(database, q2, "OnPlayerInsert", "i", playerid);
 }
+
 
 // Callback para jugadores
 forward OnPlayerInsert(playerid);
 public OnPlayerInsert(playerid)
 {
-    playerInfo[playerid][pIdSQL] = cache_insert_id(); // ID del personaje
-    printf("DEBUG: user_id %d, player_id %d", userInfo[playerid][uIdSQL], playerInfo[playerid][pIdSQL]);
+    characterInfo[playerid][pIdSQL] = cache_insert_id(); // ID del personaje
+    userInfo[playerid][currentCharacterIdSQL] = characterInfo[playerid][pIdSQL]; // Guardás el ID del personaje actual en userInfo
+}
+
+public OnPlayerSpawn(playerid){
+    if(!IsPlayerLoggedIn(playerid)){ // Si el jugador no está logueado, lo sacamos
+        SendClientMessage(playerid, -1, COLOR_ERROR"Error.");
+        return 0;
+    }else{ // Si está logueado, lo dejamos spawnear
+        if(userInfo[playerid][spawnState] == SPAWN_INITIAL){
+            SetPlayerPos(playerid, characterInfo[playerid][pPosX], characterInfo[playerid][pPosY], characterInfo[playerid][pPosZ]);
+            SetPlayerFacingAngle(playerid, characterInfo[playerid][pRot]);
+            SetPlayerSkin(playerid, characterInfo[playerid][pSkin]);
+            SetPlayerHealth(playerid, characterInfo[playerid][pHealth]);
+            SetPlayerArmour(playerid, characterInfo[playerid][pArmor]);
+            SetPlayerMoneyEx(playerid, characterInfo[playerid][pMoney]);
+            SetPlayerVirtualWorld(playerid, characterInfo[playerid][pDimension]);
+            SetPlayerInterior(playerid, characterInfo[playerid][pInterior]);
+            userInfo[playerid][spawnState] = SPAWN_NORMAL;
+
+            new _cacheMessage[128];
+            format(_cacheMessage, sizeof(_cacheMessage), "DEBUG: ID Usuario: %d, ID Personaje: %d", userInfo[playerid][uIdSQL], characterInfo[playerid][pIdSQL]);
+            SendClientMessage(playerid, -1, _cacheMessage);
+            format(_cacheMessage, sizeof(_cacheMessage), "DEBUG: IsLoggedIn: %d, SpawnState: %d", userInfo[playerid][isLoggedIn], userInfo[playerid][spawnState]);
+            SendClientMessage(playerid, -1, _cacheMessage);
+        }
+        else if(userInfo[playerid][spawnState] == SPAWN_HOSPITAL){
+            userInfo[playerid][spawnState] = SPAWN_NORMAL;
+        }
+    }
+
+
+
+    return 1;
 }
 
 
@@ -353,6 +414,56 @@ public DatabaseConnect(){
 forward CerrarServidor();
 public CerrarServidor(){
     SendRconCommand("exit");
+    return 1;
+}
+
+forward guardarCuenta(playerid);
+public guardarCuenta(playerid){
+    if(!IsPlayerLoggedIn(playerid)) return 0;
+    GetPlayerPos(playerid, characterInfo[playerid][pPosX], characterInfo[playerid][pPosY], characterInfo[playerid][pPosZ]);
+    GetPlayerFacingAngle(playerid, characterInfo[playerid][pRot]);
+    characterInfo[playerid][pMoney] = GetPlayerMoney(playerid);
+    GetPlayerHealth(playerid, characterInfo[playerid][pHealth]);
+    GetPlayerArmour(playerid, characterInfo[playerid][pArmor]);
+    characterInfo[playerid][pInterior] = GetPlayerInterior(playerid);
+    characterInfo[playerid][pDimension] = GetPlayerVirtualWorld(playerid);
+
+
+    new DB_Query[512];
+    mysql_format(database, DB_Query, sizeof(DB_Query),
+        "UPDATE characters SET name='%e', lastname='%e', gender=%d, age=%d, skin=%d, health=%d, armor=%d, interior=%d, dimension=%d, posX=%f, posY=%f, posZ=%f, rot=%f WHERE character_id=%d",
+        characterInfo[playerid][pName],
+        characterInfo[playerid][pLastname],
+        characterInfo[playerid][pGender],
+        characterInfo[playerid][pAge],
+        characterInfo[playerid][pSkin],
+        characterInfo[playerid][pHealth],
+        characterInfo[playerid][pArmor],
+        characterInfo[playerid][pInterior],
+        characterInfo[playerid][pDimension],
+        characterInfo[playerid][pPosX],
+        characterInfo[playerid][pPosY],
+        characterInfo[playerid][pPosZ],
+        characterInfo[playerid][pRot],
+
+        userInfo[playerid][currentCharacterIdSQL]
+    );
+    mysql_tquery(database, DB_Query);
+
+    mysql_format(database, DB_Query, sizeof(DB_Query),
+        "UPDATE users SET last_login=NOW(), ip='%e' WHERE user_id=%d",
+        userInfo[playerid][uIp],
+        userInfo[playerid][uIdSQL]
+    );
+    return 1;
+}
+
+forward SetPlayerMoneyEx(playerid, amount);
+public SetPlayerMoneyEx(playerid, amount){
+    if(!IsPlayerLoggedIn(playerid)) return 0;
+    characterInfo[playerid][pMoney] = amount;
+    ResetPlayerMoney(playerid);
+    GivePlayerMoney(playerid, amount);
     return 1;
 }
 
@@ -455,7 +566,7 @@ forward _cuadroRegistroPlayerAge(playerid);
 public _cuadroRegistroPlayerAge(playerid){
     new _tempTitulo[128], _tempMessage[256];
     format(_tempTitulo, sizeof(_tempTitulo), COLOR_GOLD"Registro en %s", NAME_SERVER);
-    format(_tempMessage, sizeof(_tempMessage), COLOR_WHITE"Introduce tu "COLOR_CYAN"edad:\n\n"COLOR_WARNING"- Tu personaje debe ser mayor de 13 años.\n- No es necesario que sea tu edad real, pero sí mayor de 18.");
+    format(_tempMessage, sizeof(_tempMessage), COLOR_WHITE"Introduce tu "COLOR_CYAN"edad:\n\n"COLOR_WARNING"- Tu personaje debe ser mayor de 18 años.\n- No es necesario que sea tu edad real, pero sí mayor de 18.");
     ShowPlayerDialog(playerid, DIALOG_REGISTER_PLAYER_AGE, DIALOG_STYLE_INPUT, _tempTitulo, _tempMessage, "Continuar", "Volver");
     return 1;
 }
@@ -507,5 +618,50 @@ stock HashConPepper(password[], salt[], ret_hash[], ret_hash_len)
     printf("Depuracion mezcla: %s\n", mezcla);
     printf("Depuracion salt: %s\n", salt);
     printf("Depuracion hash: %s\n", ret_hash);
+    return 1;
+}
+
+CMD:xyz(playerid, params[])
+{
+    new Float:x, Float:y, Float:z, Float:angle;
+
+    if(IsPlayerInAnyVehicle(playerid))
+    {
+        new vehicleid = GetPlayerVehicleID(playerid);
+        GetVehiclePos(vehicleid, x, y, z);
+        GetVehicleZAngle(vehicleid, angle);
+
+        SendClientMessage(playerid, -1, "Tu posición en vehículo:");
+        printf("Veh[%d] PosX: %f PosY: %f PosZ: %f Rot: %f", vehicleid, x, y, z, angle);
+        new msg[144];
+        format(msg, sizeof(msg), "X: %.2f, Y: %.2f, Z: %.2f, Rot: %.2f", x, y, z, angle);
+        SendClientMessage(playerid, -1, msg);
+    }
+    else
+    {
+        GetPlayerPos(playerid, x, y, z);
+        GetPlayerFacingAngle(playerid, angle);
+
+        SendClientMessage(playerid, -1, "Tu posición a pie:");
+        printf("Player[%d] PosX: %f PosY: %f PosZ: %f Rot: %f", playerid, x, y, z, angle);
+        new msg[144];
+        format(msg, sizeof(msg), "X: %.2f, Y: %.2f, Z: %.2f, Rot: %.2f", x, y, z, angle);
+        SendClientMessage(playerid, -1, msg);
+    }
+    return 1;
+}
+
+CMD:guardar(playerid, params[])
+{
+    if(!IsPlayerLoggedIn(playerid)){
+        SendClientMessage(playerid, -1, COLOR_ERROR"Error: "COLOR_WHITE"No estás logueado.");
+        return 1;
+    }
+    guardarCuenta(playerid);
+    SendClientMessage(playerid, -1, COLOR_SUCCESS"¡Cuenta guardada correctamente!");
+
+    new _cacheMessage[128];
+    format(_cacheMessage, sizeof(_cacheMessage), "DEBUG: Dinero: %d, Salud: %f, Armadura: %f, Interior: %d, Dimensión: %d", characterInfo[playerid][pMoney], characterInfo[playerid][pHealth], characterInfo[playerid][pArmor], characterInfo[playerid][pInterior], characterInfo[playerid][pDimension]);
+    SendClientMessage(playerid, -1, _cacheMessage);
     return 1;
 }
