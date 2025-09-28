@@ -53,8 +53,8 @@
 
 new MySQL:database;
 #define DB_HOST     "localhost"
-#define DB_USER     "root"
-#define DB_PASS     ""
+#define DB_USER     "samp-server"
+#define DB_PASS     "t8!Qz9@hV4#kR2&pX7"
 #define DB_DATABASE     "sv-samp"
 #define DB_PORT     3306
 
@@ -63,6 +63,7 @@ new MySQL:database;
 
 #define PASSWORD_MAX_CHARACTERS    (78)
 #define INVALID_NUMBER             (999995)
+new const_pepper[20] = "XyZz7y12*ab";
 
 #define FIRST_SKIN_MALE            7
 #define FIRST_SKIN_FEMALE          8
@@ -80,8 +81,9 @@ new MySQL:database;
 /*========================================================================================= */
 
 enum uData {
+    uIdSQL,
     uName[MAX_PLAYER_NAME],
-    uPassword[PASSWORD_MAX_CHARACTERS],
+    uPassword[PASSWORD_MAX_CHARACTERS+25],
     ph[19],
     uMail[60],
     uIp[17],
@@ -94,6 +96,7 @@ enum uData {
 };
 
 enum pData {
+    pIdSQL,
     pName[25],
     pLastname[25],
     pGender,
@@ -158,7 +161,8 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             }
             new hash[144];
             generateRandomSalt(userInfo[playerid][ph], 17);
-            SHA256_PassHash(inputtext, userInfo[playerid][ph], hash, sizeof(hash));
+            
+            HashConPepper(inputtext, userInfo[playerid][ph], hash, sizeof(hash));
 
             format(userInfo[playerid][uPassword], PASSWORD_MAX_CHARACTERS, "%s", hash);
             _cuadroRegistroPlayerName(playerid);
@@ -271,13 +275,19 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             SendClientMessage(playerid, -1, _cacheMessage);
 
             new DB_Query[512];
-            format(DB_Query, sizeof(DB_Query), "INSERT INTO users (username,password,ph,email) VALUES ('%s','%s','%s','%s')",
-            userInfo[playerid][uName],
-            userInfo[playerid][uPassword],
-            userInfo[playerid][ph],
-            userInfo[playerid][uMail]
+            mysql_format(database, DB_Query, sizeof(DB_Query),
+                "INSERT INTO users (username,password,ph,email) VALUES ('%e','%e','%e','%e')",
+                userInfo[playerid][uName],
+                userInfo[playerid][uPassword],
+                userInfo[playerid][ph],
+                userInfo[playerid][uMail]
             );
-            mysql_pquery(database, DB_Query);
+            mysql_tquery(database, DB_Query, "OnUserInsert", "i", playerid);
+
+            modoLobby(playerid, 0);
+            SetTimerEx("SpawnPlayerEx", 200, false, "i", playerid);
+            SendClientMessage(playerid, -1, COLOR_SUCCESS"¡Registro completado! Bienvenido a "COLOR_GOLD""NAME_SERVER"!");
+            return 1;
         }
         else{
             _cuadroRegistroPlayerAge(playerid);
@@ -297,6 +307,31 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         }
     }
     return 1;
+}
+
+// Callback del insert
+forward OnUserInsert(playerid);
+public OnUserInsert(playerid)
+{
+    userInfo[playerid][uIdSQL] = cache_insert_id(); // acá sí lo obtenés bien
+
+    // Ahora podés usarlo en el insert de players
+    new q2[256];
+    mysql_format(database, q2, sizeof(q2),
+        "INSERT INTO players (user_id,name,lastname) VALUES (%d,'%e','%e')",
+        userInfo[playerid][uIdSQL],
+        playerInfo[playerid][pName],
+        playerInfo[playerid][pLastname]
+    );
+    mysql_tquery(database, q2, "OnPlayerInsert", "i", playerid);
+}
+
+// Callback para jugadores
+forward OnPlayerInsert(playerid);
+public OnPlayerInsert(playerid)
+{
+    playerInfo[playerid][pIdSQL] = cache_insert_id(); // ID del personaje
+    printf("DEBUG: user_id %d, player_id %d", userInfo[playerid][uIdSQL], playerInfo[playerid][pIdSQL]);
 }
 
 
@@ -333,6 +368,14 @@ forward kickPlayer(playerid);
 public kickPlayer(playerid){
 	return Kick(playerid);
 }
+
+forward SpawnPlayerEx(playerid);
+public SpawnPlayerEx(playerid){
+	if(!IsPlayerConnected(playerid)) return 0;
+    SpawnPlayer(playerid);
+	return 1;
+}
+
 
 forward modoLobby(playerid, onOff);
 public modoLobby(playerid, onOff){
@@ -452,39 +495,17 @@ stock generateRandomSalt(output[], size)
     output[size - 1] = '\0'; // Fin de string
 }
 //SHA256_PassHash(inputtext, salt, hash, sizeof(hash));
-//
-
-CMD:pruebahash(playerid, params[]){
-    new inputtext[80];
-    if(sscanf(params, "s[80]", inputtext)){
-        SendClientMessage(playerid, -1, COLOR_ERROR"Uso: /pruebahash <texto>");
-        return 1;
-    }
-    new hash[144];
-    new salt[17];
-    generateRandomSalt(salt, sizeof(salt));
-    SHA256_PassHash(inputtext, salt, hash, sizeof(hash));
-
-    new _tempMessage[256];
-    format(_tempMessage, sizeof(_tempMessage), "Texto: %s\nSalt: %s\nHash: %s", inputtext, salt, hash);
-    SendClientMessage(playerid, -1, _tempMessage);
-    return 1;
-}
-
-CMD:hash(playerid, params[])
+stock HashConPepper(password[], salt[], ret_hash[], ret_hash_len)
 {
-    new dato[128], salt[64], hash[65];
+    new mezcla[256];
+    // Concatenás: pepper + password
+    format(mezcla, sizeof(mezcla), "%s%s", const_pepper, password);
+    // Hasheás usando la nativa, pasando también el salt del usuario
+    SHA256_PassHash(mezcla, salt, ret_hash, ret_hash_len);
 
-    if(sscanf(params, "s[128]s[64]", dato, salt))
-    {
-        SendClientMessage(playerid, -1, COLOR_ERROR"Uso: /hash [dato] [salt]");
-        return 1;
-    }
-
-    SHA256_PassHash(dato, salt, hash, sizeof(hash));
-
-    new msg[144];
-    format(msg, sizeof(msg), COLOR_SUCCESS"Hash generado: "COLOR_WHITE"%s", hash);
-    SendClientMessage(playerid, -1, msg);
+    printf("Depuracion password: %s\n", password);
+    printf("Depuracion mezcla: %s\n", mezcla);
+    printf("Depuracion salt: %s\n", salt);
+    printf("Depuracion hash: %s\n", ret_hash);
     return 1;
 }
