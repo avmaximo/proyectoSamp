@@ -1627,7 +1627,7 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 
 
 [16:11:40] Number of vehicle models: 0
->>>>>>> ee4f3f9ccd1722902bc5b36d7c6063a9f79469cf
+<<<<<<< HEAD
 
 ----------
 Loaded log file: "server_log.txt".
@@ -1637,6 +1637,161 @@ SA-MP Dedicated Server
 ----------------------
 v0.3.7-R2, (C)2005-2015 SA-MP Team
 
+[16:13:24] filterscripts = ""  (string)
+[16:13:24] 
+[16:13:24] Server Plugins
+[16:13:24] --------------
+[16:13:24]  Loading plugin: mysql.dll
+[16:13:24]  >> plugin.mysql: R41-4 successfully loaded.
+[16:13:24]   Loaded.
+[16:13:24]  Loaded 1 plugins.
+
+[16:13:24] 
+[16:13:24] Filterscripts
+[16:13:24] ---------------
+[16:13:24]   Loaded 0 filterscripts.
+
+[16:13:24] 
+
+[MySQL]: Error al establecer conexión con la base de datos.
+
+
+[16:13:24] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[16:18:39] filterscripts = ""  (string)
+[16:18:39] 
+[16:18:39] Server Plugins
+[16:18:39] --------------
+[16:18:39]  Loading plugin: mysql.dll
+[16:18:39]  >> plugin.mysql: R41-4 successfully loaded.
+[16:18:39]   Loaded.
+[16:18:39]  Loaded 1 plugins.
+
+[16:18:39] 
+[16:18:39] Filterscripts
+[16:18:39] ---------------
+[16:18:39]   Loaded 0 filterscripts.
+
+[16:18:39] 
+
+[MySQL]: Error al establecer conexión con la base de datos.
+
+
+[16:18:39] Number of vehicle models: 0
+[16:18:50] --- Server Shutting Down.
+[16:18:50] plugin.mysql: Unloading plugin...
+[16:18:50] plugin.mysql: Plugin unloaded.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[16:25:16] filterscripts = ""  (string)
+[16:25:16] 
+[16:25:16] Server Plugins
+[16:25:16] --------------
+[16:25:16]  Loading plugin: mysql.dll
+[16:25:16]  >> plugin.mysql: R41-4 successfully loaded.
+[16:25:16]   Loaded.
+[16:25:16]  Loaded 1 plugins.
+
+[16:25:16] 
+[16:25:16] Filterscripts
+[16:25:16] ---------------
+[16:25:16]   Loaded 0 filterscripts.
+
+[16:25:16] 
+
+[MySQL]: Error al establecer conexión con la base de datos.
+
+
+[16:25:16] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[16:28:09] filterscripts = ""  (string)
+[16:28:09] 
+[16:28:09] Server Plugins
+[16:28:09] --------------
+[16:28:09]  Loading plugin: mysql.dll
+[16:28:09]  >> plugin.mysql: R41-4 successfully loaded.
+[16:28:09]   Loaded.
+[16:28:09]  Loaded 1 plugins.
+
+[16:28:09] 
+[16:28:09] Filterscripts
+[16:28:09] ---------------
+[16:28:09]   Loaded 0 filterscripts.
+
+[16:28:09] 
+
+[MySQL]: Error al establecer conexión con la base de datos.
+
+
+[16:28:09] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[16:32:37] filterscripts = ""  (string)
+[16:32:37] 
+[16:32:37] Server Plugins
+[16:32:37] --------------
+[16:32:37]  Loading plugin: mysql.dll
+[16:32:37]  >> plugin.mysql: R41-4 successfully loaded.
+[16:32:37]   Loaded.
+[16:32:37]  Loaded 1 plugins.
+
+[16:32:37] 
+[16:32:37] Filterscripts
+[16:32:37] ---------------
+[16:32:37]   Loaded 0 filterscripts.
+
+[16:32:37] 
+
+[MySQL]: Error al establecer conexión con la base de datos.
+
+
+[16:32:37] Number of vehicle models: 0
+=======
+>>>>>>> ee4f3f9ccd1722902bc5b36d7c6063a9f79469cf
+<<<<<<< HEAD
+=======
+>>>>>>> 1e70f31465338fa8082cfc689407867c6a78b884
+>>>>>>> 827c27787f1c9824676e288274bfcf45fc63faa5
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+<<<<<<< HEAD
 [16:32:35] filterscripts = ""  (string)
 [16:32:35] 
 [16:32:35] Server Plugins
@@ -1652,9 +1807,3250 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [16:32:35]   Loaded 0 filterscripts.
 
 [16:32:35] 
+=======
+[16:41:46] filterscripts = ""  (string)
+[16:41:46] 
+[16:41:46] Server Plugins
+[16:41:46] --------------
+[16:41:46]  Loading plugin: mysql.dll
+[16:41:46]  >> plugin.mysql: R41-4 successfully loaded.
+[16:41:46]   Loaded.
+[16:41:46]  Loaded 1 plugins.
+
+[16:41:46] 
+[16:41:46] Filterscripts
+[16:41:46] ---------------
+[16:41:46]   Loaded 0 filterscripts.
+
+[16:41:46] 
+
+[MySQL]: Error al establecer conexión con la base de datos.
+
+
+[16:41:46] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[16:42:43] filterscripts = ""  (string)
+[16:42:43] 
+[16:42:43] Server Plugins
+[16:42:43] --------------
+[16:42:43]  Loading plugin: mysql.dll
+[16:42:43]  >> plugin.mysql: R41-4 successfully loaded.
+[16:42:43]   Loaded.
+[16:42:43]  Loaded 1 plugins.
+
+[16:42:43] 
+[16:42:43] Filterscripts
+[16:42:43] ---------------
+[16:42:43]   Loaded 0 filterscripts.
+
+[16:42:43] 
+
+[MySQL]: Error al establecer conexión con la base de datos.
+
+
+[16:42:43] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[16:46:03] filterscripts = ""  (string)
+[16:46:03] 
+[16:46:03] Server Plugins
+[16:46:03] --------------
+[16:46:03]  Loading plugin: mysql.dll
+[16:46:03]  >> plugin.mysql: R41-4 successfully loaded.
+[16:46:03]   Loaded.
+[16:46:03]  Loaded 1 plugins.
+
+[16:46:03] 
+[16:46:03] Filterscripts
+[16:46:03] ---------------
+[16:46:03]   Loaded 0 filterscripts.
+
+[16:46:03] 
+
+[MySQL]: Error al establecer conexión con la base de datos.
+
+
+[16:46:03] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[16:52:24] filterscripts = ""  (string)
+[16:52:24] 
+[16:52:24] Server Plugins
+[16:52:24] --------------
+[16:52:24]  Loading plugin: mysql.dll
+[16:52:24]  >> plugin.mysql: R41-4 successfully loaded.
+[16:52:24]   Loaded.
+[16:52:24]  Loaded 1 plugins.
+
+[16:52:24] 
+[16:52:24] Filterscripts
+[16:52:24] ---------------
+[16:52:24]   Loaded 0 filterscripts.
+
+[16:52:24] 
+
+[MySQL]: Error al establecer conexión con la base de datos.
+
+
+[16:52:24] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:06:26] filterscripts = ""  (string)
+[17:06:26] 
+[17:06:26] Server Plugins
+[17:06:26] --------------
+[17:06:26]  Loading plugin: mysql.dll
+[17:06:26]  >> plugin.mysql: R41-4 successfully loaded.
+[17:06:26]   Loaded.
+[17:06:26]  Loaded 1 plugins.
+
+[17:06:26] 
+[17:06:26] Filterscripts
+[17:06:26] ---------------
+[17:06:26]   Loaded 0 filterscripts.
+
+[17:06:26] 
+
+[MySQL]: Error al establecer conexión con la base de datos.
+
+
+[17:06:26] Number of vehicle models: 0
+[17:06:37] --- Server Shutting Down.
+[17:06:37] plugin.mysql: Unloading plugin...
+[17:06:37] plugin.mysql: Plugin unloaded.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:08:35] filterscripts = ""  (string)
+[17:08:35] 
+[17:08:35] Server Plugins
+[17:08:35] --------------
+[17:08:35]  Loading plugin: mysql.dll
+[17:08:35]  >> plugin.mysql: R41-4 successfully loaded.
+[17:08:35]   Loaded.
+[17:08:35]  Loaded 1 plugins.
+
+[17:08:35] 
+[17:08:35] Filterscripts
+[17:08:35] ---------------
+[17:08:35]   Loaded 0 filterscripts.
+
+[17:08:35] 
+
+[MySQL]: Error al establecer conexión con la base de datos.
+
+
+[17:08:35] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:08:47] filterscripts = ""  (string)
+[17:08:47] 
+[17:08:47] Server Plugins
+[17:08:47] --------------
+[17:08:47]  Loading plugin: mysql.dll
+[17:08:47]  >> plugin.mysql: R41-4 successfully loaded.
+[17:08:47]   Loaded.
+[17:08:47]  Loaded 1 plugins.
+
+[17:08:47] 
+[17:08:47] Filterscripts
+[17:08:47] ---------------
+[17:08:47]   Loaded 0 filterscripts.
+
+[17:08:47] 
+
+[MySQL]: Error al establecer conexión con la base de datos.
+
+
+[17:08:47] Number of vehicle models: 0
+[17:08:58] --- Server Shutting Down.
+[17:08:58] plugin.mysql: Unloading plugin...
+[17:08:58] plugin.mysql: Plugin unloaded.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:09:00] filterscripts = ""  (string)
+[17:09:00] 
+[17:09:00] Server Plugins
+[17:09:00] --------------
+[17:09:00]  Loading plugin: mysql.dll
+[17:09:00]  >> plugin.mysql: R41-4 successfully loaded.
+[17:09:00]   Loaded.
+[17:09:00]  Loaded 1 plugins.
+
+[17:09:00] 
+[17:09:00] Filterscripts
+[17:09:00] ---------------
+[17:09:00]   Loaded 0 filterscripts.
+
+[17:09:00] 
+
+[MySQL]: Error al establecer conexión con la base de datos.
+
+
+[17:09:00] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:12:16] filterscripts = ""  (string)
+[17:12:16] 
+[17:12:16] Server Plugins
+[17:12:16] --------------
+[17:12:16]  Loading plugin: mysql.dll
+[17:12:17]  >> plugin.mysql: R41-4 successfully loaded.
+[17:12:17]   Loaded.
+[17:12:17]  Loaded 1 plugins.
+
+[17:12:17] 
+[17:12:17] Filterscripts
+[17:12:17] ---------------
+[17:12:17]   Loaded 0 filterscripts.
+
+[17:12:17] 
+
+[MySQL]: Error al establecer conexión con la base de datos.
+
+
+[17:12:17] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:16:35] filterscripts = ""  (string)
+[17:16:35] 
+[17:16:35] Server Plugins
+[17:16:35] --------------
+[17:16:35]  Loading plugin: mysql.dll
+[17:16:35]  >> plugin.mysql: R41-4 successfully loaded.
+[17:16:35]   Loaded.
+[17:16:35]  Loaded 1 plugins.
+
+[17:16:35] 
+[17:16:35] Filterscripts
+[17:16:35] ---------------
+[17:16:35]   Loaded 0 filterscripts.
+
+[17:16:35] 
+
+[MySQL]: Error al establecer conexión con la base de datos.
+
+
+[17:16:35] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:31:25] filterscripts = ""  (string)
+[17:31:25] 
+[17:31:25] Server Plugins
+[17:31:25] --------------
+[17:31:25]  Loading plugin: mysql.dll
+[17:31:25]  >> plugin.mysql: R41-4 successfully loaded.
+[17:31:25]   Loaded.
+[17:31:25]  Loaded 1 plugins.
+
+[17:31:25] 
+[17:31:25] Filterscripts
+[17:31:25] ---------------
+[17:31:25]   Loaded 0 filterscripts.
+
+[17:31:25] 
+>>>>>>> 827c27787f1c9824676e288274bfcf45fc63faa5
 
 [MySQL]: Conexión con la base de datos MySQL concretada con éxito.
 [MySQL]: ON
 
 
+<<<<<<< HEAD
 [16:32:35] Number of vehicle models: 0
+=======
+[17:31:25] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:55:38] filterscripts = ""  (string)
+[17:55:38] 
+[17:55:38] Server Plugins
+[17:55:38] --------------
+[17:55:38]  Loading plugin: mysql.dll
+[17:55:38]  >> plugin.mysql: R41-4 successfully loaded.
+[17:55:38]   Loaded.
+[17:55:38]  Loaded 1 plugins.
+
+[17:55:38] 
+[17:55:38] Filterscripts
+[17:55:38] ---------------
+[17:55:38]   Loaded 0 filterscripts.
+
+[17:55:38] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[17:55:38] Number of vehicle models: 0
+[17:56:35] [connection] incoming connection: 127.0.0.1:65208 id: 0
+[17:56:35] [join] max has joined the server (0:127.0.0.1)
+[17:58:34] [connection] incoming connection: 192.168.0.30:65130 id: 1
+[17:58:35] [join] maximo has joined the server (1:192.168.0.30)
+[18:00:37] [part] max has left the server (0:1)
+[18:02:40] [connection] incoming connection: 127.0.0.1:62658 id: 0
+[18:02:40] [join] max has joined the server (0:127.0.0.1)
+[18:03:14] [part] max has left the server (0:1)
+[18:04:48] [connection] incoming connection: 127.0.0.1:64715 id: 0
+[18:04:48] [join] max has joined the server (0:127.0.0.1)
+[18:09:05] [part] max has left the server (0:1)
+[18:14:55] [connection] incoming connection: 127.0.0.1:53632 id: 0
+[18:14:55] [join] max has joined the server (0:127.0.0.1)
+[18:18:38] [part] max has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:23:32] filterscripts = ""  (string)
+[22:23:32] 
+[22:23:32] Server Plugins
+[22:23:32] --------------
+[22:23:32]  Loading plugin: mysql.dll
+[22:23:32]  >> plugin.mysql: R41-4 successfully loaded.
+[22:23:32]   Loaded.
+[22:23:32]  Loaded 1 plugins.
+
+[22:23:32] 
+[22:23:32] Filterscripts
+[22:23:32] ---------------
+[22:23:32]   Loaded 0 filterscripts.
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:24:21] filterscripts = ""  (string)
+[22:24:21] 
+[22:24:21] Server Plugins
+[22:24:21] --------------
+[22:24:21]  Loading plugin: mysql.dll
+[22:24:21]  >> plugin.mysql: R41-4 successfully loaded.
+[22:24:21]   Loaded.
+[22:24:21]  Loaded 1 plugins.
+
+[22:24:21] 
+[22:24:21] Filterscripts
+[22:24:21] ---------------
+[22:24:21]   Loaded 0 filterscripts.
+
+[22:24:21] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[22:24:21] Number of vehicle models: 0
+[22:24:57] [connection] incoming connection: 192.168.0.30:54982 id: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:28:28] filterscripts = ""  (string)
+[22:28:28] 
+[22:28:28] Server Plugins
+[22:28:28] --------------
+[22:28:28]  Loading plugin: mysql.dll
+[22:28:28]  >> plugin.mysql: R41-4 successfully loaded.
+[22:28:28]   Loaded.
+[22:28:28]  Loaded 1 plugins.
+
+[22:28:28] 
+[22:28:28] Filterscripts
+[22:28:28] ---------------
+[22:28:28]   Loaded 0 filterscripts.
+
+[22:28:28] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[22:28:28] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:29:32] filterscripts = ""  (string)
+[22:29:32] 
+[22:29:32] Server Plugins
+[22:29:32] --------------
+[22:29:32]  Loading plugin: mysql.dll
+[22:29:32]  >> plugin.mysql: R41-4 successfully loaded.
+[22:29:32]   Loaded.
+[22:29:32]  Loaded 1 plugins.
+
+[22:29:32] 
+[22:29:32] Filterscripts
+[22:29:32] ---------------
+[22:29:32]   Loaded 0 filterscripts.
+
+[22:29:32] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[22:29:32] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:30:10] filterscripts = ""  (string)
+[22:30:10] 
+[22:30:10] Server Plugins
+[22:30:10] --------------
+[22:30:10]  Loading plugin: mysql.dll
+[22:30:10]  >> plugin.mysql: R41-4 successfully loaded.
+[22:30:10]   Loaded.
+[22:30:10]  Loaded 1 plugins.
+
+[22:30:10] 
+[22:30:10] Filterscripts
+[22:30:10] ---------------
+[22:30:10]   Loaded 0 filterscripts.
+
+[22:30:10] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[22:30:10] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:30:49] filterscripts = ""  (string)
+[22:30:49] 
+[22:30:49] Server Plugins
+[22:30:49] --------------
+[22:30:49]  Loading plugin: mysql.dll
+[22:30:49]  >> plugin.mysql: R41-4 successfully loaded.
+[22:30:49]   Loaded.
+[22:30:49]  Loaded 1 plugins.
+
+[22:30:49] 
+[22:30:49] Filterscripts
+[22:30:49] ---------------
+[22:30:49]   Loaded 0 filterscripts.
+
+[22:30:49] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[22:30:49] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:31:24] filterscripts = ""  (string)
+[22:31:24] 
+[22:31:24] Server Plugins
+[22:31:24] --------------
+[22:31:24]  Loading plugin: mysql.dll
+[22:31:24]  >> plugin.mysql: R41-4 successfully loaded.
+[22:31:24]   Loaded.
+[22:31:24]  Loaded 1 plugins.
+
+[22:31:24] 
+[22:31:24] Filterscripts
+[22:31:24] ---------------
+[22:31:24]   Loaded 0 filterscripts.
+
+[22:31:24] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[22:31:24] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:34:25] filterscripts = ""  (string)
+[22:34:25] 
+[22:34:25] Server Plugins
+[22:34:25] --------------
+[22:34:25]  Loading plugin: mysql.dll
+[22:34:25]  >> plugin.mysql: R41-4 successfully loaded.
+[22:34:25]   Loaded.
+[22:34:25]  Loaded 1 plugins.
+
+[22:34:25] 
+[22:34:25] Filterscripts
+[22:34:25] ---------------
+[22:34:25]   Loaded 0 filterscripts.
+
+[22:34:25] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[22:34:25] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:34:59] filterscripts = ""  (string)
+[22:34:59] 
+[22:34:59] Server Plugins
+[22:34:59] --------------
+[22:34:59]  Loading plugin: mysql.dll
+[22:34:59]  >> plugin.mysql: R41-4 successfully loaded.
+[22:34:59]   Loaded.
+[22:34:59]  Loaded 1 plugins.
+
+[22:34:59] 
+[22:34:59] Filterscripts
+[22:34:59] ---------------
+[22:34:59]   Loaded 0 filterscripts.
+
+[22:34:59] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[22:34:59] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:35:12] filterscripts = ""  (string)
+[22:35:12] 
+[22:35:12] Server Plugins
+[22:35:12] --------------
+[22:35:12]  Loading plugin: mysql.dll
+[22:35:12]  >> plugin.mysql: R41-4 successfully loaded.
+[22:35:12]   Loaded.
+[22:35:12]  Loaded 1 plugins.
+
+[22:35:12] 
+[22:35:12] Filterscripts
+[22:35:12] ---------------
+[22:35:12]   Loaded 0 filterscripts.
+
+[22:35:12] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[22:35:12] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:35:59] filterscripts = ""  (string)
+[22:35:59] 
+[22:35:59] Server Plugins
+[22:35:59] --------------
+[22:35:59]  Loading plugin: mysql.dll
+[22:35:59]  >> plugin.mysql: R41-4 successfully loaded.
+[22:35:59]   Loaded.
+[22:35:59]  Loaded 1 plugins.
+
+[22:35:59] 
+[22:35:59] Filterscripts
+[22:35:59] ---------------
+[22:35:59]   Loaded 0 filterscripts.
+
+[22:35:59] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[22:35:59] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:37:01] filterscripts = ""  (string)
+[22:37:01] 
+[22:37:01] Server Plugins
+[22:37:01] --------------
+[22:37:01]  Loading plugin: mysql.dll
+[22:37:01]  >> plugin.mysql: R41-4 successfully loaded.
+[22:37:01]   Loaded.
+[22:37:01]  Loaded 1 plugins.
+
+[22:37:01] 
+[22:37:01] Filterscripts
+[22:37:01] ---------------
+[22:37:01]   Loaded 0 filterscripts.
+
+[22:37:01] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[22:37:01] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:37:53] filterscripts = ""  (string)
+[22:37:53] 
+[22:37:53] Server Plugins
+[22:37:53] --------------
+[22:37:53]  Loading plugin: mysql.dll
+[22:37:53]  >> plugin.mysql: R41-4 successfully loaded.
+[22:37:53]   Loaded.
+[22:37:53]  Loaded 1 plugins.
+
+[22:37:53] 
+[22:37:53] Filterscripts
+[22:37:53] ---------------
+[22:37:53]   Loaded 0 filterscripts.
+
+[22:37:53] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[22:37:53] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:38:04] filterscripts = ""  (string)
+[22:38:04] 
+[22:38:04] Server Plugins
+[22:38:04] --------------
+[22:38:04]  Loading plugin: mysql.dll
+[22:38:04]  >> plugin.mysql: R41-4 successfully loaded.
+[22:38:04]   Loaded.
+[22:38:04]  Loaded 1 plugins.
+
+[22:38:04] 
+[22:38:04] Filterscripts
+[22:38:04] ---------------
+[22:38:04]   Loaded 0 filterscripts.
+
+[22:38:04] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[22:38:04] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:39:05] filterscripts = ""  (string)
+[22:39:05] 
+[22:39:05] Server Plugins
+[22:39:05] --------------
+[22:39:05]  Loading plugin: mysql.dll
+[22:39:05]  >> plugin.mysql: R41-4 successfully loaded.
+[22:39:05]   Loaded.
+[22:39:05]  Loaded 1 plugins.
+
+[22:39:05] 
+[22:39:05] Filterscripts
+[22:39:05] ---------------
+[22:39:05]   Loaded 0 filterscripts.
+
+[22:39:05] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[22:39:05] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:45:21] filterscripts = ""  (string)
+[22:45:21] 
+[22:45:21] Server Plugins
+[22:45:21] --------------
+[22:45:21]  Loading plugin: mysql.dll
+[22:45:21]  >> plugin.mysql: R41-4 successfully loaded.
+[22:45:21]   Loaded.
+[22:45:21]  Loaded 1 plugins.
+
+[22:45:21] 
+[22:45:21] Filterscripts
+[22:45:21] ---------------
+[22:45:21]   Loaded 0 filterscripts.
+
+[22:45:21] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[22:45:21] Number of vehicle models: 0
+[22:45:42] [connection] incoming connection: 192.168.0.30:58763 id: 0
+[22:45:42] [join] maximo has joined the server (0:192.168.0.30)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:49:26] filterscripts = ""  (string)
+[22:49:26] 
+[22:49:26] Server Plugins
+[22:49:26] --------------
+[22:49:26]  Loading plugin: mysql.dll
+[22:49:26]  >> plugin.mysql: R41-4 successfully loaded.
+[22:49:26]   Loaded.
+[22:49:26]  Loaded 1 plugins.
+
+[22:49:26] 
+[22:49:26] Filterscripts
+[22:49:26] ---------------
+[22:49:26]   Loaded 0 filterscripts.
+
+[22:49:26] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[22:49:26] Number of vehicle models: 0
+[22:49:28] [connection] incoming connection: 192.168.0.30:63981 id: 0
+[22:49:28] [join] maximo has joined the server (0:192.168.0.30)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:50:15] filterscripts = ""  (string)
+[22:50:15] 
+[22:50:15] Server Plugins
+[22:50:15] --------------
+[22:50:15]  Loading plugin: mysql.dll
+[22:50:15]  >> plugin.mysql: R41-4 successfully loaded.
+[22:50:15]   Loaded.
+[22:50:15]  Loaded 1 plugins.
+
+[22:50:15] 
+[22:50:15] Filterscripts
+[22:50:15] ---------------
+[22:50:15]   Loaded 0 filterscripts.
+
+[22:50:15] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[22:50:15] Number of vehicle models: 0
+[22:50:16] [connection] incoming connection: 192.168.0.30:63700 id: 0
+[22:50:17] [join] maximo has joined the server (0:192.168.0.30)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:50:47] filterscripts = ""  (string)
+[22:50:47] 
+[22:50:47] Server Plugins
+[22:50:47] --------------
+[22:50:47]  Loading plugin: mysql.dll
+[22:50:47]  >> plugin.mysql: R41-4 successfully loaded.
+[22:50:47]   Loaded.
+[22:50:47]  Loaded 1 plugins.
+
+[22:50:47] 
+[22:50:47] Filterscripts
+[22:50:47] ---------------
+[22:50:47]   Loaded 0 filterscripts.
+
+[22:50:47] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[22:50:47] Number of vehicle models: 0
+[22:50:49] [connection] incoming connection: 192.168.0.30:63701 id: 0
+[22:50:49] [join] maximo has joined the server (0:192.168.0.30)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:50:57] filterscripts = ""  (string)
+[22:50:57] 
+[22:50:57] Server Plugins
+[22:50:57] --------------
+[22:50:57]  Loading plugin: mysql.dll
+[22:50:57]  >> plugin.mysql: R41-4 successfully loaded.
+[22:50:57]   Loaded.
+[22:50:57]  Loaded 1 plugins.
+
+[22:50:57] 
+[22:50:57] Filterscripts
+[22:50:57] ---------------
+[22:50:57]   Loaded 0 filterscripts.
+
+[22:50:57] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[22:50:57] Number of vehicle models: 0
+[22:51:05] [connection] incoming connection: 192.168.0.30:61249 id: 0
+[22:51:05] [join] maximo has joined the server (0:192.168.0.30)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:52:31] filterscripts = ""  (string)
+[22:52:31] 
+[22:52:31] Server Plugins
+[22:52:31] --------------
+[22:52:31]  Loading plugin: mysql.dll
+[22:52:31]  >> plugin.mysql: R41-4 successfully loaded.
+[22:52:31]   Loaded.
+[22:52:31]  Loaded 1 plugins.
+
+[22:52:31] 
+[22:52:31] Filterscripts
+[22:52:31] ---------------
+[22:52:31]   Loaded 0 filterscripts.
+
+[22:52:31] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[22:52:31] Number of vehicle models: 0
+[22:52:32] [connection] incoming connection: 192.168.0.30:59884 id: 0
+[22:52:33] [join] maximo has joined the server (0:192.168.0.30)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:52:43] filterscripts = ""  (string)
+[22:52:43] 
+[22:52:43] Server Plugins
+[22:52:43] --------------
+[22:52:43]  Loading plugin: mysql.dll
+[22:52:43]  >> plugin.mysql: R41-4 successfully loaded.
+[22:52:43]   Loaded.
+[22:52:43]  Loaded 1 plugins.
+
+[22:52:43] 
+[22:52:43] Filterscripts
+[22:52:43] ---------------
+[22:52:43]   Loaded 0 filterscripts.
+
+[22:52:43] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[22:52:43] Number of vehicle models: 0
+[22:52:49] [connection] incoming connection: 192.168.0.30:59885 id: 0
+[22:52:49] [join] maximo has joined the server (0:192.168.0.30)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:54:09] filterscripts = ""  (string)
+[22:54:09] 
+[22:54:09] Server Plugins
+[22:54:09] --------------
+[22:54:09]  Loading plugin: mysql.dll
+[22:54:09]  >> plugin.mysql: R41-4 successfully loaded.
+[22:54:09]   Loaded.
+[22:54:09]  Loaded 1 plugins.
+
+[22:54:09] 
+[22:54:09] Filterscripts
+[22:54:09] ---------------
+[22:54:09]   Loaded 0 filterscripts.
+
+[22:54:09] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[22:54:09] Number of vehicle models: 0
+[22:54:11] [connection] incoming connection: 192.168.0.30:59897 id: 0
+[22:54:11] [join] maximo has joined the server (0:192.168.0.30)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:56:58] filterscripts = ""  (string)
+[22:56:58] 
+[22:56:58] Server Plugins
+[22:56:58] --------------
+[22:56:58]  Loading plugin: mysql.dll
+[22:56:58]  >> plugin.mysql: R41-4 successfully loaded.
+[22:56:58]   Loaded.
+[22:56:58]  Loaded 1 plugins.
+
+[22:56:58] 
+[22:56:58] Filterscripts
+[22:56:58] ---------------
+[22:56:58]   Loaded 0 filterscripts.
+
+[22:56:58] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[22:56:58] Number of vehicle models: 0
+[22:57:00] [connection] incoming connection: 192.168.0.30:59923 id: 0
+[22:57:01] [join] maximo has joined the server (0:192.168.0.30)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:58:01] filterscripts = ""  (string)
+[22:58:01] 
+[22:58:01] Server Plugins
+[22:58:01] --------------
+[22:58:01]  Loading plugin: mysql.dll
+[22:58:01]  >> plugin.mysql: R41-4 successfully loaded.
+[22:58:01]   Loaded.
+[22:58:01]  Loaded 1 plugins.
+
+[22:58:01] 
+[22:58:01] Filterscripts
+[22:58:01] ---------------
+[22:58:01]   Loaded 0 filterscripts.
+
+[22:58:01] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[22:58:01] Number of vehicle models: 0
+[22:58:03] [connection] incoming connection: 192.168.0.30:64983 id: 0
+[22:58:04] [join] maximo has joined the server (0:192.168.0.30)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:59:13] filterscripts = ""  (string)
+[22:59:13] 
+[22:59:13] Server Plugins
+[22:59:13] --------------
+[22:59:13]  Loading plugin: mysql.dll
+[22:59:13]  >> plugin.mysql: R41-4 successfully loaded.
+[22:59:13]   Loaded.
+[22:59:13]  Loaded 1 plugins.
+
+[22:59:13] 
+[22:59:13] Filterscripts
+[22:59:13] ---------------
+[22:59:13]   Loaded 0 filterscripts.
+
+[22:59:13] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[22:59:13] Number of vehicle models: 0
+[22:59:15] [connection] incoming connection: 192.168.0.30:64993 id: 0
+[22:59:15] [join] maximo has joined the server (0:192.168.0.30)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:00:52] filterscripts = ""  (string)
+[23:00:52] 
+[23:00:52] Server Plugins
+[23:00:52] --------------
+[23:00:52]  Loading plugin: mysql.dll
+[23:00:52]  >> plugin.mysql: R41-4 successfully loaded.
+[23:00:52]   Loaded.
+[23:00:52]  Loaded 1 plugins.
+
+[23:00:52] 
+[23:00:52] Filterscripts
+[23:00:52] ---------------
+[23:00:52]   Loaded 0 filterscripts.
+
+[23:00:52] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[23:00:52] Number of vehicle models: 0
+[23:00:53] [connection] incoming connection: 192.168.0.30:65005 id: 0
+[23:00:53] [join] maximo has joined the server (0:192.168.0.30)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:01:20] filterscripts = ""  (string)
+[23:01:20] 
+[23:01:20] Server Plugins
+[23:01:20] --------------
+[23:01:20]  Loading plugin: mysql.dll
+[23:01:20]  >> plugin.mysql: R41-4 successfully loaded.
+[23:01:20]   Loaded.
+[23:01:20]  Loaded 1 plugins.
+
+[23:01:20] 
+[23:01:20] Filterscripts
+[23:01:20] ---------------
+[23:01:20]   Loaded 0 filterscripts.
+
+[23:01:20] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[23:01:20] Number of vehicle models: 0
+[23:01:30] [connection] incoming connection: 192.168.0.30:64498 id: 0
+[23:01:31] [join] maximo has joined the server (0:192.168.0.30)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:02:15] filterscripts = ""  (string)
+[23:02:15] 
+[23:02:15] Server Plugins
+[23:02:15] --------------
+[23:02:15]  Loading plugin: mysql.dll
+[23:02:15]  >> plugin.mysql: R41-4 successfully loaded.
+[23:02:15]   Loaded.
+[23:02:15]  Loaded 1 plugins.
+
+[23:02:15] 
+[23:02:15] Filterscripts
+[23:02:15] ---------------
+[23:02:15]   Loaded 0 filterscripts.
+
+[23:02:15] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[23:02:15] Number of vehicle models: 0
+[23:02:17] [connection] incoming connection: 192.168.0.30:64499 id: 0
+[23:02:17] [join] maximo has joined the server (0:192.168.0.30)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:02:29] filterscripts = ""  (string)
+[23:02:29] 
+[23:02:29] Server Plugins
+[23:02:29] --------------
+[23:02:29]  Loading plugin: mysql.dll
+[23:02:29]  >> plugin.mysql: R41-4 successfully loaded.
+[23:02:29]   Loaded.
+[23:02:29]  Loaded 1 plugins.
+
+[23:02:29] 
+[23:02:29] Filterscripts
+[23:02:29] ---------------
+[23:02:29]   Loaded 0 filterscripts.
+
+[23:02:29] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[23:02:29] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:02:33] filterscripts = ""  (string)
+[23:02:33] 
+[23:02:33] Server Plugins
+[23:02:33] --------------
+[23:02:33]  Loading plugin: mysql.dll
+[23:02:33]  >> plugin.mysql: R41-4 successfully loaded.
+[23:02:33]   Loaded.
+[23:02:33]  Loaded 1 plugins.
+
+[23:02:33] 
+[23:02:33] Filterscripts
+[23:02:33] ---------------
+[23:02:33]   Loaded 0 filterscripts.
+
+[23:02:33] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[23:02:33] Number of vehicle models: 0
+[23:02:36] [connection] incoming connection: 192.168.0.30:64500 id: 0
+[23:02:37] [join] maximo has joined the server (0:192.168.0.30)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:03:57] filterscripts = ""  (string)
+[23:03:57] 
+[23:03:57] Server Plugins
+[23:03:57] --------------
+[23:03:57]  Loading plugin: mysql.dll
+[23:03:57]  >> plugin.mysql: R41-4 successfully loaded.
+[23:03:57]   Loaded.
+[23:03:57]  Loaded 1 plugins.
+
+[23:03:57] 
+[23:03:57] Filterscripts
+[23:03:57] ---------------
+[23:03:57]   Loaded 0 filterscripts.
+
+[23:03:57] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[23:03:57] Number of vehicle models: 0
+[23:03:58] [connection] incoming connection: 192.168.0.30:54888 id: 0
+[23:03:59] [join] maximo has joined the server (0:192.168.0.30)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:04:43] filterscripts = ""  (string)
+[23:04:43] 
+[23:04:43] Server Plugins
+[23:04:43] --------------
+[23:04:43]  Loading plugin: mysql.dll
+[23:04:43]  >> plugin.mysql: R41-4 successfully loaded.
+[23:04:43]   Loaded.
+[23:04:43]  Loaded 1 plugins.
+
+[23:04:43] 
+[23:04:43] Filterscripts
+[23:04:43] ---------------
+[23:04:43]   Loaded 0 filterscripts.
+
+[23:04:43] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[23:04:43] Number of vehicle models: 0
+[23:04:44] [connection] incoming connection: 192.168.0.30:54891 id: 0
+[23:04:44] [join] maximo has joined the server (0:192.168.0.30)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:06:14] filterscripts = ""  (string)
+[23:06:14] 
+[23:06:14] Server Plugins
+[23:06:14] --------------
+[23:06:14]  Loading plugin: mysql.dll
+[23:06:14]  >> plugin.mysql: R41-4 successfully loaded.
+[23:06:14]   Loaded.
+[23:06:14]  Loaded 1 plugins.
+
+[23:06:14] 
+[23:06:14] Filterscripts
+[23:06:14] ---------------
+[23:06:14]   Loaded 0 filterscripts.
+
+[23:06:14] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[23:06:14] Number of vehicle models: 0
+[23:06:15] [connection] incoming connection: 192.168.0.30:54904 id: 0
+[23:06:15] [join] maximo has joined the server (0:192.168.0.30)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:07:05] filterscripts = ""  (string)
+[23:07:05] 
+[23:07:05] Server Plugins
+[23:07:05] --------------
+[23:07:05]  Loading plugin: mysql.dll
+[23:07:05]  >> plugin.mysql: R41-4 successfully loaded.
+[23:07:05]   Loaded.
+[23:07:05]  Loaded 1 plugins.
+
+[23:07:05] 
+[23:07:05] Filterscripts
+[23:07:05] ---------------
+[23:07:05]   Loaded 0 filterscripts.
+
+[23:07:05] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[23:07:05] Number of vehicle models: 0
+[23:07:06] [connection] incoming connection: 192.168.0.30:54908 id: 0
+[23:07:07] [join] maximo has joined the server (0:192.168.0.30)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:08:31] filterscripts = ""  (string)
+[23:08:31] 
+[23:08:31] Server Plugins
+[23:08:31] --------------
+[23:08:31]  Loading plugin: mysql.dll
+[23:08:31]  >> plugin.mysql: R41-4 successfully loaded.
+[23:08:31]   Loaded.
+[23:08:31]  Loaded 1 plugins.
+
+[23:08:31] 
+[23:08:31] Filterscripts
+[23:08:31] ---------------
+[23:08:31]   Loaded 0 filterscripts.
+
+[23:08:31] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[23:08:31] Number of vehicle models: 0
+[23:08:33] [connection] incoming connection: 192.168.0.30:54913 id: 0
+[23:08:33] [join] maximo has joined the server (0:192.168.0.30)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:12:45] filterscripts = ""  (string)
+[23:12:45] 
+[23:12:45] Server Plugins
+[23:12:45] --------------
+[23:12:45]  Loading plugin: mysql.dll
+[23:12:45]  >> plugin.mysql: R41-4 successfully loaded.
+[23:12:45]   Loaded.
+[23:12:45]  Loaded 1 plugins.
+
+[23:12:45] 
+[23:12:45] Filterscripts
+[23:12:45] ---------------
+[23:12:45]   Loaded 0 filterscripts.
+
+[23:12:45] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[23:12:45] Number of vehicle models: 0
+[23:12:47] [connection] incoming connection: 192.168.0.30:56984 id: 0
+[23:12:47] [join] maximo has joined the server (0:192.168.0.30)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:13:24] filterscripts = ""  (string)
+[23:13:24] 
+[23:13:24] Server Plugins
+[23:13:24] --------------
+[23:13:24]  Loading plugin: mysql.dll
+[23:13:24]  >> plugin.mysql: R41-4 successfully loaded.
+[23:13:24]   Loaded.
+[23:13:24]  Loaded 1 plugins.
+
+[23:13:24] 
+[23:13:24] Filterscripts
+[23:13:24] ---------------
+[23:13:24]   Loaded 0 filterscripts.
+
+[23:13:24] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[23:13:24] Number of vehicle models: 0
+[23:13:25] [connection] incoming connection: 192.168.0.30:52965 id: 0
+[23:13:26] [join] maximo has joined the server (0:192.168.0.30)
+[23:14:15] [part] maximo has left the server (0:2)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:16:06] filterscripts = ""  (string)
+[23:16:06] 
+[23:16:06] Server Plugins
+[23:16:06] --------------
+[23:16:06]  Loading plugin: mysql.dll
+[23:16:06]  >> plugin.mysql: R41-4 successfully loaded.
+[23:16:06]   Loaded.
+[23:16:06]  Loaded 1 plugins.
+
+[23:16:06] 
+[23:16:06] Filterscripts
+[23:16:06] ---------------
+[23:16:06]   Loaded 0 filterscripts.
+
+[23:16:06] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[23:16:06] Number of vehicle models: 0
+[23:16:33] [connection] incoming connection: 192.168.0.30:53439 id: 0
+[23:16:33] [join] maximo has joined the server (0:192.168.0.30)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:20:30] filterscripts = ""  (string)
+[23:20:30] 
+[23:20:30] Server Plugins
+[23:20:30] --------------
+[23:20:30]  Loading plugin: mysql.dll
+[23:20:30]  >> plugin.mysql: R41-4 successfully loaded.
+[23:20:30]   Loaded.
+[23:20:30]  Loaded 1 plugins.
+
+[23:20:30] 
+[23:20:30] Filterscripts
+[23:20:30] ---------------
+[23:20:30]   Loaded 0 filterscripts.
+
+[23:20:30] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[23:20:30] Number of vehicle models: 0
+[23:20:31] [connection] incoming connection: 192.168.0.30:63074 id: 0
+[23:20:31] [join] maximo has joined the server (0:192.168.0.30)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:21:03] filterscripts = ""  (string)
+[23:21:03] 
+[23:21:03] Server Plugins
+[23:21:03] --------------
+[23:21:03]  Loading plugin: mysql.dll
+[23:21:03]  >> plugin.mysql: R41-4 successfully loaded.
+[23:21:03]   Loaded.
+[23:21:03]  Loaded 1 plugins.
+
+[23:21:03] 
+[23:21:03] Filterscripts
+[23:21:03] ---------------
+[23:21:03]   Loaded 0 filterscripts.
+
+[23:21:03] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[23:21:03] Number of vehicle models: 0
+[23:21:08] [connection] incoming connection: 192.168.0.30:55360 id: 0
+[23:21:08] [join] maximo has joined the server (0:192.168.0.30)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:22:41] filterscripts = ""  (string)
+[23:22:41] 
+[23:22:41] Server Plugins
+[23:22:41] --------------
+[23:22:41]  Loading plugin: mysql.dll
+[23:22:41]  >> plugin.mysql: R41-4 successfully loaded.
+[23:22:41]   Loaded.
+[23:22:41]  Loaded 1 plugins.
+
+[23:22:41] 
+[23:22:41] Filterscripts
+[23:22:41] ---------------
+[23:22:41]   Loaded 0 filterscripts.
+
+[23:22:41] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[23:22:41] Number of vehicle models: 0
+[23:22:43] [connection] incoming connection: 192.168.0.30:59066 id: 0
+[23:22:43] [join] maximo has joined the server (0:192.168.0.30)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:30:31] filterscripts = ""  (string)
+[23:30:31] 
+[23:30:31] Server Plugins
+[23:30:31] --------------
+[23:30:31]  Loading plugin: mysql.dll
+[23:30:31]  >> plugin.mysql: R41-4 successfully loaded.
+[23:30:31]   Loaded.
+[23:30:31]  Loaded 1 plugins.
+
+[23:30:31] 
+[23:30:31] Filterscripts
+[23:30:31] ---------------
+[23:30:31]   Loaded 0 filterscripts.
+
+[23:30:31] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[23:30:31] Number of vehicle models: 0
+[23:30:33] [connection] incoming connection: 192.168.0.30:61469 id: 0
+[23:30:33] [join] maximo has joined the server (0:192.168.0.30)
+[23:30:44] [part] maximo has left the server (0:2)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:34:00] filterscripts = ""  (string)
+[23:34:00] 
+[23:34:00] Server Plugins
+[23:34:00] --------------
+[23:34:00]  Loading plugin: mysql.dll
+[23:34:00]  >> plugin.mysql: R41-4 successfully loaded.
+[23:34:00]   Loaded.
+[23:34:00]  Loaded 1 plugins.
+
+[23:34:00] 
+[23:34:00] Filterscripts
+[23:34:00] ---------------
+[23:34:00]   Loaded 0 filterscripts.
+
+[23:34:00] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[23:34:00] Number of vehicle models: 0
+[23:34:22] [connection] incoming connection: 127.0.0.1:54847 id: 0
+[23:34:22] [join] max has joined the server (0:127.0.0.1)
+[23:35:31] [part] max has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:56:05] filterscripts = ""  (string)
+[23:56:05] 
+[23:56:05] Server Plugins
+[23:56:05] --------------
+[23:56:05]  Loading plugin: mysql.dll
+[23:56:06]  >> plugin.mysql: R41-4 successfully loaded.
+[23:56:06]   Loaded.
+[23:56:06]  Loaded 1 plugins.
+
+[23:56:06] 
+[23:56:06] Filterscripts
+[23:56:06] ---------------
+[23:56:06]   Loaded 0 filterscripts.
+
+[23:56:06] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[23:56:06] Number of vehicle models: 0
+[23:56:21] [connection] incoming connection: 127.0.0.1:57710 id: 0
+[23:56:22] [join] max has joined the server (0:127.0.0.1)
+[23:56:24] [connection] incoming connection: 192.168.0.30:64018 id: 1
+[23:56:24] [join] maximo has joined the server (1:192.168.0.30)
+[23:57:26] [part] max has left the server (0:1)
+[23:57:30] [part] maximo has left the server (1:2)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:59:23] filterscripts = ""  (string)
+[23:59:23] 
+[23:59:23] Server Plugins
+[23:59:23] --------------
+[23:59:23]  Loading plugin: mysql.dll
+[23:59:23]  >> plugin.mysql: R41-4 successfully loaded.
+[23:59:23]   Loaded.
+[23:59:23]  Loaded 1 plugins.
+
+[23:59:23] 
+[23:59:23] Filterscripts
+[23:59:23] ---------------
+[23:59:23]   Loaded 0 filterscripts.
+
+[23:59:23] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[23:59:23] Number of vehicle models: 0
+[23:59:37] [connection] incoming connection: 127.0.0.1:51816 id: 0
+[23:59:37] [join] max has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[00:02:13] filterscripts = ""  (string)
+[00:02:13] 
+[00:02:13] Server Plugins
+[00:02:13] --------------
+[00:02:13]  Loading plugin: mysql.dll
+[00:02:13]  >> plugin.mysql: R41-4 successfully loaded.
+[00:02:13]   Loaded.
+[00:02:13]  Loaded 1 plugins.
+
+[00:02:13] 
+[00:02:13] Filterscripts
+[00:02:13] ---------------
+[00:02:13]   Loaded 0 filterscripts.
+
+[00:02:13] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[00:02:13] Number of vehicle models: 0
+[00:02:28] [connection] incoming connection: 127.0.0.1:63189 id: 0
+[00:02:29] [join] max has joined the server (0:127.0.0.1)
+[00:03:32] [part] max has left the server (0:2)
+[00:24:06] [connection] incoming connection: 127.0.0.1:49845 id: 0
+[00:24:06] [join] max has joined the server (0:127.0.0.1)
+[00:24:18] [part] max has left the server (0:2)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[00:25:58] filterscripts = ""  (string)
+[00:25:58] 
+[00:25:58] Server Plugins
+[00:25:58] --------------
+[00:25:58]  Loading plugin: mysql.dll
+[00:25:58]  >> plugin.mysql: R41-4 successfully loaded.
+[00:25:58]   Loaded.
+[00:25:58]  Loaded 1 plugins.
+
+[00:25:59] 
+[00:25:59] Filterscripts
+[00:25:59] ---------------
+[00:25:59]   Loaded 0 filterscripts.
+
+[00:25:59] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[00:25:59] Number of vehicle models: 0
+[00:26:14] [connection] incoming connection: 127.0.0.1:62980 id: 0
+[00:26:14] [join] max has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[00:53:51] filterscripts = ""  (string)
+[00:53:51] 
+[00:53:51] Server Plugins
+[00:53:51] --------------
+[00:53:51]  Loading plugin: mysql.dll
+[00:53:51]  >> plugin.mysql: R41-4 successfully loaded.
+[00:53:51]   Loaded.
+[00:53:51]  Loaded 1 plugins.
+
+[00:53:51] 
+[00:53:51] Filterscripts
+[00:53:51] ---------------
+[00:53:51]   Loaded 0 filterscripts.
+
+[00:53:51] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[00:53:51] Number of vehicle models: 0
+[00:54:06] [connection] incoming connection: 127.0.0.1:49885 id: 0
+[00:54:06] [join] max has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[00:58:31] filterscripts = ""  (string)
+[00:58:31] 
+[00:58:31] Server Plugins
+[00:58:31] --------------
+[00:58:31]  Loading plugin: mysql.dll
+[00:58:31]  >> plugin.mysql: R41-4 successfully loaded.
+[00:58:31]   Loaded.
+[00:58:31]  Loaded 1 plugins.
+
+[00:58:31] 
+[00:58:31] Filterscripts
+[00:58:31] ---------------
+[00:58:31]   Loaded 0 filterscripts.
+
+[00:58:31] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[00:58:31] Number of vehicle models: 0
+[00:58:33] [connection] incoming connection: 127.0.0.1:49185 id: 0
+[00:58:33] [join] max has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:00:18] filterscripts = ""  (string)
+[01:00:18] 
+[01:00:18] Server Plugins
+[01:00:18] --------------
+[01:00:18]  Loading plugin: mysql.dll
+[01:00:18]  >> plugin.mysql: R41-4 successfully loaded.
+[01:00:18]   Loaded.
+[01:00:18]  Loaded 1 plugins.
+
+[01:00:19] 
+[01:00:19] Filterscripts
+[01:00:19] ---------------
+[01:00:19]   Loaded 0 filterscripts.
+
+[01:00:19] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[01:00:19] Number of vehicle models: 0
+[01:00:21] [connection] incoming connection: 127.0.0.1:62719 id: 0
+[01:00:22] [join] max has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:05:43] filterscripts = ""  (string)
+[01:05:43] 
+[01:05:43] Server Plugins
+[01:05:43] --------------
+[01:05:43]  Loading plugin: mysql.dll
+[01:05:43]  >> plugin.mysql: R41-4 successfully loaded.
+[01:05:43]   Loaded.
+[01:05:43]  Loaded 1 plugins.
+
+[01:05:43] 
+[01:05:43] Filterscripts
+[01:05:43] ---------------
+[01:05:43]   Loaded 0 filterscripts.
+
+[01:05:43] {
+[01:05:43] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[01:05:43] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:06:01] filterscripts = ""  (string)
+[01:06:01] 
+[01:06:01] Server Plugins
+[01:06:01] --------------
+[01:06:01]  Loading plugin: mysql.dll
+[01:06:01]  >> plugin.mysql: R41-4 successfully loaded.
+[01:06:01]   Loaded.
+[01:06:01]  Loaded 1 plugins.
+
+[01:06:01] 
+[01:06:01] Filterscripts
+[01:06:01] ---------------
+[01:06:01]   Loaded 0 filterscripts.
+
+[01:06:01] D
+[01:06:01] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[01:06:01] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:06:47] filterscripts = ""  (string)
+[01:06:47] 
+[01:06:47] Server Plugins
+[01:06:47] --------------
+[01:06:47]  Loading plugin: mysql.dll
+[01:06:47]  >> plugin.mysql: R41-4 successfully loaded.
+[01:06:47]   Loaded.
+[01:06:47]  Loaded 1 plugins.
+
+[01:06:47] 
+[01:06:47] Filterscripts
+[01:06:47] ---------------
+[01:06:47]   Loaded 0 filterscripts.
+
+[01:06:47] 12356
+[01:06:47] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[01:06:47] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:06:53] filterscripts = ""  (string)
+[01:06:53] 
+[01:06:53] Server Plugins
+[01:06:53] --------------
+[01:06:53]  Loading plugin: mysql.dll
+[01:06:53]  >> plugin.mysql: R41-4 successfully loaded.
+[01:06:53]   Loaded.
+[01:06:53]  Loaded 1 plugins.
+
+[01:06:53] 
+[01:06:53] Filterscripts
+[01:06:53] ---------------
+[01:06:53]   Loaded 0 filterscripts.
+
+[01:06:53] 12356
+[01:06:53] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[01:06:53] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:07:03] filterscripts = ""  (string)
+[01:07:03] 
+[01:07:03] Server Plugins
+[01:07:03] --------------
+[01:07:03]  Loading plugin: mysql.dll
+[01:07:03]  >> plugin.mysql: R41-4 successfully loaded.
+[01:07:03]   Loaded.
+[01:07:03]  Loaded 1 plugins.
+
+[01:07:03] 
+[01:07:03] Filterscripts
+[01:07:03] ---------------
+[01:07:03]   Loaded 0 filterscripts.
+
+[01:07:03] 0
+[01:07:03] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[01:07:03] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:07:11] filterscripts = ""  (string)
+[01:07:11] 
+[01:07:11] Server Plugins
+[01:07:11] --------------
+[01:07:11]  Loading plugin: mysql.dll
+[01:07:11]  >> plugin.mysql: R41-4 successfully loaded.
+[01:07:11]   Loaded.
+[01:07:11]  Loaded 1 plugins.
+
+[01:07:11] 
+[01:07:11] Filterscripts
+[01:07:11] ---------------
+[01:07:11]   Loaded 0 filterscripts.
+
+[01:07:11] 0
+[01:07:11] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[01:07:11] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:07:41] filterscripts = ""  (string)
+[01:07:41] 
+[01:07:41] Server Plugins
+[01:07:41] --------------
+[01:07:41]  Loading plugin: mysql.dll
+[01:07:41]  >> plugin.mysql: R41-4 successfully loaded.
+[01:07:41]   Loaded.
+[01:07:41]  Loaded 1 plugins.
+
+[01:07:41] 
+[01:07:41] Filterscripts
+[01:07:41] ---------------
+[01:07:41]   Loaded 0 filterscripts.
+
+[01:07:41] 1
+[01:07:41] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[01:07:41] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:16:44] filterscripts = ""  (string)
+[01:16:44] 
+[01:16:44] Server Plugins
+[01:16:44] --------------
+[01:16:44]  Loading plugin: mysql.dll
+[01:16:44]  >> plugin.mysql: R41-4 successfully loaded.
+[01:16:44]   Loaded.
+[01:16:44]  Loaded 1 plugins.
+
+[01:16:44] 
+[01:16:44] Filterscripts
+[01:16:44] ---------------
+[01:16:44]   Loaded 0 filterscripts.
+
+[01:16:44] 1
+[01:16:44] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[01:16:44] Number of vehicle models: 0
+[01:16:46] [connection] incoming connection: 127.0.0.1:58241 id: 0
+[01:16:47] [join] max has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:20:40] filterscripts = ""  (string)
+[01:20:40] 
+[01:20:40] Server Plugins
+[01:20:40] --------------
+[01:20:40]  Loading plugin: mysql.dll
+[01:20:40]  >> plugin.mysql: R41-4 successfully loaded.
+[01:20:40]   Loaded.
+[01:20:40]  Loaded 1 plugins.
+
+[01:20:40] 
+[01:20:40] Filterscripts
+[01:20:40] ---------------
+[01:20:40]   Loaded 0 filterscripts.
+
+[01:20:40] 1
+[01:20:40] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[01:20:40] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:20:55] filterscripts = ""  (string)
+[01:20:55] 
+[01:20:55] Server Plugins
+[01:20:55] --------------
+[01:20:55]  Loading plugin: mysql.dll
+[01:20:55]  >> plugin.mysql: R41-4 successfully loaded.
+[01:20:55]   Loaded.
+[01:20:55]  Loaded 1 plugins.
+
+[01:20:55] 
+[01:20:55] Filterscripts
+[01:20:55] ---------------
+[01:20:55]   Loaded 0 filterscripts.
+
+[01:20:55] 1
+[01:20:55] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[01:20:55] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:21:00] filterscripts = ""  (string)
+[01:21:00] 
+[01:21:00] Server Plugins
+[01:21:00] --------------
+[01:21:00]  Loading plugin: mysql.dll
+[01:21:00]  >> plugin.mysql: R41-4 successfully loaded.
+[01:21:00]   Loaded.
+[01:21:00]  Loaded 1 plugins.
+
+[01:21:00] 
+[01:21:00] Filterscripts
+[01:21:00] ---------------
+[01:21:00]   Loaded 0 filterscripts.
+
+[01:21:00] 1
+[01:21:00] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[01:21:00] Number of vehicle models: 0
+[01:21:16] [connection] incoming connection: 127.0.0.1:53113 id: 0
+[01:21:16] [join] max has joined the server (0:127.0.0.1)
+[01:21:29] [connection] incoming connection: 192.168.0.30:60504 id: 1
+[01:21:30] [join] maximo has joined the server (1:192.168.0.30)
+[01:22:00] [part] maximo has left the server (1:2)
+[01:22:08] [part] max has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:38:58] filterscripts = ""  (string)
+[01:38:58] 
+[01:38:58] Server Plugins
+[01:38:58] --------------
+[01:38:58]  Loading plugin: mysql.dll
+[01:38:58]  >> plugin.mysql: R41-4 successfully loaded.
+[01:38:58]   Loaded.
+[01:38:58]  Loaded 1 plugins.
+
+[01:38:58] 
+[01:38:58] Filterscripts
+[01:38:58] ---------------
+[01:38:58]   Loaded 0 filterscripts.
+
+[01:38:58] 1
+[01:38:58] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[01:38:58] Number of vehicle models: 0
+[01:39:10] [connection] incoming connection: 127.0.0.1:64818 id: 0
+[01:39:10] [join] max has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:42:45] filterscripts = ""  (string)
+[01:42:45] 
+[01:42:45] Server Plugins
+[01:42:45] --------------
+[01:42:45]  Loading plugin: mysql.dll
+[01:42:45]  >> plugin.mysql: R41-4 successfully loaded.
+[01:42:45]   Loaded.
+[01:42:45]  Loaded 1 plugins.
+
+[01:42:45] 
+[01:42:45] Filterscripts
+[01:42:45] ---------------
+[01:42:45]   Loaded 0 filterscripts.
+
+[01:42:45] 1
+[01:42:45] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[01:42:45] Number of vehicle models: 0
+[01:43:04] [connection] incoming connection: 127.0.0.1:59655 id: 0
+[01:43:04] [join] max has joined the server (0:127.0.0.1)
+[01:43:46] [part] max has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:48:49] filterscripts = ""  (string)
+[01:48:49] 
+[01:48:49] Server Plugins
+[01:48:49] --------------
+[01:48:49]  Loading plugin: mysql.dll
+[01:48:49]  >> plugin.mysql: R41-4 successfully loaded.
+[01:48:49]   Loaded.
+[01:48:49]  Loaded 1 plugins.
+
+[01:48:49] 
+[01:48:49] Filterscripts
+[01:48:49] ---------------
+[01:48:49]   Loaded 0 filterscripts.
+
+[01:48:49] Script[gamemodes/sv.amx]: Run time error 19: "File or function is not found"
+[01:48:49] Number of vehicle models: 0
+[01:48:59] [connection] incoming connection: 127.0.0.1:58243 id: 0
+[01:49:00] [join] max has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:49:58] filterscripts = ""  (string)
+[01:49:58] 
+[01:49:58] Server Plugins
+[01:49:58] --------------
+[01:49:58]  Loading plugin: mysql.dll
+[01:49:59]  >> plugin.mysql: R41-4 successfully loaded.
+[01:49:59]   Loaded.
+[01:49:59]  Loaded 1 plugins.
+
+[01:49:59] 
+[01:49:59] Filterscripts
+[01:49:59] ---------------
+[01:49:59]   Loaded 0 filterscripts.
+
+[01:49:59] Script[gamemodes/sv.amx]: Run time error 19: "File or function is not found"
+[01:49:59] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:50:35] filterscripts = ""  (string)
+[01:50:35] 
+[01:50:35] Server Plugins
+[01:50:35] --------------
+[01:50:35]  Loading plugin: mysql.dll
+[01:50:35]  >> plugin.mysql: R41-4 successfully loaded.
+[01:50:35]   Loaded.
+[01:50:35]  Loaded 1 plugins.
+
+[01:50:35] 
+[01:50:35] Filterscripts
+[01:50:35] ---------------
+[01:50:35]   Loaded 0 filterscripts.
+
+[01:50:35] Script[gamemodes/sv.amx]: Run time error 19: "File or function is not found"
+[01:50:35] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:50:42] filterscripts = ""  (string)
+[01:50:42] 
+[01:50:42] Server Plugins
+[01:50:42] --------------
+[01:50:42]  Loading plugin: mysql.dll
+[01:50:42]  >> plugin.mysql: R41-4 successfully loaded.
+[01:50:42]   Loaded.
+[01:50:42]  Loaded 1 plugins.
+
+[01:50:42] 
+[01:50:42] Filterscripts
+[01:50:42] ---------------
+[01:50:42]   Loaded 0 filterscripts.
+
+[01:50:42] Script[gamemodes/sv.amx]: Run time error 19: "File or function is not found"
+[01:50:42] Number of vehicle models: 0
+[01:50:44] [connection] incoming connection: 127.0.0.1:56355 id: 0
+[01:50:44] [join] max has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:51:37] filterscripts = ""  (string)
+[01:51:37] 
+[01:51:37] Server Plugins
+[01:51:37] --------------
+[01:51:37]  Loading plugin: mysql.dll
+[01:51:37]  >> plugin.mysql: R41-4 successfully loaded.
+[01:51:37]   Loaded.
+[01:51:37]  Loaded 1 plugins.
+
+[01:51:37] 
+[01:51:37] Filterscripts
+[01:51:37] ---------------
+[01:51:37]   Loaded 0 filterscripts.
+
+[01:51:37] Script[gamemodes/sv.amx]: Run time error 19: "File or function is not found"
+[01:51:37] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:51:45] filterscripts = ""  (string)
+[01:51:45] 
+[01:51:45] Server Plugins
+[01:51:45] --------------
+[01:51:45]  Loading plugin: mysql.dll
+[01:51:45]  >> plugin.mysql: R41-4 successfully loaded.
+[01:51:45]   Loaded.
+[01:51:45]  Loaded 1 plugins.
+
+[01:51:45] 
+[01:51:45] Filterscripts
+[01:51:45] ---------------
+[01:51:45]   Loaded 0 filterscripts.
+
+[01:51:45] Script[gamemodes/sv.amx]: Run time error 19: "File or function is not found"
+[01:51:45] Number of vehicle models: 0
+[01:51:57] [connection] incoming connection: 127.0.0.1:50317 id: 0
+[01:51:57] [join] max has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:53:23] filterscripts = ""  (string)
+[01:53:23] 
+[01:53:23] Server Plugins
+[01:53:23] --------------
+[01:53:23]  Loading plugin: mysql.dll
+[01:53:23]  >> plugin.mysql: R41-4 successfully loaded.
+[01:53:23]   Loaded.
+[01:53:23]  Loaded 1 plugins.
+
+[01:53:23] 
+[01:53:23] Filterscripts
+[01:53:23] ---------------
+[01:53:23]   Loaded 0 filterscripts.
+
+[01:53:23] Script[gamemodes/sv.amx]: Run time error 19: "File or function is not found"
+[01:53:23] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:53:31] filterscripts = ""  (string)
+[01:53:31] 
+[01:53:31] Server Plugins
+[01:53:31] --------------
+[01:53:31]  Loading plugin: mysql.dll
+[01:53:31]  >> plugin.mysql: R41-4 successfully loaded.
+[01:53:31]   Loaded.
+[01:53:31]  Loaded 1 plugins.
+
+[01:53:31] 
+[01:53:31] Filterscripts
+[01:53:31] ---------------
+[01:53:31]   Loaded 0 filterscripts.
+
+[01:53:31] Script[gamemodes/sv.amx]: Run time error 19: "File or function is not found"
+[01:53:31] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:53:48] filterscripts = ""  (string)
+[01:53:48] 
+[01:53:48] Server Plugins
+[01:53:48] --------------
+[01:53:48]  Loading plugin: mysql.dll
+[01:53:48]  >> plugin.mysql: R41-4 successfully loaded.
+[01:53:48]   Loaded.
+[01:53:48]  Loaded 1 plugins.
+
+[01:53:48] 
+[01:53:48] Filterscripts
+[01:53:48] ---------------
+[01:53:48]   Loaded 0 filterscripts.
+
+[01:53:48] Script[gamemodes/sv.amx]: Run time error 19: "File or function is not found"
+[01:53:48] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:54:02] filterscripts = ""  (string)
+[01:54:02] 
+[01:54:02] Server Plugins
+[01:54:02] --------------
+[01:54:02]  Loading plugin: mysql.dll
+[01:54:02]  >> plugin.mysql: R41-4 successfully loaded.
+[01:54:02]   Loaded.
+[01:54:02]  Loaded 1 plugins.
+
+[01:54:02] 
+[01:54:02] Filterscripts
+[01:54:02] ---------------
+[01:54:02]   Loaded 0 filterscripts.
+
+[01:54:02] Script[gamemodes/sv.amx]: Run time error 19: "File or function is not found"
+[01:54:02] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:54:24] filterscripts = ""  (string)
+[01:54:24] 
+[01:54:24] Server Plugins
+[01:54:24] --------------
+[01:54:24]  Loading plugin: mysql.dll
+[01:54:24]  >> plugin.mysql: R41-4 successfully loaded.
+[01:54:24]   Loaded.
+[01:54:24]  Loaded 1 plugins.
+
+[01:54:24] 
+[01:54:24] Filterscripts
+[01:54:24] ---------------
+[01:54:24]   Loaded 0 filterscripts.
+
+[01:54:24] Script[gamemodes/sv.amx]: Run time error 19: "File or function is not found"
+[01:54:24] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:54:41] filterscripts = ""  (string)
+[01:54:41] 
+[01:54:41] Server Plugins
+[01:54:41] --------------
+[01:54:41]  Loading plugin: mysql.dll
+[01:54:41]  >> plugin.mysql: R41-4 successfully loaded.
+[01:54:41]   Loaded.
+[01:54:41]  Loaded 1 plugins.
+
+[01:54:41] 
+[01:54:41] Filterscripts
+[01:54:41] ---------------
+[01:54:41]   Loaded 0 filterscripts.
+
+[01:54:41] Script[gamemodes/sv.amx]: Run time error 19: "File or function is not found"
+[01:54:41] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:54:47] filterscripts = ""  (string)
+[01:54:47] 
+[01:54:47] Server Plugins
+[01:54:47] --------------
+[01:54:47]  Loading plugin: mysql.dll
+[01:54:47]  >> plugin.mysql: R41-4 successfully loaded.
+[01:54:47]   Loaded.
+[01:54:47]  Loaded 1 plugins.
+
+[01:54:48] 
+[01:54:48] Filterscripts
+[01:54:48] ---------------
+[01:54:48]   Loaded 0 filterscripts.
+
+[01:54:48] Script[gamemodes/sv.amx]: Run time error 17: "Invalid/unsupported P-code file format"
+[01:54:48] Failed to load 'gamemodes/sv.amx' script.
+[01:54:48] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:54:58] filterscripts = ""  (string)
+[01:54:58] 
+[01:54:58] Server Plugins
+[01:54:58] --------------
+[01:54:58]  Loading plugin: mysql.dll
+[01:54:58]  >> plugin.mysql: R41-4 successfully loaded.
+[01:54:58]   Loaded.
+[01:54:58]  Loaded 1 plugins.
+
+[01:54:58] 
+[01:54:58] Filterscripts
+[01:54:58] ---------------
+[01:54:58]   Loaded 0 filterscripts.
+
+[01:54:58] Script[gamemodes/sv.amx]: Run time error 19: "File or function is not found"
+[01:54:58] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:55:40] filterscripts = ""  (string)
+[01:55:40] 
+[01:55:40] Server Plugins
+[01:55:40] --------------
+[01:55:40]  Loading plugin: mysql.dll
+[01:55:40]  >> plugin.mysql: R41-4 successfully loaded.
+[01:55:40]   Loaded.
+[01:55:40]  Loaded 1 plugins.
+
+[01:55:40] 
+[01:55:40] Filterscripts
+[01:55:40] ---------------
+[01:55:40]   Loaded 0 filterscripts.
+
+[01:55:40] Script[gamemodes/sv.amx]: Run time error 19: "File or function is not found"
+[01:55:40] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:55:59] filterscripts = ""  (string)
+[01:55:59] 
+[01:55:59] Server Plugins
+[01:55:59] --------------
+[01:55:59]  Loading plugin: mysql.dll
+[01:55:59]  >> plugin.mysql: R41-4 successfully loaded.
+[01:55:59]   Loaded.
+[01:55:59]  Loaded 1 plugins.
+
+[01:55:59] 
+[01:55:59] Filterscripts
+[01:55:59] ---------------
+[01:55:59]   Loaded 0 filterscripts.
+
+[01:55:59] Script[gamemodes/sv.amx]: Run time error 19: "File or function is not found"
+[01:55:59] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:56:12] filterscripts = ""  (string)
+[01:56:12] 
+[01:56:12] Server Plugins
+[01:56:12] --------------
+[01:56:12]  Loading plugin: mysql.dll
+[01:56:12]  >> plugin.mysql: R41-4 successfully loaded.
+[01:56:12]   Loaded.
+[01:56:12]  Loaded 1 plugins.
+
+[01:56:12] 
+[01:56:12] Filterscripts
+[01:56:12] ---------------
+[01:56:12]   Loaded 0 filterscripts.
+
+[01:56:12] Script[gamemodes/sv.amx]: Run time error 19: "File or function is not found"
+[01:56:12] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:56:39] filterscripts = ""  (string)
+[01:56:39] 
+[01:56:39] Server Plugins
+[01:56:39] --------------
+[01:56:39]  Loading plugin: mysql.dll
+[01:56:39]  >> plugin.mysql: R41-4 successfully loaded.
+[01:56:39]   Loaded.
+[01:56:39]  Loaded 1 plugins.
+
+[01:56:39] 
+[01:56:39] Filterscripts
+[01:56:39] ---------------
+[01:56:39]   Loaded 0 filterscripts.
+
+[01:56:39] Script[gamemodes/sv.amx]: Run time error 19: "File or function is not found"
+[01:56:39] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:58:13] filterscripts = ""  (string)
+[01:58:13] 
+[01:58:13] Server Plugins
+[01:58:13] --------------
+[01:58:13]  Loading plugin: sscanf.dll
+[01:58:13]   Failed.
+[01:58:13]  Loading plugin: streamer.dll
+[01:58:13]   Failed.
+[01:58:13]  Loading plugin: mysql.dll
+[01:58:13]  >> plugin.mysql: R41-4 successfully loaded.
+[01:58:13]   Loaded.
+[01:58:13]  Loaded 1 plugins.
+
+[01:58:13] 
+[01:58:13] Filterscripts
+[01:58:13] ---------------
+[01:58:13]   Loaded 0 filterscripts.
+
+[01:58:13] Script[gamemodes/sv.amx]: Run time error 19: "File or function is not found"
+[01:58:13] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:59:56] filterscripts = ""  (string)
+[01:59:56] 
+[01:59:56] Server Plugins
+[01:59:56] --------------
+[01:59:56]  Loading plugin: sscanf.dll
+[01:59:56] 
+[01:59:56]  ===============================
+[01:59:56] 
+[01:59:56]       sscanf plugin loaded.     
+[01:59:56] 
+[01:59:56]          Version: 2.13.8
+[01:59:56] 
+[01:59:56]    (c) 2022 Alex "Y_Less" Cole  
+[01:59:56] 
+[01:59:56]  ===============================
+[01:59:56] 
+[01:59:56]   Loaded.
+[01:59:56]  Loading plugin: streamer.dll
+[01:59:56] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[01:59:56]   Loaded.
+[01:59:56]  Loading plugin: mysql.dll
+[01:59:56]  >> plugin.mysql: R41-4 successfully loaded.
+[01:59:56]   Loaded.
+[01:59:56]  Loaded 3 plugins.
+
+[01:59:56] 
+[01:59:56] Filterscripts
+[01:59:56] ---------------
+[01:59:56]   Loaded 0 filterscripts.
+
+[01:59:56] 1
+[01:59:56] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[01:59:56] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[02:00:11] filterscripts = ""  (string)
+[02:00:11] 
+[02:00:11] Server Plugins
+[02:00:11] --------------
+[02:00:11]  Loading plugin: sscanf.dll
+[02:00:11] 
+[02:00:11]  ===============================
+[02:00:11] 
+[02:00:11]       sscanf plugin loaded.     
+[02:00:11] 
+[02:00:11]          Version: 2.13.8
+[02:00:11] 
+[02:00:11]    (c) 2022 Alex "Y_Less" Cole  
+[02:00:11] 
+[02:00:11]  ===============================
+[02:00:11] 
+[02:00:11]   Loaded.
+[02:00:11]  Loading plugin: streamer.dll
+[02:00:11] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[02:00:11]   Loaded.
+[02:00:11]  Loading plugin: mysql.dll
+[02:00:11]  >> plugin.mysql: R41-4 successfully loaded.
+[02:00:11]   Loaded.
+[02:00:11]  Loaded 3 plugins.
+
+[02:00:11] 
+[02:00:11] Filterscripts
+[02:00:11] ---------------
+[02:00:11]   Loaded 0 filterscripts.
+
+[02:00:11] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[02:00:11] Number of vehicle models: 0
+[02:00:31] [connection] incoming connection: 127.0.0.1:55885 id: 0
+[02:00:31] [join] max has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[02:05:42] filterscripts = ""  (string)
+[02:05:42] 
+[02:05:42] Server Plugins
+[02:05:42] --------------
+[02:05:42]  Loading plugin: sscanf.dll
+[02:05:42] 
+[02:05:42]  ===============================
+[02:05:42] 
+[02:05:42]       sscanf plugin loaded.     
+[02:05:42] 
+[02:05:42]          Version: 2.13.8
+[02:05:42] 
+[02:05:42]    (c) 2022 Alex "Y_Less" Cole  
+[02:05:42] 
+[02:05:42]  ===============================
+[02:05:42] 
+[02:05:42]   Loaded.
+[02:05:42]  Loading plugin: streamer.dll
+[02:05:42] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[02:05:42]   Loaded.
+[02:05:42]  Loading plugin: mysql.dll
+[02:05:43]  >> plugin.mysql: R41-4 successfully loaded.
+[02:05:43]   Loaded.
+[02:05:43]  Loaded 3 plugins.
+
+[02:05:43] 
+[02:05:43] Filterscripts
+[02:05:43] ---------------
+[02:05:43]   Loaded 0 filterscripts.
+
+[02:05:43] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[02:05:43] Number of vehicle models: 0
+[02:05:45] [connection] incoming connection: 127.0.0.1:58632 id: 0
+[02:05:45] [join] max has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[02:09:31] filterscripts = ""  (string)
+[02:09:31] 
+[02:09:31] Server Plugins
+[02:09:31] --------------
+[02:09:31]  Loading plugin: sscanf.dll
+[02:09:31] 
+[02:09:31]  ===============================
+[02:09:31] 
+[02:09:31]       sscanf plugin loaded.     
+[02:09:31] 
+[02:09:31]          Version: 2.13.8
+[02:09:31] 
+[02:09:31]    (c) 2022 Alex "Y_Less" Cole  
+[02:09:31] 
+[02:09:31]  ===============================
+[02:09:31] 
+[02:09:31]   Loaded.
+[02:09:31]  Loading plugin: streamer.dll
+[02:09:31] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[02:09:31]   Loaded.
+[02:09:31]  Loading plugin: mysql.dll
+[02:09:31]  >> plugin.mysql: R41-4 successfully loaded.
+[02:09:31]   Loaded.
+[02:09:31]  Loaded 3 plugins.
+
+[02:09:31] 
+[02:09:31] Filterscripts
+[02:09:31] ---------------
+[02:09:31]   Loaded 0 filterscripts.
+
+[02:09:31] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[02:09:31] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[02:09:35] filterscripts = ""  (string)
+[02:09:35] 
+[02:09:35] Server Plugins
+[02:09:35] --------------
+[02:09:35]  Loading plugin: sscanf.dll
+[02:09:35] 
+[02:09:35]  ===============================
+[02:09:35] 
+[02:09:35]       sscanf plugin loaded.     
+[02:09:35] 
+[02:09:35]          Version: 2.13.8
+[02:09:35] 
+[02:09:35]    (c) 2022 Alex "Y_Less" Cole  
+[02:09:35] 
+[02:09:35]  ===============================
+[02:09:35] 
+[02:09:35]   Loaded.
+[02:09:35]  Loading plugin: streamer.dll
+[02:09:35] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[02:09:35]   Loaded.
+[02:09:35]  Loading plugin: mysql.dll
+[02:09:35]  >> plugin.mysql: R41-4 successfully loaded.
+[02:09:35]   Loaded.
+[02:09:35]  Loaded 3 plugins.
+
+[02:09:35] 
+[02:09:35] Filterscripts
+[02:09:35] ---------------
+[02:09:35]   Loaded 0 filterscripts.
+
+[02:09:35] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[02:09:35] Number of vehicle models: 0
+[02:09:47] [connection] incoming connection: 127.0.0.1:62083 id: 0
+[02:09:47] [join] max has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[02:12:26] filterscripts = ""  (string)
+[02:12:26] 
+[02:12:26] Server Plugins
+[02:12:26] --------------
+[02:12:26]  Loading plugin: sscanf.dll
+[02:12:26] 
+[02:12:26]  ===============================
+[02:12:26] 
+[02:12:26]       sscanf plugin loaded.     
+[02:12:26] 
+[02:12:26]          Version: 2.13.8
+[02:12:26] 
+[02:12:26]    (c) 2022 Alex "Y_Less" Cole  
+[02:12:26] 
+[02:12:26]  ===============================
+[02:12:26] 
+[02:12:26]   Loaded.
+[02:12:26]  Loading plugin: streamer.dll
+[02:12:26] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[02:12:26]   Loaded.
+[02:12:26]  Loading plugin: mysql.dll
+[02:12:26]  >> plugin.mysql: R41-4 successfully loaded.
+[02:12:26]   Loaded.
+[02:12:26]  Loaded 3 plugins.
+
+[02:12:26] 
+[02:12:26] Filterscripts
+[02:12:26] ---------------
+[02:12:26]   Loaded 0 filterscripts.
+
+[02:12:26] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[02:12:26] Number of vehicle models: 0
+[02:12:28] [connection] incoming connection: 127.0.0.1:59999 id: 0
+[02:12:28] [join] max has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[02:14:25] filterscripts = ""  (string)
+[02:14:25] 
+[02:14:25] Server Plugins
+[02:14:25] --------------
+[02:14:25]  Loading plugin: sscanf.dll
+[02:14:25] 
+[02:14:25]  ===============================
+[02:14:25] 
+[02:14:25]       sscanf plugin loaded.     
+[02:14:25] 
+[02:14:25]          Version: 2.13.8
+[02:14:25] 
+[02:14:25]    (c) 2022 Alex "Y_Less" Cole  
+[02:14:25] 
+[02:14:25]  ===============================
+[02:14:25] 
+[02:14:25]   Loaded.
+[02:14:25]  Loading plugin: streamer.dll
+[02:14:25] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[02:14:25]   Loaded.
+[02:14:25]  Loading plugin: mysql.dll
+[02:14:25]  >> plugin.mysql: R41-4 successfully loaded.
+[02:14:25]   Loaded.
+[02:14:25]  Loaded 3 plugins.
+
+[02:14:25] 
+[02:14:25] Filterscripts
+[02:14:25] ---------------
+[02:14:25]   Loaded 0 filterscripts.
+
+[02:14:25] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[02:14:25] Number of vehicle models: 0
+[02:14:34] [connection] incoming connection: 127.0.0.1:54887 id: 0
+[02:14:34] [join] max has joined the server (0:127.0.0.1)
+[02:15:02] [connection] incoming connection: 192.168.0.30:65523 id: 1
+[02:15:02] [join] maximo has joined the server (1:192.168.0.30)
+[02:16:58] [part] maximo has left the server (1:1)
+[02:17:03] [part] max has left the server (0:1)
+Console input: exit
+[02:17:08] --- Server Shutting Down.
+[02:17:08] 
+[02:17:08]  ===============================
+[02:17:08] 
+[02:17:08]      sscanf plugin unloaded.    
+[02:17:08] 
+[02:17:08]  ===============================
+[02:17:08] 
+[02:17:08] 
+
+*** Streamer Plugin v2.9.6 by Incognito unloaded ***
+
+[02:17:08] plugin.mysql: Unloading plugin...
+[02:17:08] plugin.mysql: Plugin unloaded.
+>>>>>>> 827c27787f1c9824676e288274bfcf45fc63faa5
