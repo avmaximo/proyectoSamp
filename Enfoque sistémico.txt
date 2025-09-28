@@ -1,162 +1,182 @@
-Esquema Sistémico Básico – Servidor RP + RPG
-1️⃣ Módulo de Jugador
-
-Objetivo: Controlar todos los datos y estados del jugador.
-
-Datos principales (uData / pData):
-
-Nombre del personaje
-
-Contraseña / cuenta
-
-Nivel de personaje (RPG)
-
-Experiencia / XP (RPG)
-
-Habilidades (conducción, puntería, medicina, fuerza)
-
-Dinero / Inventario
-
-Trabajo actual (RP)
-
-Estado de salud y armadura
-
-Posición en el mapa y vehículo actual
-
-Funciones:
-
-Login / Logout
-
-Guardar y cargar datos en MySQL
-
-Actualizar experiencia y nivel
-
-Cambiar habilidades y trabajo
-
-2️⃣ Módulo de Economía y Progresión (RPG)
-
-Objetivo: Gestionar dinero, niveles, habilidades y objetos.
-
-Submódulos:
-
-Dinero: salarios, ventas, robos, recompensas de misiones.
-
-Experiencia y niveles: subir de nivel según misiones o trabajos.
-
-Habilidades: mejorar con uso o entrenamiento.
-
-Inventario: armas, vehículos, objetos consumibles.
-
-Funciones:
-
-Añadir / quitar dinero
-
-Subir experiencia y nivel
-
-Gestionar items y vehículos
-
-3️⃣ Módulo de Trabajos y Roles (RP)
-
-Objetivo: Gestionar la actividad laboral y social del jugador.
-
-Ejemplos de roles:
-
-Policía, médico, taxista, bombero, político, criminal.
-
-Funciones:
-
-Aplicar reglas específicas de cada rol (ej.: policía puede arrestar, médico puede curar)
-
-Acceso a vehículos y herramientas del trabajo
-
-Misiones o tareas diarias según rol
-
-Registro de eventos sociales (arrestos, accidentes, emergencias)
-
-4️⃣ Módulo de Misiones y Eventos
-
-Objetivo: Proveer contenido dinámico y recompensas.
-
-Tipos de eventos:
-
-Misiones RPG: entregas, rescates, combates, entrenamiento.
-
-Eventos RP: manifestaciones, accidentes, investigaciones.
-
-Eventos globales: duplicar pagos, festivales, misiones especiales por tiempo limitado.
-
-Funciones:
-
-Crear misiones dinámicas
-
-Recompensar experiencia y dinero
-
-Notificar a jugadores y grupos específicos
-
-5️⃣ Módulo Social y Comunidad (RP)
-
-Objetivo: Gestionar interacción entre jugadores.
-
-Elementos:
-
-Chat / mensajes privados
-
-Grupos / facciones / familias
-
-Sistema de reputación (RP): respetar reglas de rol aumenta reputación
-
-Sistema judicial y penal (si existe policía)
-
-Funciones:
-
-Enviar mensajes y alertas
-
-Gestionar jerarquías y facciones
-
-Aplicar sanciones por mal rol (ej.: matar sin razón)
-
-6️⃣ Módulo de Vehículos y Mapa (RP + RPG)
-
-Objetivo: Gestionar transporte, propiedades y mapas.
-
-Elementos:
-
-Vehículos: legales e ilegales
-
-Propiedades: casas, negocios
-
-Puntos de interés: hospitales, comisarías, tiendas
-
-Sistema de transporte: taxi, ambulancia, policía
-
-Funciones:
-
-Spawn y des-spawn de vehículos
-
-Compra / venta de propiedades
-
-Teleport / spawn de jugadores a lugares permitidos
-
-7️⃣ Módulo Base de Datos (MySQL)
-
-Objetivo: Persistencia de información.
-
-Tablas sugeridas:
-
-usuarios: cuenta, contraseña, nivel, XP, habilidades
-
-personajes: nombre, rol, inventario, dinero
-
-vehiculos: propietario, tipo, posición
-
-propiedades: dueño, ubicación, precio
-
-eventos: activos, completados, recompensas
-
-Funciones:
-
-Guardar y cargar datos al conectar/desconectar
-
-Actualizar progresión y economía
-
-Registrar eventos y estadísticas
+PLAN MAESTRO PRIMERO. LOGIN/REGISTRO DESPUÉS. SIN CÓDIGO. PSEUDOCÓDIGO, ENTRADAS Y SALIDAS CLARAS.
+
+# Mapa mental global → sistemas y subsistemas
+Basado en tu enfoque sistémico: Jugador, Economía/Progresión, Trabajos/Roles, Misiones/Eventos, Social/Comunidad, Vehículos/Mapa, Base de Datos.
+
+S1. Sistema Jugador
+- Sub: Identidad y Cuenta, Estado en partida, Persistencia de datos, Progresión básica.
+- Responsables: login/logout, carga/guardado, sincronización de estado.
+
+S2. Sistema Economía y Progresión
+- Sub: Dinero, XP/Nivel, Habilidades, Inventario.
+- Responsables: sumar/restar dinero, otorgar XP, gestionar ítems.
+
+S3. Sistema Trabajos y Roles
+- Sub: Perfiles de rol, Permisos por rol, Tareas/Mecánicas.
+- Responsables: reglas por rol, acceso a vehículos/herramientas, misiones por rol.
+
+S4. Sistema Misiones y Eventos
+- Sub: Generador de misiones, Recompensas, Notificaciones.
+- Responsables: crear misiones, pagar recompensas, avisos.
+
+S5. Sistema Social y Comunidad
+- Sub: Chat/MP, Facciones/Grupos, Reputación/Sanciones, Judicial.
+- Responsables: mensajería, jerarquías, sanciones RP.
+
+S6. Sistema Vehículos y Mapa
+- Sub: Vehículos, Propiedades, Puntos de interés, Transporte.
+- Responsables: spawn/despawn, compra/venta, movilidad.
+
+S7. Sistema Base de Datos
+- Sub: Modelo de datos, Migraciones, Acceso/Transacciones, Auditoría/Stats.
+- Responsables: persistencia, integridad, trazabilidad.
+
+# Orden de trabajo ANTES del login/registro
+Secuencia para evitar improvisación:
+1) Modelo de datos mínimo viable (MDMV)
+   - Tablas mínimas: cuentas (usuario, hash, email opcional, fecha alta, estado), personajes (fk_cuenta, nombre, apariencia, pos, dinero, nivel), sesiones (fk_cuenta, token, ip, hwid opcional, expiración), auditoria (evento, cuenta, ts, detalle).
+   - Reglas: unicidad de usuario y nombre personaje, FK estrictas, índices por usuario y estado.
+2) Políticas de identidad
+   - Formato de usuario y nombre de personaje, longitud y caracteres permitidos.
+   - Reglas de unicidad sin sensibilidad a mayúsculas.
+   - Política de contraseñas y almacenamiento con hash.
+3) Estados y ciclo de vida
+   - Estados de cuenta: nueva, activa, bloqueada, baneada, pendiente_verificación (si usas email).
+   - Transiciones válidas y quién las ejecuta.
+4) Flujos y UX de acceso
+   - Registro: validar → crear cuenta → crear personaje base → guardar estado inicial → teletransportar al punto de inicio.
+   - Login: validar credenciales → controles de seguridad → reanudar estado persistido → notificar subsistemas.
+5) Seguridad y anti-abuso
+   - Rate limit por IP/usuario, bloqueo temporal por intentos fallidos, lista de contraseñas prohibidas, detección de duplicado en línea, cierre limpio de sesión.
+   - Auditoría de eventos clave.
+6) Persistencia y transacciones
+   - Alta de cuenta y de personaje en una misma transacción.
+   - Guardado periódico del estado del jugador con confirmación.
+7) Observabilidad
+   - Logs con códigos de evento, métricas: tasa de éxito, errores, tiempo de login, intentos fallidos, abandonos en registro.
+8) Pruebas
+   - Casos felices, bordes, errores, resiliencia a caídas, idempotencia al reintentar.
+
+# Entradas y salidas por sistema (en este alcance)
+Entradas comunes
+- Usuario, contraseña, nombre de personaje, IP, versión de cliente, elección de rol inicial opcional.
+
+Salidas comunes
+- Estado de autenticación, mensajes de validación, token/identificador de sesión, spawn y estado del personaje cargado, eventos de sistema para otros módulos.
+
+S1 Jugador
+- In: credenciales, selección de personaje.
+- Out: estado completo del jugador en memoria, posición, atributos.
+
+S7 Base de Datos
+- In: operaciones CRUD para cuentas/personajes/sesiones/auditoría.
+- Out: confirmación de transacciones o error categorizado.
+
+S5 Social (solo señales)
+- In: evento “jugador_conectado/desconectado”.
+- Out: avisos de bienvenida, mensajes de sistema.
+
+S3 Trabajos/Roles (solo señales)
+- In: evento “login_ok” con rol del personaje.
+- Out: permisos y equipamiento inicial si aplica.
+
+# Pseudocódigo de alto nivel del servidor
+al_iniciar_servidor:
+  cargar_config
+  inicializar_sistemas(S1..S7)
+  verificar_conexion_bd
+  preparar_rate_limit_y_logs
+
+al_jugador_conectar:
+  mostrar_menu_inicial(opciones: login, registro, recuperar)
+  esperar_eleccion
+
+si eleccion == registro:
+  flujo_registro()
+
+si eleccion == login:
+  flujo_login()
+
+al_jugador_desconectar:
+  guardar_estado_jugador
+  cerrar_sesion_si_abierta
+  registrar_evento_auditoria("logout")
+
+# Pseudocódigo de Registro
+flujo_registro():
+  pedir(usuario, contraseña, confirmar, nombre_personaje)
+  validar_formato(usuario, contraseña, nombre_personaje)
+  si invalido -> mostrar_error y volver_menu
+
+  si usuario_existe(usuario_normalizado) -> error "usuario en uso"
+  si nombre_personaje_existe(nombre_normalizado) -> error "nombre en uso"
+
+  iniciar_transaccion()
+    crear_cuenta(usuario, hash(contraseña), estado="activa")
+    crear_personaje(cuenta_id, nombre_personaje, estado_inicial, pos_inicial, dinero_base, nivel_base)
+    crear_sesion(cuenta_id, generar_token(), ip, expiracion)
+    registrar_evento_auditoria("registro_ok", cuenta_id)
+  confirmar_transaccion()
+
+  cargar_estado_en_memoria(cuenta_id)
+  teletransportar_al_spawn_inicial
+  mostrar_mensaje_bienvenida
+
+# Pseudocódigo de Login
+flujo_login():
+  pedir(usuario, contraseña)
+  validar_formato(usuario, contraseña)
+  si excede_rate_limit(usuario/ip) -> error "intenta más tarde"
+
+  cuenta = buscar_cuenta(usuario_normalizado)
+  si no_existe -> error "credenciales inválidas"
+
+  si cuenta.estado in {bloqueada, baneada} -> error "acceso denegado"
+
+  si verificar_hash(contraseña, cuenta.hash) == falso:
+    registrar_evento_auditoria("login_fallido", cuenta_id)
+    incrementar_contador_fallos(usuario/ip)
+    si demasiados_intentos -> bloquear_temporalmente(usuario/ip)
+    error "credenciales inválidas"
+
+  si ya_tiene_sesion_activa(cuenta_id) -> política:
+     - permitir_reconexión_y_cerrar_anterior  O
+     - rechazar y mostrar "sesión activa"
+
+  iniciar_transaccion()
+    sesion = crear_o_actualizar_sesion(cuenta_id, token, ip, expiracion)
+    personaje = cargar_personaje_principal(cuenta_id)
+    registrar_evento_auditoria("login_ok", cuenta_id)
+  confirmar_transaccion()
+
+  cargar_estado_en_memoria(personaje)
+  aplicar_permisos_por_rol(personaje.rol)
+  ubicar_en_ultima_posicion_o_spawn
+  notificar_sistemas("jugador_conectado", cuenta_id)
+
+# Reglas y casos borde a decidir
+- Reintentos: 5 intentos en 10 minutos por IP y por usuario.
+- Sesión duplicada: ¿expulsar la anterior o bloquear el nuevo login?
+- Recuperación de cuenta: flujo separado con verificación por correo o pregunta de seguridad.
+- Normalización: usuario y nombre de personaje guardados y comparados en minúsculas, pero se muestra la forma original.
+- Tiempo de vida de sesión: define expiración y renovación en actividad.
+- Guardado periódico: cada X minutos y en eventos clave (muerte, compra, fin de misión).
+- Telemetría mínima: tasa de éxito de login, tiempo medio de login, top errores.
+- Mensajería: errores breves al jugador; detalle técnico solo a logs.
+
+# Checklist “listo para programar” del módulo
+1) Esquema mínimo en BD creado con índices y FKs.
+2) Políticas de identidad y contraseñas definidas.
+3) Estados de cuenta y transiciones documentados.
+4) Rate limit implementado.
+5) Auditoría de eventos clave activa.
+6) Transacciones en alta de cuenta+personaje.
+7) Carga y guardado de estado encapsulados en S1+S7.
+8) Flujos de login/registro probados con casos felices y fallos.
+9) Métricas y logs visibles en consola o archivo.
+10) Decisión sobre sesión duplicada y recuperación de cuenta.
+
+# Dependencias entre sistemas al terminar login/registro
+- S1 ← S7: carga/guardado confiables.
+- S3/S5/S6/S2/S4 escuchan “jugador_conectado” y habilitan permisos, chats, vehículos, balances y misiones iniciales.
+- Auditoría central registra todo para soporte y moderación.
