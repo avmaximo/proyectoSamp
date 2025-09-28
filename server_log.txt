@@ -5771,3 +5771,1171 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 =======
 >>>>>>> 827c27787f1c9824676e288274bfcf45fc63faa5
 >>>>>>> 3da20dcff7065fb15d05f9b51fddd357b0da84c6
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[18:46:22] filterscripts = ""  (string)
+[18:46:22] 
+[18:46:22] Server Plugins
+[18:46:22] --------------
+[18:46:22]  Loading plugin: sscanf.dll
+[18:46:22] 
+[18:46:22]  ===============================
+[18:46:22] 
+[18:46:22]       sscanf plugin loaded.     
+[18:46:22] 
+[18:46:22]          Version: 2.13.8
+[18:46:22] 
+[18:46:22]    (c) 2022 Alex "Y_Less" Cole  
+[18:46:22] 
+[18:46:22]  ===============================
+[18:46:22] 
+[18:46:22]   Loaded.
+[18:46:22]  Loading plugin: streamer.dll
+[18:46:22] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[18:46:22]   Loaded.
+[18:46:22]  Loading plugin: mysql.dll
+[18:46:22]  >> plugin.mysql: R41-4 successfully loaded.
+[18:46:22]   Loaded.
+[18:46:22]  Loaded 3 plugins.
+
+[18:46:22] 
+[18:46:22] Filterscripts
+[18:46:22] ---------------
+[18:46:22]   Loaded 0 filterscripts.
+
+[18:46:22] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[18:46:22] Number of vehicle models: 0
+[18:46:51] [connection] incoming connection: 127.0.0.1:52606 id: 0
+[18:46:51] [join] maxi has joined the server (0:127.0.0.1)
+[18:47:00] [part] maxi has left the server (0:2)
+[18:47:12] [connection] incoming connection: 127.0.0.1:50694 id: 0
+[18:47:12] [join] maxi has joined the server (0:127.0.0.1)
+[18:47:17] Depuracion password: ##Cantando2@2@##
+
+[18:47:17] Depuracion mezcla: XyZz7y12*ab##Cantando2@2@##
+
+[18:47:17] Depuracion salt: YxA5a0ZP1WlmNEas
+
+[18:47:17] Depuracion hash: 960B37B1998698C8F7556DA01068833E0365059E771A6597049682DCD9DB0DDC
+
+[18:47:40] Player[0] PosX: 132.000000 PosY: -67.290817 PosZ: 1.578125 Rot: 0.000000
+[18:47:43] Player[0] PosX: 138.079376 PosY: -80.519775 PosZ: 1.578125 Rot: 225.811004
+[18:53:39] Player[0] PosX: 1765.931274 PosY: -1949.806640 PosZ: 14.109554 Rot: 271.041625
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[18:55:40] filterscripts = ""  (string)
+[18:55:40] 
+[18:55:40] Server Plugins
+[18:55:40] --------------
+[18:55:40]  Loading plugin: sscanf.dll
+[18:55:40] 
+[18:55:40]  ===============================
+[18:55:40] 
+[18:55:40]       sscanf plugin loaded.     
+[18:55:40] 
+[18:55:40]          Version: 2.13.8
+[18:55:40] 
+[18:55:40]    (c) 2022 Alex "Y_Less" Cole  
+[18:55:40] 
+[18:55:40]  ===============================
+[18:55:40] 
+[18:55:40]   Loaded.
+[18:55:40]  Loading plugin: streamer.dll
+[18:55:40] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[18:55:40]   Loaded.
+[18:55:40]  Loading plugin: mysql.dll
+[18:55:40]  >> plugin.mysql: R41-4 successfully loaded.
+[18:55:40]   Loaded.
+[18:55:40]  Loaded 3 plugins.
+
+[18:55:40] 
+[18:55:40] Filterscripts
+[18:55:40] ---------------
+[18:55:40]   Loaded 0 filterscripts.
+
+[18:55:40] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[18:55:40] Number of vehicle models: 0
+[18:55:58] [connection] incoming connection: 127.0.0.1:54069 id: 0
+[18:55:58] [join] maxi has joined the server (0:127.0.0.1)
+[18:56:01] Depuracion password: Cocacola1
+
+[18:56:01] Depuracion mezcla: XyZz7y12*abCocacola1
+
+[18:56:01] Depuracion salt: PzIjqWOMU3WPXLob
+
+[18:56:01] Depuracion hash: 7C46DF669B9E6B23AEBE17455689F8FD542D3D5C96DB8872BD256F40C52641CF
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[19:25:58] filterscripts = ""  (string)
+[19:25:58] 
+[19:25:58] Server Plugins
+[19:25:58] --------------
+[19:25:58]  Loading plugin: sscanf.dll
+[19:25:58] 
+[19:25:58]  ===============================
+[19:25:58] 
+[19:25:58]       sscanf plugin loaded.     
+[19:25:58] 
+[19:25:58]          Version: 2.13.8
+[19:25:58] 
+[19:25:58]    (c) 2022 Alex "Y_Less" Cole  
+[19:25:58] 
+[19:25:58]  ===============================
+[19:25:58] 
+[19:25:58]   Loaded.
+[19:25:58]  Loading plugin: streamer.dll
+[19:25:58] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[19:25:58]   Loaded.
+[19:25:58]  Loading plugin: mysql.dll
+[19:25:58]  >> plugin.mysql: R41-4 successfully loaded.
+[19:25:58]   Loaded.
+[19:25:58]  Loaded 3 plugins.
+
+[19:25:58] 
+[19:25:58] Filterscripts
+[19:25:58] ---------------
+[19:25:58]   Loaded 0 filterscripts.
+
+[19:25:58] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[19:25:58] Number of vehicle models: 0
+[19:26:01] [connection] incoming connection: 127.0.0.1:61567 id: 0
+[19:26:01] [join] maxi has joined the server (0:127.0.0.1)
+[19:26:03] Depuracion password: Cocacola1
+
+[19:26:03] Depuracion mezcla: XyZz7y12*abCocacola1
+
+[19:26:03] Depuracion salt: 3UVFmHnOurYqpYLO
+
+[19:26:03] Depuracion hash: 76E18DC9D23427B80B38E64D22A605B8D949C79EAD6531FF6F0EEA8602461ED5
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[19:28:35] filterscripts = ""  (string)
+[19:28:35] 
+[19:28:35] Server Plugins
+[19:28:35] --------------
+[19:28:35]  Loading plugin: sscanf.dll
+[19:28:35] 
+[19:28:35]  ===============================
+[19:28:35] 
+[19:28:35]       sscanf plugin loaded.     
+[19:28:35] 
+[19:28:35]          Version: 2.13.8
+[19:28:35] 
+[19:28:35]    (c) 2022 Alex "Y_Less" Cole  
+[19:28:35] 
+[19:28:35]  ===============================
+[19:28:35] 
+[19:28:35]   Loaded.
+[19:28:35]  Loading plugin: streamer.dll
+[19:28:35] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[19:28:35]   Loaded.
+[19:28:35]  Loading plugin: mysql.dll
+[19:28:35]  >> plugin.mysql: R41-4 successfully loaded.
+[19:28:35]   Loaded.
+[19:28:35]  Loaded 3 plugins.
+
+[19:28:35] 
+[19:28:35] Filterscripts
+[19:28:35] ---------------
+[19:28:35]   Loaded 0 filterscripts.
+
+[19:28:35] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[19:28:35] Number of vehicle models: 0
+[19:28:55] [connection] incoming connection: 127.0.0.1:60158 id: 0
+[19:28:55] [join] maxi has joined the server (0:127.0.0.1)
+[19:28:58] Depuracion password: Cocacola1
+
+[19:28:58] Depuracion mezcla: XyZz7y12*abCocacola1
+
+[19:28:58] Depuracion salt: wCDWABZ8yLXG0CLT
+
+[19:28:58] Depuracion hash: BE41A5DA00A9142A27BF2C1B3CF91942C10DD52B9AB247282C3C5D4275F0B2C3
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[19:31:46] filterscripts = ""  (string)
+[19:31:46] 
+[19:31:46] Server Plugins
+[19:31:46] --------------
+[19:31:46]  Loading plugin: sscanf.dll
+[19:31:46] 
+[19:31:46]  ===============================
+[19:31:46] 
+[19:31:46]       sscanf plugin loaded.     
+[19:31:46] 
+[19:31:46]          Version: 2.13.8
+[19:31:46] 
+[19:31:46]    (c) 2022 Alex "Y_Less" Cole  
+[19:31:46] 
+[19:31:46]  ===============================
+[19:31:46] 
+[19:31:46]   Loaded.
+[19:31:46]  Loading plugin: streamer.dll
+[19:31:46] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[19:31:46]   Loaded.
+[19:31:46]  Loading plugin: mysql.dll
+[19:31:46]  >> plugin.mysql: R41-4 successfully loaded.
+[19:31:46]   Loaded.
+[19:31:46]  Loaded 3 plugins.
+
+[19:31:46] 
+[19:31:46] Filterscripts
+[19:31:46] ---------------
+[19:31:46]   Loaded 0 filterscripts.
+
+[19:31:46] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[19:31:46] Number of vehicle models: 0
+[19:31:49] [connection] incoming connection: 127.0.0.1:65296 id: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[19:32:02] filterscripts = ""  (string)
+[19:32:02] 
+[19:32:02] Server Plugins
+[19:32:02] --------------
+[19:32:02]  Loading plugin: sscanf.dll
+[19:32:02] 
+[19:32:02]  ===============================
+[19:32:02] 
+[19:32:02]       sscanf plugin loaded.     
+[19:32:02] 
+[19:32:02]          Version: 2.13.8
+[19:32:02] 
+[19:32:02]    (c) 2022 Alex "Y_Less" Cole  
+[19:32:02] 
+[19:32:02]  ===============================
+[19:32:02] 
+[19:32:02]   Loaded.
+[19:32:02]  Loading plugin: streamer.dll
+[19:32:02] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[19:32:02]   Loaded.
+[19:32:02]  Loading plugin: mysql.dll
+[19:32:02]  >> plugin.mysql: R41-4 successfully loaded.
+[19:32:02]   Loaded.
+[19:32:02]  Loaded 3 plugins.
+
+[19:32:02] 
+[19:32:02] Filterscripts
+[19:32:02] ---------------
+[19:32:02]   Loaded 0 filterscripts.
+
+[19:32:02] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[19:32:02] Number of vehicle models: 0
+[19:32:04] [connection] incoming connection: 127.0.0.1:51414 id: 0
+[19:32:04] [join] maxi has joined the server (0:127.0.0.1)
+[19:32:06] Depuracion password: Cocacola1
+
+[19:32:06] Depuracion mezcla: XyZz7y12*abCocacola1
+
+[19:32:06] Depuracion salt: A1R5xy0cdBovQePS
+
+[19:32:06] Depuracion hash: 9967D04800E75655721B24B29A22BEB21BE70EC193FF898E44D3DA6CE5F1CAB0
+
+[19:32:13] DEBUG: user_id 15, player_id 3
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[19:37:19] filterscripts = ""  (string)
+[19:37:19] 
+[19:37:19] Server Plugins
+[19:37:19] --------------
+[19:37:19]  Loading plugin: sscanf.dll
+[19:37:19] 
+[19:37:19]  ===============================
+[19:37:19] 
+[19:37:19]       sscanf plugin loaded.     
+[19:37:19] 
+[19:37:19]          Version: 2.13.8
+[19:37:19] 
+[19:37:19]    (c) 2022 Alex "Y_Less" Cole  
+[19:37:19] 
+[19:37:19]  ===============================
+[19:37:19] 
+[19:37:19]   Loaded.
+[19:37:19]  Loading plugin: streamer.dll
+[19:37:19] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[19:37:19]   Loaded.
+[19:37:19]  Loading plugin: mysql.dll
+[19:37:19]  >> plugin.mysql: R41-4 successfully loaded.
+[19:37:19]   Loaded.
+[19:37:19]  Loaded 3 plugins.
+
+[19:37:19] 
+[19:37:19] Filterscripts
+[19:37:19] ---------------
+[19:37:19]   Loaded 0 filterscripts.
+
+[19:37:19] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[19:37:19] Number of vehicle models: 0
+[19:37:30] [connection] incoming connection: 127.0.0.1:53608 id: 0
+[19:37:31] [join] maxi has joined the server (0:127.0.0.1)
+[19:37:33] Depuracion password: Cocacola1
+
+[19:37:33] Depuracion mezcla: XyZz7y12*abCocacola1
+
+[19:37:33] Depuracion salt: 4ufYvKX0BpQML5G3
+
+[19:37:33] Depuracion hash: 949395A2AE371A2E0A880B33BB10DB2D6D5A479232BAF3372BE5EBE17E4E9BD6
+
+[19:37:44] DEBUG: user_id 16, player_id 4
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[19:48:57] filterscripts = ""  (string)
+[19:48:57] 
+[19:48:57] Server Plugins
+[19:48:57] --------------
+[19:48:57]  Loading plugin: sscanf.dll
+[19:48:57] 
+[19:48:57]  ===============================
+[19:48:57] 
+[19:48:57]       sscanf plugin loaded.     
+[19:48:57] 
+[19:48:57]          Version: 2.13.8
+[19:48:57] 
+[19:48:57]    (c) 2022 Alex "Y_Less" Cole  
+[19:48:57] 
+[19:48:57]  ===============================
+[19:48:57] 
+[19:48:57]   Loaded.
+[19:48:57]  Loading plugin: streamer.dll
+[19:48:57] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[19:48:57]   Loaded.
+[19:48:57]  Loading plugin: mysql.dll
+[19:48:57]  >> plugin.mysql: R41-4 successfully loaded.
+[19:48:57]   Loaded.
+[19:48:57]  Loaded 3 plugins.
+
+[19:48:57] 
+[19:48:57] Filterscripts
+[19:48:57] ---------------
+[19:48:57]   Loaded 0 filterscripts.
+
+[19:48:57] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[19:48:57] Number of vehicle models: 0
+[19:48:59] [connection] incoming connection: 127.0.0.1:63779 id: 0
+[19:49:00] [join] maxi has joined the server (0:127.0.0.1)
+[19:49:02] Depuracion password: Cocacola1
+
+[19:49:02] Depuracion mezcla: XyZz7y12*abCocacola1
+
+[19:49:02] Depuracion salt: xWyWWZBbpUVruGad
+
+[19:49:02] Depuracion hash: D2FE1264A535AA9E9BEF48EADED7BD024960E938D805EAEE8B27F1AB2B4059E3
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[19:50:20] filterscripts = ""  (string)
+[19:50:20] 
+[19:50:20] Server Plugins
+[19:50:20] --------------
+[19:50:20]  Loading plugin: sscanf.dll
+[19:50:20] 
+[19:50:20]  ===============================
+[19:50:20] 
+[19:50:20]       sscanf plugin loaded.     
+[19:50:20] 
+[19:50:20]          Version: 2.13.8
+[19:50:20] 
+[19:50:20]    (c) 2022 Alex "Y_Less" Cole  
+[19:50:20] 
+[19:50:20]  ===============================
+[19:50:20] 
+[19:50:20]   Loaded.
+[19:50:20]  Loading plugin: streamer.dll
+[19:50:20] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[19:50:20]   Loaded.
+[19:50:20]  Loading plugin: mysql.dll
+[19:50:20]  >> plugin.mysql: R41-4 successfully loaded.
+[19:50:20]   Loaded.
+[19:50:20]  Loaded 3 plugins.
+
+[19:50:20] 
+[19:50:20] Filterscripts
+[19:50:20] ---------------
+[19:50:20]   Loaded 0 filterscripts.
+
+[19:50:20] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[19:50:20] Number of vehicle models: 0
+[19:50:22] [connection] incoming connection: 127.0.0.1:51962 id: 0
+[19:50:22] [join] maxi has joined the server (0:127.0.0.1)
+[19:50:36] Depuracion password: Cocacola1
+
+[19:50:36] Depuracion mezcla: XyZz7y12*abCocacola1
+
+[19:50:36] Depuracion salt: A9POXhCJ7Y92e1pH
+
+[19:50:36] Depuracion hash: 4B5124EC098C7C436A0519694939E2A279F5561BA605762D3EB206B71F89F1FD
+
+[19:51:07] Depuracion password: Cocacola1
+
+[19:51:07] Depuracion mezcla: XyZz7y12*abCocacola1
+
+[19:51:07] Depuracion salt: 0KbRfHsjh12Is8Bf
+
+[19:51:07] Depuracion hash: 852DBE1B9CEB0BE411F07E4B6FCF64A764BB8FF82161458D83B6A8DAAF9EE6BC
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[19:54:20] filterscripts = ""  (string)
+[19:54:20] 
+[19:54:20] Server Plugins
+[19:54:20] --------------
+[19:54:20]  Loading plugin: sscanf.dll
+[19:54:20] 
+[19:54:20]  ===============================
+[19:54:20] 
+[19:54:20]       sscanf plugin loaded.     
+[19:54:20] 
+[19:54:20]          Version: 2.13.8
+[19:54:20] 
+[19:54:20]    (c) 2022 Alex "Y_Less" Cole  
+[19:54:20] 
+[19:54:20]  ===============================
+[19:54:20] 
+[19:54:20]   Loaded.
+[19:54:20]  Loading plugin: streamer.dll
+[19:54:20] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[19:54:20]   Loaded.
+[19:54:20]  Loading plugin: mysql.dll
+[19:54:20]  >> plugin.mysql: R41-4 successfully loaded.
+[19:54:20]   Loaded.
+[19:54:20]  Loaded 3 plugins.
+
+[19:54:20] 
+[19:54:20] Filterscripts
+[19:54:20] ---------------
+[19:54:20]   Loaded 0 filterscripts.
+
+[19:54:20] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[19:54:20] Number of vehicle models: 0
+[19:54:33] [connection] incoming connection: 127.0.0.1:62542 id: 0
+[19:54:33] [join] maxi has joined the server (0:127.0.0.1)
+[19:54:37] Depuracion password: 191002Cocacola1
+
+[19:54:37] Depuracion mezcla: XyZz7y12*ab191002Cocacola1
+
+[19:54:37] Depuracion salt: I62GccfIjHTHckzS
+
+[19:54:37] Depuracion hash: 7E820DC7ECCD0EC5F95766E4F6006E3E5C05A283CE56382A2E25FDEAFCD4A461
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:09:34] filterscripts = ""  (string)
+[20:09:34] 
+[20:09:34] Server Plugins
+[20:09:34] --------------
+[20:09:34]  Loading plugin: sscanf.dll
+[20:09:34] 
+[20:09:34]  ===============================
+[20:09:34] 
+[20:09:34]       sscanf plugin loaded.     
+[20:09:34] 
+[20:09:34]          Version: 2.13.8
+[20:09:34] 
+[20:09:34]    (c) 2022 Alex "Y_Less" Cole  
+[20:09:34] 
+[20:09:34]  ===============================
+[20:09:34] 
+[20:09:34]   Loaded.
+[20:09:34]  Loading plugin: streamer.dll
+[20:09:34] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[20:09:34]   Loaded.
+[20:09:34]  Loading plugin: mysql.dll
+[20:09:34]  >> plugin.mysql: R41-4 successfully loaded.
+[20:09:34]   Loaded.
+[20:09:34]  Loaded 3 plugins.
+
+[20:09:34] 
+[20:09:34] Filterscripts
+[20:09:34] ---------------
+[20:09:34]   Loaded 0 filterscripts.
+
+[20:09:34] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[20:09:34] Number of vehicle models: 0
+[20:09:37] [connection] incoming connection: 127.0.0.1:58917 id: 0
+[20:09:37] [join] maxi has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:09:43] filterscripts = ""  (string)
+[20:09:43] 
+[20:09:43] Server Plugins
+[20:09:43] --------------
+[20:09:43]  Loading plugin: sscanf.dll
+[20:09:43] 
+[20:09:43]  ===============================
+[20:09:43] 
+[20:09:43]       sscanf plugin loaded.     
+[20:09:43] 
+[20:09:43]          Version: 2.13.8
+[20:09:43] 
+[20:09:43]    (c) 2022 Alex "Y_Less" Cole  
+[20:09:43] 
+[20:09:43]  ===============================
+[20:09:43] 
+[20:09:43]   Loaded.
+[20:09:43]  Loading plugin: streamer.dll
+[20:09:43] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[20:09:43]   Loaded.
+[20:09:43]  Loading plugin: mysql.dll
+[20:09:43]  >> plugin.mysql: R41-4 successfully loaded.
+[20:09:43]   Loaded.
+[20:09:43]  Loaded 3 plugins.
+
+[20:09:43] 
+[20:09:43] Filterscripts
+[20:09:43] ---------------
+[20:09:43]   Loaded 0 filterscripts.
+
+[20:09:43] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[20:09:43] Number of vehicle models: 0
+[20:09:55] [connection] incoming connection: 127.0.0.1:49963 id: 0
+[20:09:55] [join] maxi has joined the server (0:127.0.0.1)
+[20:09:57] Depuracion password: Cocacola1
+
+[20:09:57] Depuracion mezcla: XyZz7y12*abCocacola1
+
+[20:09:57] Depuracion salt: sBWF9IJSBzTEB9tU
+
+[20:09:57] Depuracion hash: D5BFFB6226E84A1A95FFEE8917F5F0D964FD1A1385892B35ED6AED276E74F0FF
+
+[20:10:17] [part] maxi has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:11:35] filterscripts = ""  (string)
+[20:11:35] 
+[20:11:35] Server Plugins
+[20:11:35] --------------
+[20:11:35]  Loading plugin: sscanf.dll
+[20:11:35] 
+[20:11:35]  ===============================
+[20:11:35] 
+[20:11:35]       sscanf plugin loaded.     
+[20:11:35] 
+[20:11:35]          Version: 2.13.8
+[20:11:35] 
+[20:11:35]    (c) 2022 Alex "Y_Less" Cole  
+[20:11:35] 
+[20:11:35]  ===============================
+[20:11:35] 
+[20:11:35]   Loaded.
+[20:11:35]  Loading plugin: streamer.dll
+[20:11:35] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[20:11:35]   Loaded.
+[20:11:35]  Loading plugin: mysql.dll
+[20:11:35]  >> plugin.mysql: R41-4 successfully loaded.
+[20:11:35]   Loaded.
+[20:11:35]  Loaded 3 plugins.
+
+[20:11:35] 
+[20:11:35] Filterscripts
+[20:11:35] ---------------
+[20:11:35]   Loaded 0 filterscripts.
+
+[20:11:35] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[20:11:35] Number of vehicle models: 0
+[20:11:47] [connection] incoming connection: 127.0.0.1:59154 id: 0
+[20:11:47] [join] maxi has joined the server (0:127.0.0.1)
+[20:11:50] Depuracion password: Cocacola1
+
+[20:11:50] Depuracion mezcla: XyZz7y12*abCocacola1
+
+[20:11:50] Depuracion salt: CVzDuP7aivekGs6d
+
+[20:11:50] Depuracion hash: B1A7C13A45E9DDE7D7E0BE596912E458A367C6288958E06DA8FD884910937308
+
+[20:12:11] [part] maxi has left the server (0:1)
+[20:13:30] [connection] incoming connection: 127.0.0.1:58801 id: 0
+[20:13:30] [join] maxi has joined the server (0:127.0.0.1)
+[20:13:36] Depuracion password: Cocacola1
+
+[20:13:36] Depuracion mezcla: XyZz7y12*abCocacola1
+
+[20:13:36] Depuracion salt: lWcEClwBi9kwk9XZ
+
+[20:13:36] Depuracion hash: B56B9314E47D1142C9759B23A8DAD99EB8B1DBC9F872A8954F8A7951159AB68E
+
+[20:13:52] [part] maxi has left the server (0:1)
+[20:16:45] [connection] incoming connection: 127.0.0.1:53254 id: 0
+[20:16:46] [join] maxi has joined the server (0:127.0.0.1)
+[20:16:48] Depuracion password: Cocacola1
+
+[20:16:48] Depuracion mezcla: XyZz7y12*abCocacola1
+
+[20:16:48] Depuracion salt: vKPYFnLtBbJk3H6Y
+
+[20:16:48] Depuracion hash: 0F621F778BF7C6BDE1A2CE376BA752E0AB8DEF4910192BA910DB9E8C8F05FE83
+
+[20:17:04] [part] maxi has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:19:25] filterscripts = ""  (string)
+[20:19:25] 
+[20:19:25] Server Plugins
+[20:19:25] --------------
+[20:19:25]  Loading plugin: sscanf.dll
+[20:19:25] 
+[20:19:25]  ===============================
+[20:19:25] 
+[20:19:25]       sscanf plugin loaded.     
+[20:19:25] 
+[20:19:25]          Version: 2.13.8
+[20:19:25] 
+[20:19:25]    (c) 2022 Alex "Y_Less" Cole  
+[20:19:25] 
+[20:19:25]  ===============================
+[20:19:25] 
+[20:19:25]   Loaded.
+[20:19:25]  Loading plugin: streamer.dll
+[20:19:25] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[20:19:25]   Loaded.
+[20:19:25]  Loading plugin: mysql.dll
+[20:19:25]  >> plugin.mysql: R41-4 successfully loaded.
+[20:19:25]   Loaded.
+[20:19:25]  Loaded 3 plugins.
+
+[20:19:25] 
+[20:19:25] Filterscripts
+[20:19:25] ---------------
+[20:19:25]   Loaded 0 filterscripts.
+
+[20:19:25] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[20:19:25] Number of vehicle models: 0
+[20:19:44] [connection] incoming connection: 127.0.0.1:54996 id: 0
+[20:19:44] [join] maxi has joined the server (0:127.0.0.1)
+[20:19:52] Depuracion password: 123123123
+
+[20:19:52] Depuracion mezcla: XyZz7y12*ab123123123
+
+[20:19:52] Depuracion salt: SSkmgFJy4XL3e53z
+
+[20:19:52] Depuracion hash: 5E6B78D8D421F4927C4E1D803C4D19F5DEEA3BF8C3CD0A0DC52619F6768EC550
+
+[20:19:55] Depuracion password: Cocacola1
+
+[20:19:55] Depuracion mezcla: XyZz7y12*abCocacola1
+
+[20:19:55] Depuracion salt: A4T6C2oo0T5bD02O
+
+[20:19:55] Depuracion hash: 883525C1FF9664C097B3A1EBF43FD7A85025A77347250182EA067A7A05515CB1
+
+[20:20:07] [part] maxi has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:22:59] filterscripts = ""  (string)
+[20:22:59] 
+[20:22:59] Server Plugins
+[20:22:59] --------------
+[20:22:59]  Loading plugin: sscanf.dll
+[20:22:59] 
+[20:22:59]  ===============================
+[20:22:59] 
+[20:22:59]       sscanf plugin loaded.     
+[20:22:59] 
+[20:22:59]          Version: 2.13.8
+[20:22:59] 
+[20:22:59]    (c) 2022 Alex "Y_Less" Cole  
+[20:22:59] 
+[20:22:59]  ===============================
+[20:22:59] 
+[20:22:59]   Loaded.
+[20:22:59]  Loading plugin: streamer.dll
+[20:22:59] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[20:22:59]   Loaded.
+[20:22:59]  Loading plugin: mysql.dll
+[20:22:59]  >> plugin.mysql: R41-4 successfully loaded.
+[20:22:59]   Loaded.
+[20:22:59]  Loaded 3 plugins.
+
+[20:22:59] 
+[20:22:59] Filterscripts
+[20:22:59] ---------------
+[20:22:59]   Loaded 0 filterscripts.
+
+[20:22:59] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[20:22:59] Number of vehicle models: 0
+[20:23:10] [connection] incoming connection: 127.0.0.1:57375 id: 0
+[20:23:10] [join] maxi has joined the server (0:127.0.0.1)
+[20:23:19] Depuracion password: Cocacola1
+
+[20:23:19] Depuracion mezcla: XyZz7y12*abCocacola1
+
+[20:23:19] Depuracion salt: 5pPDY6Ln6ZWZr3xo
+
+[20:23:19] Depuracion hash: 69102843F660144F2832E44D93A8BDEEA31CE96169FFD92DA1A7BB39E1745093
+
+[20:23:28] [part] maxi has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:27:27] filterscripts = ""  (string)
+[20:27:27] 
+[20:27:27] Server Plugins
+[20:27:27] --------------
+[20:27:27]  Loading plugin: sscanf.dll
+[20:27:27] 
+[20:27:27]  ===============================
+[20:27:27] 
+[20:27:27]       sscanf plugin loaded.     
+[20:27:27] 
+[20:27:27]          Version: 2.13.8
+[20:27:27] 
+[20:27:27]    (c) 2022 Alex "Y_Less" Cole  
+[20:27:27] 
+[20:27:27]  ===============================
+[20:27:27] 
+[20:27:27]   Loaded.
+[20:27:27]  Loading plugin: streamer.dll
+[20:27:27] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[20:27:27]   Loaded.
+[20:27:27]  Loading plugin: mysql.dll
+[20:27:27]  >> plugin.mysql: R41-4 successfully loaded.
+[20:27:27]   Loaded.
+[20:27:27]  Loaded 3 plugins.
+
+[20:27:27] 
+[20:27:27] Filterscripts
+[20:27:27] ---------------
+[20:27:27]   Loaded 0 filterscripts.
+
+[20:27:27] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[20:27:27] Number of vehicle models: 0
+[20:27:46] [connection] incoming connection: 127.0.0.1:62220 id: 0
+[20:27:46] [join] maxi has joined the server (0:127.0.0.1)
+[20:27:49] Depuracion password: Cocacola1
+
+[20:27:49] Depuracion mezcla: XyZz7y12*abCocacola1
+
+[20:27:49] Depuracion salt: csUPcsXzaVkeivf1
+
+[20:27:49] Depuracion hash: 03D04FD2B81C4B25A0D0B601463E4508A495541D1EBD03064BD098670C6FEC4D
+
+[20:27:59] [part] maxi has left the server (0:1)
+[20:28:54] [connection] incoming connection: 127.0.0.1:52424 id: 0
+[20:28:54] [join] maxi has joined the server (0:127.0.0.1)
+[20:29:02] Depuracion password: panza281
+
+[20:29:02] Depuracion mezcla: XyZz7y12*abpanza281
+
+[20:29:02] Depuracion salt: 9NgzkBpYWeeWAOt0
+
+[20:29:02] Depuracion hash: A82F9BBD1279459EF02C62931F589D3672C89A51CA57DFA5C1781A57AE7CD10A
+
+[20:29:59] [part] maxi has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:32:40] filterscripts = ""  (string)
+[20:32:40] 
+[20:32:40] Server Plugins
+[20:32:40] --------------
+[20:32:40]  Loading plugin: sscanf.dll
+[20:32:40] 
+[20:32:40]  ===============================
+[20:32:40] 
+[20:32:40]       sscanf plugin loaded.     
+[20:32:40] 
+[20:32:40]          Version: 2.13.8
+[20:32:40] 
+[20:32:40]    (c) 2022 Alex "Y_Less" Cole  
+[20:32:40] 
+[20:32:40]  ===============================
+[20:32:40] 
+[20:32:40]   Loaded.
+[20:32:40]  Loading plugin: streamer.dll
+[20:32:40] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[20:32:40]   Loaded.
+[20:32:40]  Loading plugin: mysql.dll
+[20:32:40]  >> plugin.mysql: R41-4 successfully loaded.
+[20:32:40]   Loaded.
+[20:32:40]  Loaded 3 plugins.
+
+[20:32:40] 
+[20:32:40] Filterscripts
+[20:32:40] ---------------
+[20:32:40]   Loaded 0 filterscripts.
+
+[20:32:40] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[20:32:40] Number of vehicle models: 0
+[20:32:57] [connection] incoming connection: 127.0.0.1:57704 id: 0
+[20:32:58] [join] maxi has joined the server (0:127.0.0.1)
+[20:33:00] Depuracion password: Cocacola1q
+
+[20:33:00] Depuracion mezcla: XyZz7y12*abCocacola1q
+
+[20:33:00] Depuracion salt: jvjRTdNXE2APzaj1
+
+[20:33:00] Depuracion hash: D095D03223B058F9742E9B30A535244875CB2753E48954A23BA7FD3971A45E23
+
+[20:33:24] [part] maxi has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:35:49] filterscripts = ""  (string)
+[20:35:49] 
+[20:35:49] Server Plugins
+[20:35:49] --------------
+[20:35:49]  Loading plugin: sscanf.dll
+[20:35:49] 
+[20:35:49]  ===============================
+[20:35:49] 
+[20:35:49]       sscanf plugin loaded.     
+[20:35:49] 
+[20:35:49]          Version: 2.13.8
+[20:35:49] 
+[20:35:49]    (c) 2022 Alex "Y_Less" Cole  
+[20:35:49] 
+[20:35:49]  ===============================
+[20:35:49] 
+[20:35:49]   Loaded.
+[20:35:49]  Loading plugin: streamer.dll
+[20:35:49] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[20:35:49]   Loaded.
+[20:35:49]  Loading plugin: mysql.dll
+[20:35:49]  >> plugin.mysql: R41-4 successfully loaded.
+[20:35:49]   Loaded.
+[20:35:49]  Loaded 3 plugins.
+
+[20:35:49] 
+[20:35:49] Filterscripts
+[20:35:49] ---------------
+[20:35:49]   Loaded 0 filterscripts.
+
+[20:35:49] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[20:35:49] Number of vehicle models: 0
+[20:36:01] [connection] incoming connection: 127.0.0.1:63052 id: 0
+[20:36:01] [join] maxi has joined the server (0:127.0.0.1)
+[20:36:04] Depuracion password: Cocacoola1
+
+[20:36:04] Depuracion mezcla: XyZz7y12*abCocacoola1
+
+[20:36:04] Depuracion salt: 42aG4XCjVehu85jh
+
+[20:36:04] Depuracion hash: 1729056405E78147D88BB3B202012C066B5DB0054C73E687E706BEF0F4A61C52
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:37:49] filterscripts = ""  (string)
+[20:37:49] 
+[20:37:49] Server Plugins
+[20:37:49] --------------
+[20:37:49]  Loading plugin: sscanf.dll
+[20:37:49] 
+[20:37:49]  ===============================
+[20:37:49] 
+[20:37:49]       sscanf plugin loaded.     
+[20:37:49] 
+[20:37:49]          Version: 2.13.8
+[20:37:49] 
+[20:37:49]    (c) 2022 Alex "Y_Less" Cole  
+[20:37:49] 
+[20:37:49]  ===============================
+[20:37:49] 
+[20:37:49]   Loaded.
+[20:37:49]  Loading plugin: streamer.dll
+[20:37:49] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[20:37:49]   Loaded.
+[20:37:49]  Loading plugin: mysql.dll
+[20:37:49]  >> plugin.mysql: R41-4 successfully loaded.
+[20:37:49]   Loaded.
+[20:37:49]  Loaded 3 plugins.
+
+[20:37:49] 
+[20:37:49] Filterscripts
+[20:37:49] ---------------
+[20:37:49]   Loaded 0 filterscripts.
+
+[20:37:49] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[20:37:49] Number of vehicle models: 0
+[20:37:53] [connection] incoming connection: 127.0.0.1:58533 id: 0
+[20:37:53] [join] maxi has joined the server (0:127.0.0.1)
+[20:37:55] Depuracion password: Cocacola1
+
+[20:37:55] Depuracion mezcla: XyZz7y12*abCocacola1
+
+[20:37:55] Depuracion salt: 49V5lRTh49S6s41s
+
+[20:37:55] Depuracion hash: 23D2576E2781640E0F06B61B64FE9C48F8AFCAAA4AEFD9E6C661CF2998FF113B
+
+[20:40:07] [part] maxi has left the server (0:1)

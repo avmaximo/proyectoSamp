@@ -375,3 +375,15 @@
 =======
 >>>>>>> 827c27787f1c9824676e288274bfcf45fc63faa5
 >>>>>>> 3da20dcff7065fb15d05f9b51fddd357b0da84c6
+[18:47:34] [ERROR] error #1364 while executing query "INSERT INTO characters (user_id,name,lastname) VALUES (11,'Nicki','Nicole')": Field 'gender' doesn't have a default value
+[18:56:11] [ERROR] error #1364 while executing query "INSERT INTO characters (user_id,name,lastname) VALUES (12,'Maximo','Avila')": Field 'gender' doesn't have a default value
+[19:26:09] [ERROR] error #1364 while executing query "INSERT INTO characters (user_id,name,lastname) VALUES (13,'Maximo','Avila')": Field 'gender' doesn't have a default value
+[19:29:06] [ERROR] error #1364 while executing query "INSERT INTO characters (user_id,name,lastname) VALUES (14,'Maximo','Avila')": Field 'gender' doesn't have a default value
+[20:10:05] [ERROR] error #1364 while executing query "INSERT INTO users (username,password,ph,email) VALUES ('maxi','D5BFFB6226E84A1A95FFEE8917F5F0D964FD1A1385892B35ED6AED276E74F0FF','sBWF9IJSBzTEB9tU','a@.')": Field 'last_login' doesn't have a default value
+[20:11:57] [ERROR] error #1406 while executing query "INSERT INTO users (username,password,ph,email,last_login,ip) VALUES ('maxi','B1A7C13A45E9DDE7D7E0BE596912E458A367C6288958E06DA8FD884910937308','CVzDuP7aivekGs6d','ads@.',NOW(),'')": Data too long for column 'last_login' at row 1
+[20:13:42] [ERROR] error #1364 while executing query "INSERT INTO characters (user_id,name,lastname,gender,age,skin,level,money,bank,posX,posY,posZ,rot,health,armor) VALUES (4,'Maximo','Avila',0,23,7,1,1000,0,1765.931274,-1949.806640,14.609554,271.041625,100,0)": Field 'dimension' doesn't have a default value
+[20:16:55] [ERROR] error #1364 while executing query "INSERT INTO characters (user_id,name,lastname,gender,age,skin,level,money,bank,posX,posY,posZ,rot,health,armor) VALUES (5,'maxim','avil',0,23,7,1,1000,0,1765.931274,-1949.806640,14.609554,271.041625,100,0)": Field 'interior' doesn't have a default value
+[20:19:59] [ERROR] mysql_format: no value for specifier '%.' passed
+[20:19:59] [ERROR] error #1065 while executing query "": Query was empty
+[20:23:23] [ERROR] mysql_format: no value for specifier '%.' passed
+[20:23:23] [ERROR] error #1065 while executing query "": Query was empty
