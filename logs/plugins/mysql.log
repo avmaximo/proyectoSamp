@@ -387,3 +387,13 @@
 [20:19:59] [ERROR] error #1065 while executing query "": Query was empty
 [20:23:23] [ERROR] mysql_format: no value for specifier '%.' passed
 [20:23:23] [ERROR] error #1065 while executing query "": Query was empty
+[15:50:59] [ERROR] CConnection::CConnection - establishing connection to MySQL database failed: #1045 'Access denied for user 'samp-server'@'localhost' (using password: YES)'
+[15:50:59] [ERROR] CConnection::CConnection - establishing connection to MySQL database failed: #1045 'Access denied for user 'samp-server'@'localhost' (using password: YES)'
+[15:50:59] [ERROR] CConnection::CConnection - establishing connection to MySQL database failed: #1045 'Access denied for user 'samp-server'@'localhost' (using password: YES)'
+[15:50:59] [ERROR] CConnection::CConnection - establishing connection to MySQL database failed: #1045 'Access denied for user 'samp-server'@'localhost' (using password: YES)'
+[15:55:33] [ERROR] error #1054 while executing query "INSERT INTO users (username,password,ph,email,last_login,ip) VALUES ('maximo','2230C9D7D4A4CC1A6DE6D7C3206970E8D2831ADBA3EDDA7813BF53B5E8C584E4','5pOTtASWV0NwCeph','avilams2002@hotmail.com',NOW(),'')": Unknown column 'ph' in 'field list'
+[15:56:07] [ERROR] error #1146 while executing query "UPDATE characters SET name='Maximo', lastname='Avila', gender=0, age=22, skin=7, health=1120403456, armor=0, interior=0, dimension=0, posX=1797.365112, posY=-1849.539063, posZ=13.578125, rot=330.318817 WHERE character_id=0": Table 'sv-samp.characters' doesn't exist
+[15:58:25] [ERROR] error #1054 while executing query "INSERT INTO users (username,password,ph,email,last_login,ip) VALUES ('maximo','86B1ACF68CFDEB0EF3BF66AF88D7E34899BE8F78D64B2505A4EBB8FA7265DEBF','QZP3LTwu3hrFk5qt','avilams2002@hotmail.com',NOW(),'')": Unknown column 'ph' in 'field list'
+[16:02:23] [ERROR] error #1054 while executing query "INSERT INTO users (username,password,ph,email,last_login,ip) VALUES ('maximo','8F6236C745EE0098578A262B372F2D058DF071B92B9C2FEB71188FA8725A2B87','0Agw850DFtyL4e3w','avilamax002@hotmail.com',NOW(),'')": Unknown column 'email' in 'field list'
+[16:03:43] [ERROR] error #1054 while executing query "INSERT INTO users (username,password,ph,email,last_login,ip) VALUES ('maximo','383060857FA26CAD5E6CA11EF76FE82DD7B66526A7DD34EB4BC6A59D3A95A095','iQ17xhKKsj6BlxCf','avi.@',NOW(),'')": Unknown column 'email' in 'field list'
+[16:04:59] [ERROR] error #1054 while executing query "INSERT INTO users (username,password,ph,email,last_login,ip) VALUES ('maximo','26AB254D11BEB0D566646CCF3BDE973ED97141CAF5878FE15C38FD2EA16186A4','nxsvBIuv3xvsUbC6','avi@.',NOW(),'')": Unknown column 'last_login' in 'field list'

@@ -78,6 +78,7 @@ new const_pepper[20] = "XyZz7y12*ab";
 #define DIALOG_REGISTER_PLAYER_LASTNAME (id_dialogos+4)
 #define DIALOG_REGISTER_PLAYER_GENDER   (id_dialogos+5)
 #define DIALOG_REGISTER_PLAYER_AGE      (id_dialogos+6)
+#define DIALOG_LOGIN_PASSWORD           (id_dialogos+7)
 /*========================================================================================= */
 
 #define SPAWN_NONE        0
@@ -91,9 +92,7 @@ enum uData {
     uPassword[PASSWORD_MAX_CHARACTERS+25],
     ph[19],
     uMail[60],
-    uIp[17],
-    uRegisterDate[9],
-    uLastLogin[9],
+    uIp[16],
     aLevel,
 
     lastDialog,
@@ -134,6 +133,7 @@ public OnPlayerConnect(playerid){
     modoLobby(playerid, 1);
     userInfo[playerid][spawnState] = SPAWN_NONE;
     GetPlayerName(playerid, userInfo[playerid][uName], MAX_PLAYER_NAME);
+    GetPlayerIp(playerid, userInfo[playerid][uIp], 16);
     SetTimerEx("ClearChat", 400, false, "i", playerid);
     new DB_Query[256],Cache:ResultCache_;
     format(DB_Query, sizeof(DB_Query), "SELECT * FROM users WHERE username='%s' LIMIT 1", userInfo[playerid][uName]);
@@ -280,7 +280,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             }
             new DB_Query[512];
             mysql_format(database, DB_Query, sizeof(DB_Query),
-                "INSERT INTO users (username,password,ph,email,last_login,ip) VALUES ('%e','%e','%e','%e',NOW(),'%e')",
+                "INSERT INTO users (username,password,ph,email,last_login,ip,register_date) VALUES ('%e','%e','%e','%e',NOW(),'%e',NOW())",
                 userInfo[playerid][uName],
                 userInfo[playerid][uPassword],
                 userInfo[playerid][ph],
@@ -431,7 +431,7 @@ public guardarCuenta(playerid){
 
     new DB_Query[512];
     mysql_format(database, DB_Query, sizeof(DB_Query),
-        "UPDATE characters SET name='%e', lastname='%e', gender=%d, age=%d, skin=%d, health=%d, armor=%d, interior=%d, dimension=%d, posX=%f, posY=%f, posZ=%f, rot=%f WHERE character_id=%d",
+        "UPDATE characters SET name='%e', lastname='%e', gender=%d, age=%d, skin=%d, health=%f, armor=%f, interior=%d, dimension=%d, posX=%f, posY=%f, posZ=%f, rot=%f WHERE character_id=%d",
         characterInfo[playerid][pName],
         characterInfo[playerid][pLastname],
         characterInfo[playerid][pGender],
@@ -570,6 +570,15 @@ public _cuadroRegistroPlayerAge(playerid){
     ShowPlayerDialog(playerid, DIALOG_REGISTER_PLAYER_AGE, DIALOG_STYLE_INPUT, _tempTitulo, _tempMessage, "Continuar", "Volver");
     return 1;
 }
+forward _cuadroLogeoPassword(playerid);
+public _cuadroLogeoPassword(playerid){
+    new _tempTitulo[128], _tempMessage[256];
+    format(_tempTitulo, sizeof(_tempTitulo), COLOR_GOLD"Iniciar sesión en %s", NAME_SERVER);
+    format(_tempMessage, sizeof(_tempMessage), COLOR_WHITE"Introduce tu "COLOR_CYAN"edad:\n\n"COLOR_WARNING"- Tu personaje debe ser mayor de 18 años.\n- No es necesario que sea tu edad real, pero sí mayor de 18.");
+    ShowPlayerDialog(playerid, DIALOG_LOGIN_PASSWORD, DIALOG_STYLE_PASSWORD, _tempTitulo, _tempMessage, "Continuar", "Volver");
+    return 1; //TERMINAR DIALOGO DE LOGEO 02/10/2025
+}
+
 forward _cuadroPreguntaSalir(playerid);
 public _cuadroPreguntaSalir(playerid){
     new _tempTitulo[128], _tempMessage[256];
