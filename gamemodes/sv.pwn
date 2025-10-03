@@ -86,6 +86,8 @@ new const_pepper[20] = "XyZz7y12*ab";
 #define SPAWN_HOSPITAL    2
 #define SPAWN_NORMAL      3
 
+new loginAttempts[MAX_PLAYERS];
+
 enum uData {
     uIdSQL,
     uName[MAX_PLAYER_NAME],
@@ -132,6 +134,7 @@ public OnGameModeInit(){
 public OnPlayerConnect(playerid){
     modoLobby(playerid, 1);
     userInfo[playerid][spawnState] = SPAWN_NONE;
+    loginAttempts[playerid] = 3;
     GetPlayerName(playerid, userInfo[playerid][uName], MAX_PLAYER_NAME);
     GetPlayerIp(playerid, userInfo[playerid][uIp], 16);
     SetTimerEx("ClearChat", 400, false, "i", playerid);
@@ -139,12 +142,16 @@ public OnPlayerConnect(playerid){
     format(DB_Query, sizeof(DB_Query), "SELECT * FROM users WHERE username='%s' LIMIT 1", userInfo[playerid][uName]);
     ResultCache_ = mysql_query(database, DB_Query);
     if(cache_num_rows()){//-------------------------------------------------------------El usuario existe
-        SendClientMessage(playerid, -1, "El usuario existe");
+        cache_get_value_name(0, "ph", userInfo[playerid][ph], 17);
+
+        SetTimerEx("_mensajeBienvenida", 500, false, "ii", playerid,1);
+        SetTimerEx("_cuadroLogeoPassword", 800, false, "ii", playerid,loginAttempts[playerid]); // playerid, attempts
+
 
 
 
     }else{ //---------------------------------------------------------------------------El usuario no existe
-        SetTimerEx("_mensajeBienvenida", 500, false, "i", playerid);
+        SetTimerEx("_mensajeBienvenida", 500, false, "ii", playerid,0);
 
         SetTimerEx("_cuadroRegistroPassword", 800, false, "i", playerid); 
 
@@ -315,6 +322,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             return 1;
         }
     }
+    
     else if(dialogid == DIALOG_EXIT){
         if(response){
             SetTimerEx("kickPlayer", 500, false, "i", playerid);
@@ -323,6 +331,9 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         else{
             if(userInfo[playerid][lastDialog] == DIALOG_REGISTER_PASSWORD){
                 _cuadroRegistroPassword(playerid);
+            }
+            else if(userInfo[playerid][lastDialog] == DIALOG_LOGIN_PASSWORD){
+                _cuadroLogeoPassword(playerid,3);
             }
             return 1;
         }
@@ -510,15 +521,20 @@ public IsPlayerLoggedIn(playerid){
     return 0;
 }
 
-forward _mensajeBienvenida(playerid);
-public _mensajeBienvenida(playerid){
+forward _mensajeBienvenida(playerid,nro);
+public _mensajeBienvenida(playerid,nro){
     new _tempMessage[128];
-    format(_tempMessage, sizeof(_tempMessage), "Bienvenido a "COLOR_GOLD"%s", NAME_SERVER);
-    SendClientMessage(playerid, -1, _tempMessage);
-    format(_tempMessage, sizeof(_tempMessage), "No encontramos una cuenta registrada con el nombre "#COLOR_PLAYER"%s", userInfo[playerid][uName]);
-    SendClientMessage(playerid, -1, _tempMessage);
-    format(_tempMessage, sizeof(_tempMessage), "Para comenzar a jugar, crea tu cuenta.");
-    SendClientMessage(playerid, -1, _tempMessage);
+    if(nro == 0){
+        format(_tempMessage, sizeof(_tempMessage), "¡Bienvenido/a a "COLOR_GOLD"%s"#COLOR_WHITE"!", NAME_SERVER);
+        SendClientMessage(playerid, -1, _tempMessage);
+        format(_tempMessage, sizeof(_tempMessage), "No encontramos una cuenta registrada con el nombre "#COLOR_PLAYER"%s", userInfo[playerid][uName]);
+        SendClientMessage(playerid, -1, _tempMessage);
+        format(_tempMessage, sizeof(_tempMessage), "Para comenzar a jugar, crea tu cuenta.");
+        SendClientMessage(playerid, -1, _tempMessage);
+    }else{
+        format(_tempMessage, sizeof(_tempMessage), "¡Bienvenido/a de nuevo a "COLOR_GOLD"%s"#COLOR_WHITE"!", NAME_SERVER);
+        SendClientMessage(playerid, -1, _tempMessage);
+    }
     return 1;
 }
 
@@ -570,11 +586,11 @@ public _cuadroRegistroPlayerAge(playerid){
     ShowPlayerDialog(playerid, DIALOG_REGISTER_PLAYER_AGE, DIALOG_STYLE_INPUT, _tempTitulo, _tempMessage, "Continuar", "Volver");
     return 1;
 }
-forward _cuadroLogeoPassword(playerid);
-public _cuadroLogeoPassword(playerid){
+forward _cuadroLogeoPassword(playerid,attempts);
+public _cuadroLogeoPassword(playerid,attempts){
     new _tempTitulo[128], _tempMessage[256];
     format(_tempTitulo, sizeof(_tempTitulo), COLOR_GOLD"Iniciar sesión en %s", NAME_SERVER);
-    format(_tempMessage, sizeof(_tempMessage), COLOR_WHITE"Introduce tu "COLOR_CYAN"edad:\n\n"COLOR_WARNING"- Tu personaje debe ser mayor de 18 años.\n- No es necesario que sea tu edad real, pero sí mayor de 18.");
+    format(_tempMessage, sizeof(_tempMessage), COLOR_WHITE"Introduce tu contraseña:\n\n"COLOR_WARNING"- Tienes %s intentos.",attempts);
     ShowPlayerDialog(playerid, DIALOG_LOGIN_PASSWORD, DIALOG_STYLE_PASSWORD, _tempTitulo, _tempMessage, "Continuar", "Volver");
     return 1; //TERMINAR DIALOGO DE LOGEO 02/10/2025
 }
