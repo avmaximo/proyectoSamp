@@ -79,6 +79,8 @@ new const_pepper[20] = "XyZz7y12*ab";
 #define DIALOG_REGISTER_PLAYER_GENDER   (id_dialogos+5)
 #define DIALOG_REGISTER_PLAYER_AGE      (id_dialogos+6)
 #define DIALOG_LOGIN_PASSWORD           (id_dialogos+7)
+#define DIALOG_CHARACTER_SELECT (id_dialogos + 8)
+
 /*========================================================================================= */
 
 #define SPAWN_NONE        0
@@ -95,7 +97,10 @@ enum uData {
     ph[19],
     uMail[60],
     uIp[16],
-    aLevel,
+    
+    uLevel,
+    uExp,
+    uMinutesPlayed,
 
     lastDialog,
     isLoggedIn,
@@ -112,14 +117,18 @@ enum pData {
     pAge,
     pSkin,
     pMoney,
-    pLevel,
-    pExp,
+    pBank,
     pJob[2], // 0 y 1
     Float:pPosX,Float:pPosY,Float:pPosZ,Float:pRot,
     Float:pHealth,
     Float:pArmor,
     pInterior,
-    pDimension
+    pDimension,
+
+    pLevel,
+    pExp,
+    pMinutesPlayed,
+    bool:pLevelUp
 };
 
 new characterInfo[MAX_PLAYERS][pData], userInfo[MAX_PLAYERS][uData];
@@ -170,8 +179,7 @@ public OnPlayerDisconnect(playerid, reason){
     return 1;
 }
 
-public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
-{
+public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[]){
     if(dialogid == DIALOG_REGISTER_PASSWORD){
         if(response){
             while((strlen(inputtext) < 8 || strlen(inputtext) > PASSWORD_MAX_CHARACTERS) || strfind(inputtext, " ") != -1){
@@ -287,7 +295,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             }
             new DB_Query[512];
             mysql_format(database, DB_Query, sizeof(DB_Query),
-                "INSERT INTO users (username,password,ph,email,last_login,ip,register_date) VALUES ('%e','%e','%e','%e',NOW(),'%e',NOW())",
+                "INSERT INTO users (username,password,ph,email,last_login,ip,register_date) VALUES ('%e','%e','%e','%e',NOW(),'%s',NOW())",
                 userInfo[playerid][uName],
                 userInfo[playerid][uPassword],
                 userInfo[playerid][ph],
@@ -321,8 +329,98 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             _cuadroRegistroPlayerAge(playerid);
             return 1;
         }
+    }else if(dialogid == DIALOG_LOGIN_PASSWORD)
+    {
+        if(response)
+        {
+            // Si el usuario deja el campo vacío
+            if(strlen(inputtext) == 0)
+            {
+                _cuadroLogeoPassword(playerid, loginAttempts[playerid]);
+                SendClientMessage(playerid, -1, COLOR_ERROR"Error: "COLOR_WHITE"La contraseña no puede estar vacía.");
+                return 1;
+            }
+
+            // Hashear contraseña ingresada
+            new hash[144];
+            HashConPepper(inputtext, userInfo[playerid][ph], hash, sizeof(hash));
+
+            // Consultar en base de datos
+            new DB_Query[256], Cache:ResultCache_;
+            format(DB_Query, sizeof(DB_Query),
+                "SELECT * FROM users WHERE username='%s' AND password='%s' LIMIT 1",
+                userInfo[playerid][uName], hash
+            );
+
+            ResultCache_ = mysql_query(database, DB_Query);
+
+            if(cache_num_rows()) // ? Contraseña correcta
+            {
+                cache_get_value_name_int(0, "ID_sql", userInfo[playerid][uIdSQL]);
+                userInfo[playerid][isLoggedIn] = 1;
+                userInfo[playerid][spawnState] = SPAWN_INITIAL;
+
+                SendClientMessage(playerid, -1, COLOR_SUCCESS"¡Has iniciado sesión correctamente!");
+                mysql_format(database, DB_Query, sizeof(DB_Query),
+                    "SELECT character_id, name, lastname FROM characters WHERE user_id=%d",
+                    userInfo[playerid][uIdSQL]
+                );
+                ResultCache_ = mysql_query(database, DB_Query);
+                OnCharacterList(playerid);
+
+
+
+            }
+            else // ? Contraseña incorrecta
+            {
+                loginAttempts[playerid]--;
+                if(loginAttempts[playerid] <= 0)
+                {
+                    SendClientMessage(playerid, -1, COLOR_ERROR"Has agotado tus intentos de inicio de sesión.");
+                    SetTimerEx("kickPlayer", 1000, false, "i", playerid);
+                    cache_delete(ResultCache_);
+                    return 1;
+                }
+                else
+                {
+                    new msg[128];
+                    format(msg, sizeof(msg),
+                        COLOR_ERROR"Contraseña incorrecta. "COLOR_WARNING"Tienes %d intento(s) restante(s).",
+                        loginAttempts[playerid]
+                    );
+                    SendClientMessage(playerid, -1, msg);
+                    _cuadroLogeoPassword(playerid, loginAttempts[playerid]);
+                }
+            }
+
+            cache_delete(ResultCache_);
+        }
+        else // Canceló el diálogo
+        {
+            userInfo[playerid][lastDialog] = DIALOG_LOGIN_PASSWORD;
+            _cuadroPreguntaSalir(playerid);
+        }
     }
-    
+    else if(dialogid == DIALOG_CHARACTER_SELECT)
+    {
+        if(!response)
+        {
+            SendClientMessage(playerid, -1, COLOR_ERROR"No has seleccionado ningún personaje.");
+            _cuadroSeleccionPersonaje(playerid); // vuelve a mostrar el cuadro
+            return 1;
+        }
+
+
+        // Si es válido, carga el personaje seleccionado
+        new DB_Query[256];
+        mysql_format(database, DB_Query, sizeof(DB_Query),
+            "SELECT * FROM characters WHERE user_id=%d LIMIT %d,1",
+            userInfo[playerid][uIdSQL], listitem
+        );
+        mysql_tquery(database, DB_Query, "OnCharacterSelect", "i", playerid);
+        return 1;
+    }
+
     else if(dialogid == DIALOG_EXIT){
         if(response){
             SetTimerEx("kickPlayer", 500, false, "i", playerid);
@@ -333,7 +431,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 _cuadroRegistroPassword(playerid);
             }
             else if(userInfo[playerid][lastDialog] == DIALOG_LOGIN_PASSWORD){
-                _cuadroLogeoPassword(playerid,3);
+                _cuadroLogeoPassword(playerid,loginAttempts[playerid]);
             }
             return 1;
         }
@@ -373,6 +471,75 @@ public OnPlayerInsert(playerid)
     characterInfo[playerid][pIdSQL] = cache_insert_id(); // ID del personaje
     userInfo[playerid][currentCharacterIdSQL] = characterInfo[playerid][pIdSQL]; // Guardás el ID del personaje actual en userInfo
 }
+
+forward OnCharacterList(playerid);
+public OnCharacterList(playerid)
+{   
+    
+    new rows = cache_num_rows();
+    printf("DEBUG: OnCharacterList llamado para player %s: cache_num_rows()=%d", userInfo[playerid][uName], rows);
+    if(rows == 0)
+    {
+        
+        SendClientMessage(playerid, -1, COLOR_ERROR"No tienes personajes creados. Contacta con un administrador.");
+        SetTimerEx("kickPlayer", 3000, false, "i", playerid);
+        return 1;
+    }
+    
+
+    
+
+
+    new dialogContent[512];
+    new name[32], lastname[32];
+    for(new i = 0; i < rows; i++)
+    {
+        cache_get_value_name(i, "name", name, sizeof(name));
+        cache_get_value_name(i, "lastname", lastname, sizeof(lastname));
+
+        format(dialogContent, sizeof(dialogContent), "%s%s %s\n", dialogContent, name, lastname);
+    }
+
+    // Línea gris final
+    format(dialogContent, sizeof(dialogContent), "%s%sCrea tu siguiente personaje con VIP", dialogContent, COLOR_GRAY);
+
+    new title[64];
+    format(title, sizeof(title), COLOR_GOLD"Selecciona tu personaje");
+    ShowPlayerDialog(playerid, DIALOG_CHARACTER_SELECT, DIALOG_STYLE_LIST, title, dialogContent, "Seleccionar", "Cancelar");
+
+    return 1;
+}
+
+forward OnCharacterSelect(playerid);
+public OnCharacterSelect(playerid)
+{
+    if(!cache_num_rows()) return 1;
+
+    cache_get_value_name_int(0, "character_id", userInfo[playerid][currentCharacterIdSQL]);
+    cache_get_value_name(0, "name", characterInfo[playerid][pName], 25);
+    cache_get_value_name(0, "lastname", characterInfo[playerid][pLastname], 25);
+    cache_get_value_name_int(0, "gender", characterInfo[playerid][pGender]);
+    cache_get_value_name_int(0, "age", characterInfo[playerid][pAge]);
+    cache_get_value_name_int(0, "skin", characterInfo[playerid][pSkin]);
+    cache_get_value_name_float(0, "posX", characterInfo[playerid][pPosX]);
+    cache_get_value_name_float(0, "posY", characterInfo[playerid][pPosY]);
+    cache_get_value_name_float(0, "posZ", characterInfo[playerid][pPosZ]);
+    cache_get_value_name_float(0, "rot", characterInfo[playerid][pRot]);
+    cache_get_value_name_float(0, "health", characterInfo[playerid][pHealth]);
+    cache_get_value_name_float(0, "armor", characterInfo[playerid][pArmor]);
+    cache_get_value_name_int(0, "interior", characterInfo[playerid][pInterior]);
+    cache_get_value_name_int(0, "dimension", characterInfo[playerid][pDimension]);
+    cache_get_value_name_int(0, "money", characterInfo[playerid][pMoney]);
+    cache_get_value_name_int(0, "bank", characterInfo[playerid][pBank]);
+
+    SendClientMessage(playerid, -1, COLOR_SUCCESS"Has seleccionado tu personaje correctamente.");
+    userInfo[playerid][spawnState] = SPAWN_INITIAL;
+    modoLobby(playerid, 0);
+    SetTimerEx("SpawnPlayerEx", 500, false, "i", playerid);
+
+    return 1;
+}
+
 
 public OnPlayerSpawn(playerid){
     if(!IsPlayerLoggedIn(playerid)){ // Si el jugador no está logueado, lo sacamos
@@ -428,6 +595,33 @@ public CerrarServidor(){
     return 1;
 }
 
+forward UpdatePlayerMinutes(playerid);
+public UpdatePlayerMinutes(playerid){
+    if(!IsPlayerLoggedIn(playerid)) return 0;
+    characterInfo[playerid][pMinutesPlayed]++;
+    if(characterInfo[playerid][pMinutesPlayed] >= 60){
+        if(characterInfo[playerid][pLevelUp]){
+            SendClientMessage(playerid, -1, COLOR_WARNING"Recuerda que puedes subir de nivel. Usa el comando /comandoParaSubirDeNivel");
+            return 1;
+        }
+        characterInfo[playerid][pMinutesPlayed] = 0;
+        characterInfo[playerid][pExp] += 100;
+        if(characterInfo[playerid][pExp] >= generateExpPlayerNextGoal(playerid)){
+            characterInfo[playerid][pLevel]++;
+            characterInfo[playerid][pExp] = 0;
+            SendClientMessage(playerid, -1, COLOR_SUCCESS"Ya puedes subir de nivel. /comandoParaSubirDeNivel");
+            characterInfo[playerid][pLevelUp] = true;
+        }
+    }
+}
+
+forward generateExpPlayerNextGoal(playerid);
+public generateExpPlayerNextGoal(playerid){
+    if(!IsPlayerLoggedIn(playerid)) return 0;
+    new expNextGoal = (100 * (characterInfo[playerid][pLevel] ** 1.5)) + (characterInfo[playerid][pLevel] * 50);
+    return expNextGoal;
+}
+
 forward guardarCuenta(playerid);
 public guardarCuenta(playerid){
     if(!IsPlayerLoggedIn(playerid)) return 0;
@@ -442,7 +636,7 @@ public guardarCuenta(playerid){
 
     new DB_Query[512];
     mysql_format(database, DB_Query, sizeof(DB_Query),
-        "UPDATE characters SET name='%e', lastname='%e', gender=%d, age=%d, skin=%d, health=%f, armor=%f, interior=%d, dimension=%d, posX=%f, posY=%f, posZ=%f, rot=%f WHERE character_id=%d",
+        "UPDATE characters SET name='%e', lastname='%e', gender=%d, age=%d, skin=%d, health=%f, armor=%f, interior=%d, dimension=%d, posX=%f, posY=%f, posZ=%f, rot=%f,money=%d, bank=%d WHERE character_id=%d",
         characterInfo[playerid][pName],
         characterInfo[playerid][pLastname],
         characterInfo[playerid][pGender],
@@ -456,13 +650,15 @@ public guardarCuenta(playerid){
         characterInfo[playerid][pPosY],
         characterInfo[playerid][pPosZ],
         characterInfo[playerid][pRot],
+        characterInfo[playerid][pMoney],
+        characterInfo[playerid][pBank],
 
         userInfo[playerid][currentCharacterIdSQL]
     );
     mysql_tquery(database, DB_Query);
 
     mysql_format(database, DB_Query, sizeof(DB_Query),
-        "UPDATE users SET last_login=NOW(), ip='%e' WHERE user_id=%d",
+        "UPDATE users SET last_login=NOW(), ip='%s' WHERE user_id=%d",
         userInfo[playerid][uIp],
         userInfo[playerid][uIdSQL]
     );
@@ -590,10 +786,23 @@ forward _cuadroLogeoPassword(playerid,attempts);
 public _cuadroLogeoPassword(playerid,attempts){
     new _tempTitulo[128], _tempMessage[256];
     format(_tempTitulo, sizeof(_tempTitulo), COLOR_GOLD"Iniciar sesión en %s", NAME_SERVER);
-    format(_tempMessage, sizeof(_tempMessage), COLOR_WHITE"Introduce tu contraseña:\n\n"COLOR_WARNING"- Tienes %s intentos.",attempts);
+    format(_tempMessage, sizeof(_tempMessage), COLOR_WHITE"Introduce tu contraseña:\n\n"COLOR_WARNING"- Tienes %d intentos.",attempts);
     ShowPlayerDialog(playerid, DIALOG_LOGIN_PASSWORD, DIALOG_STYLE_PASSWORD, _tempTitulo, _tempMessage, "Continuar", "Volver");
     return 1; //TERMINAR DIALOGO DE LOGEO 02/10/2025
 }
+
+forward _cuadroSeleccionPersonaje(playerid);
+public _cuadroSeleccionPersonaje(playerid)
+{
+    new DB_Query[256];
+    mysql_format(database, DB_Query, sizeof(DB_Query),
+        "SELECT character_id, name, lastname FROM characters WHERE user_id=%d",
+        userInfo[playerid][uIdSQL]
+    );
+    mysql_tquery(database, DB_Query, "OnCharacterList", "i", playerid);
+    return 1;
+}
+
 
 forward _cuadroPreguntaSalir(playerid);
 public _cuadroPreguntaSalir(playerid){

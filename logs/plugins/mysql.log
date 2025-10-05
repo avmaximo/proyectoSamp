@@ -397,3 +397,44 @@
 [16:02:23] [ERROR] error #1054 while executing query "INSERT INTO users (username,password,ph,email,last_login,ip) VALUES ('maximo','8F6236C745EE0098578A262B372F2D058DF071B92B9C2FEB71188FA8725A2B87','0Agw850DFtyL4e3w','avilamax002@hotmail.com',NOW(),'')": Unknown column 'email' in 'field list'
 [16:03:43] [ERROR] error #1054 while executing query "INSERT INTO users (username,password,ph,email,last_login,ip) VALUES ('maximo','383060857FA26CAD5E6CA11EF76FE82DD7B66526A7DD34EB4BC6A59D3A95A095','iQ17xhKKsj6BlxCf','avi.@',NOW(),'')": Unknown column 'email' in 'field list'
 [16:04:59] [ERROR] error #1054 while executing query "INSERT INTO users (username,password,ph,email,last_login,ip) VALUES ('maximo','26AB254D11BEB0D566646CCF3BDE973ED97141CAF5878FE15C38FD2EA16186A4','nxsvBIuv3xvsUbC6','avi@.',NOW(),'')": Unknown column 'last_login' in 'field list'
+[12:00:29] [ERROR] cache_get_value_name_int: field 'user_id' not found
+[12:01:39] [ERROR] cache_get_value_name_int: field 'user_id' not found
+[12:06:28] [ERROR] cache_get_value_name_int: field 'user_id' not found
+[12:14:35] [ERROR] cache_get_value_name_int: field 'user_id' not found
+[12:16:47] [ERROR] cache_get_value_name_int: field 'user_id' not found
+[12:27:26] [ERROR] cache_get_value_name_int: field 'user_id' not found
+[12:27:26] [ERROR] cache_delete: invalid cache id '2'
+[12:30:26] [ERROR] cache_get_value_name_int: field 'user_id' not found
+[12:33:23] [ERROR] cache_get_value_name_int: field 'user_id' not found
+[12:36:38] [ERROR] cache_get_row_count: no active cache
+[12:41:14] [ERROR] cache_get_row_count: no active cache
+[12:41:16] [ERROR] cache_get_row_count: no active cache
+[12:41:16] [ERROR] cache_get_row_count: no active cache
+[12:41:17] [ERROR] cache_get_row_count: no active cache
+[12:41:18] [ERROR] cache_get_row_count: no active cache
+[12:41:19] [ERROR] cache_get_row_count: no active cache
+[12:41:20] [ERROR] cache_get_row_count: no active cache
+[12:41:22] [ERROR] cache_get_row_count: no active cache
+[12:41:22] [ERROR] cache_get_row_count: no active cache
+[12:41:23] [ERROR] cache_get_row_count: no active cache
+[12:41:23] [ERROR] cache_get_row_count: no active cache
+[12:41:25] [ERROR] cache_get_row_count: no active cache
+[12:41:26] [ERROR] cache_get_row_count: no active cache
+[12:50:49] [ERROR] error #1054 while executing query "SELECT user_id FROM users WHERE username='maxi' AND password='23D2576E2781640E0F06B61B64FE9C48F8AFCAAA4AEFD9E6C661CF2998FF113B' LIMIT 1": Unknown column 'user_id' in 'field list'
+[12:54:41] [ERROR] cache_get_row_count: no active cache
+[12:54:42] [ERROR] cache_get_row_count: no active cache
+[12:58:34] [ERROR] cache_get_row_count: no active cache
+[13:00:46] [ERROR] cache_get_row_count: no active cache
+[13:00:47] [ERROR] cache_get_row_count: no active cache
+[13:00:49] [ERROR] cache_get_row_count: no active cache
+[13:00:50] [ERROR] cache_get_row_count: no active cache
+[13:00:51] [ERROR] cache_get_row_count: no active cache
+[13:00:51] [ERROR] cache_get_row_count: no active cache
+[13:00:52] [ERROR] cache_get_row_count: no active cache
+[13:00:54] [ERROR] cache_get_row_count: no active cache
+[13:01:05] [ERROR] cache_get_row_count: no active cache
+[13:01:10] [ERROR] cache_get_row_count: no active cache
+[13:01:17] [ERROR] cache_get_row_count: no active cache
+[13:01:32] [ERROR] cache_get_row_count: no active cache
+[13:01:47] [ERROR] cache_get_row_count: no active cache
+[13:30:09] [ERROR] error #1054 while executing query "INSERT INTO users (username,password,ph,email,last_login,ip,register_date) VALUES ('maximo','B5C36B507102872FC957D07A15C8BCC5504A16616A34347916C01A9DF3572DF2','Z1sSZHU3LifAoeAc','fracolapinto2@gmail.com',NOW(),'127.0.0.1',NOW())": Unknown column 'register_date' in 'field list'
