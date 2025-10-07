@@ -19,8 +19,15 @@
 #define COLOR_CYAN         "{00FFFF}"
 #define COLOR_MAGENTA      "{FF00FF}"
 #define COLOR_ORANGE       "{FFA500}"
-#define COLOR_GRAY         "{808080}"
 #define COLOR_SILVER       "{C0C0C0}"
+
+#define COLOR_PRIMARY     "{E8C547}" // dorado suave
+#define COLOR_ACCENT      "{7FB3D5}" // azul pastel
+#define COLOR_TEXT        "{EAEAEA}" // blanco grisáceo
+#define COLOR_WARNING     "{F5B041}" // ámbar cálido
+#define COLOR_ERROR       "{EC7063}" // rojo suave
+#define COLOR_SUCCESS     "{82E0AA}" // verde menta
+#define COLOR_GRAY        "{A6ACAF}" // gris medio
 
 // Colores extra comunes
 #define COLOR_PINK         "{FFC0CB}"
@@ -39,9 +46,6 @@
 #define COLOR_VIP          "{DAA520}" // goldenrod
 #define COLOR_PLAYER       "{87CEEB}" // sky blue
 #define COLOR_SYSTEM       "{B22222}" // firebrick
-#define COLOR_WARNING      "{FFD700}" // dorado fuerte
-#define COLOR_SUCCESS      "{32CD32}" // lime green
-#define COLOR_ERROR        "{DC143C}" // crimson
 
 // Contrastes
 #define COLOR_DARKGRAY     "{A9A9A9}"
@@ -65,8 +69,8 @@ new MySQL:database;
 #define INVALID_NUMBER             (999995)
 new const_pepper[20] = "XyZz7y12*ab";
 
-#define FIRST_SKIN_MALE            7
-#define FIRST_SKIN_FEMALE          8
+#define FIRST_SKIN_MALE            101
+#define FIRST_SKIN_FEMALE          56
 
 /*======================================= DEFINE DIALOGOS ================================== */
 #define id_dialogos             100
@@ -79,7 +83,7 @@ new const_pepper[20] = "XyZz7y12*ab";
 #define DIALOG_REGISTER_PLAYER_GENDER   (id_dialogos+5)
 #define DIALOG_REGISTER_PLAYER_AGE      (id_dialogos+6)
 #define DIALOG_LOGIN_PASSWORD           (id_dialogos+7)
-#define DIALOG_CHARACTER_SELECT (id_dialogos + 8)
+#define DIALOG_CHARACTER_SELECT         (id_dialogos + 8)
 
 /*========================================================================================= */
 
@@ -89,6 +93,10 @@ new const_pepper[20] = "XyZz7y12*ab";
 #define SPAWN_NORMAL      3
 
 new loginAttempts[MAX_PLAYERS];
+
+new Text:TD_Fondo[MAX_PLAYERS];
+new Text:TD_Logo[MAX_PLAYERS];
+
 
 enum uData {
     uIdSQL,
@@ -153,16 +161,16 @@ public OnPlayerConnect(playerid){
     if(cache_num_rows()){//-------------------------------------------------------------El usuario existe
         cache_get_value_name(0, "ph", userInfo[playerid][ph], 17);
 
-        SetTimerEx("_mensajeBienvenida", 500, false, "ii", playerid,1);
-        SetTimerEx("_cuadroLogeoPassword", 800, false, "ii", playerid,loginAttempts[playerid]); // playerid, attempts
+        SetTimerEx("_mensajeBienvenida", 400, false, "ii", playerid,1);
+        SetTimerEx("_cuadroLogeoPassword", 5000, false, "ii", playerid,loginAttempts[playerid]); // playerid, attempts
 
 
 
 
     }else{ //---------------------------------------------------------------------------El usuario no existe
-        SetTimerEx("_mensajeBienvenida", 500, false, "ii", playerid,0);
+        SetTimerEx("_mensajeBienvenida", 400, false, "ii", playerid,0);
 
-        SetTimerEx("_cuadroRegistroPassword", 800, false, "i", playerid); 
+        SetTimerEx("_cuadroRegistroPassword", 5000, false, "i", playerid); 
 
 
 
@@ -307,7 +315,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[]){
 
 
             userInfo[playerid][spawnState] = SPAWN_INITIAL;
-            modoLobby(playerid, 0);
+            SetTimerEx("modoLobby", 500, false, "ii", playerid,0);
             
             characterInfo[playerid][pMoney] = 1000;
             characterInfo[playerid][pLevel] = 1;
@@ -321,7 +329,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[]){
             characterInfo[playerid][pInterior] = 0;
             characterInfo[playerid][pDimension] = 0;
 
-            SetTimerEx("SpawnPlayerEx", 200, false, "i", playerid);
+            SetTimerEx("SpawnPlayerEx", 600, false, "i", playerid);
             SendClientMessage(playerid, -1, COLOR_SUCCESS"¡Registro completado! Bienvenido a "COLOR_GOLD""NAME_SERVER"!");
             return 1;
         }
@@ -594,7 +602,7 @@ public CerrarServidor(){
     SendRconCommand("exit");
     return 1;
 }
-
+/*
 forward UpdatePlayerMinutes(playerid);
 public UpdatePlayerMinutes(playerid){
     if(!IsPlayerLoggedIn(playerid)) return 0;
@@ -621,6 +629,7 @@ public generateExpPlayerNextGoal(playerid){
     new expNextGoal = (100 * (characterInfo[playerid][pLevel] ** 1.5)) + (characterInfo[playerid][pLevel] * 50);
     return expNextGoal;
 }
+*/
 
 forward guardarCuenta(playerid);
 public guardarCuenta(playerid){
@@ -695,17 +704,75 @@ public SpawnPlayerEx(playerid){
 }
 
 
+
 forward modoLobby(playerid, onOff);
-public modoLobby(playerid, onOff){
+public modoLobby(playerid, onOff)
+{
     if(!IsPlayerConnected(playerid)) return 0;
-    if(onOff == 1){
+
+    if(onOff == 1)
+    {
         TogglePlayerSpectating(playerid, 1);
         userInfo[playerid][isLoggedIn] = 0;
+        SetPlayerVirtualWorld(playerid, 0);
+
+
+        GameTextForPlayer(playerid, "~y~Conectando a~n~~w~Ciudad Libertad Roleplay...", 5000, 3);
+
+        // Cámara panorámica
+        SetPlayerCameraPos(playerid, 1741.497436, -736.675598, 167.170059);
+        SetPlayerCameraLookAt(playerid, 1687.005126, -847.056640, 134.222259);
+        InterpolateCameraPos(playerid,
+            1741.497436, -736.675598, 167.170059,
+            1687.005126, -847.056640, 134.222259,
+            16000, CAMERA_MOVE
+        );
+
+
+        // Esperar 100 ms y reproducir música
+        SetTimerEx("PlayAudioLobby", 100, false, "i", playerid);
     }
-    else if(onOff == 0){
+    else if(onOff == 0)
+    {
+        StopAudioStreamForPlayer(playerid);
         TogglePlayerSpectating(playerid, 0);
         userInfo[playerid][isLoggedIn] = 1;
+
+        TextDrawHideForPlayer(playerid, TD_Fondo[playerid]);
+        TextDrawHideForPlayer(playerid, TD_Logo[playerid]);
+
+        TextDrawDestroy(TD_Fondo[playerid]);
+        TextDrawDestroy(TD_Logo[playerid]);
+
     }
+    return 1;
+}
+
+// Callback real de audio
+forward PlayAudioLobby(playerid);
+public PlayAudioLobby(playerid)
+{
+    if(!IsPlayerConnected(playerid)) return 0;
+    // Fondo negro translúcido
+    TD_Fondo[playerid] = TextDrawCreate(0.0, 0.0, "_");
+    TextDrawLetterSize(TD_Fondo[playerid], 0.0, 50.0);
+    TextDrawTextSize(TD_Fondo[playerid], 640.0, 480.0);
+    TextDrawAlignment(TD_Fondo[playerid], 1);
+    TextDrawColor(TD_Fondo[playerid], 0x00000099); // negro semitransparente
+    TextDrawUseBox(TD_Fondo[playerid], 1);
+    TextDrawBoxColor(TD_Fondo[playerid], 0x00000066);
+    TextDrawShowForPlayer(playerid, TD_Fondo[playerid]);
+
+    // Logo / nombre del servidor
+    TD_Logo[playerid] = TextDrawCreate(320.0, 80.0, NAME_SERVER);
+    TextDrawLetterSize(TD_Logo[playerid], 0.8, 3.0);
+    TextDrawAlignment(TD_Logo[playerid], 2);
+    TextDrawColor(TD_Logo[playerid], 0xFFD700FF); // dorado
+    TextDrawSetOutline(TD_Logo[playerid], 1);
+    TextDrawSetShadow(TD_Logo[playerid], 1);
+    TextDrawFont(TD_Logo[playerid], 2);
+    TextDrawShowForPlayer(playerid, TD_Logo[playerid]);
+    PlayAudioStreamForPlayer(playerid, "https://raw.githubusercontent.com/avmaximo/server-sound_/main/intro2.mp3");
     return 1;
 }
 
@@ -736,60 +803,69 @@ public _mensajeBienvenida(playerid,nro){
 
 forward _cuadroRegistroPassword(playerid);
 public _cuadroRegistroPassword(playerid){
-    new _tempTitulo[128], _tempMessage[256];
-    format(_tempTitulo, sizeof(_tempTitulo), COLOR_GOLD"Registro en %s", NAME_SERVER);
-    format(_tempMessage, sizeof(_tempMessage), COLOR_WHITE"Crea tu "COLOR_SUCCESS"contraseña:\n\n"COLOR_WARNING"- Debe tener al menos 8 caracteres.\n- Máximo 78 caracteres.\n- No debe contener espacios.");
-    ShowPlayerDialog(playerid, DIALOG_REGISTER_PASSWORD, DIALOG_STYLE_INPUT, _tempTitulo, _tempMessage, "Continuar", "Cancelar");
+    new titulo[128], msg[512];
+    format(titulo, sizeof(titulo), "{7FB3D5}» Registro de cuenta");
+    format(msg, sizeof(msg), "{EAEAEA}Creá tu {82E0AA}contraseña segura{EAEAEA} para continuar.\n\n{A6ACAF}Requisitos:\n{F5B041}» {EAEAEA}Mínimo 8 caracteres\n{F5B041}» {EAEAEA}Máximo 78 caracteres\n{F5B041}» {EAEAEA}Sin espacios\n\n{7FB3D5}Consejo:{EAEAEA} combiná letras y números.");
+    ShowPlayerDialog(playerid, DIALOG_REGISTER_PASSWORD, DIALOG_STYLE_INPUT, titulo, msg, "Continuar", "Cancelar");
     return 1;
 }
+
+
+
 forward _cuadroRegistroPlayerName(playerid);
 public _cuadroRegistroPlayerName(playerid){
-    new _tempTitulo[128], _tempMessage[256];
-    format(_tempTitulo, sizeof(_tempTitulo), COLOR_GOLD"Registro en %s", NAME_SERVER);
-    format(_tempMessage, sizeof(_tempMessage), COLOR_WHITE"Introduce tu "COLOR_CYAN"NOMBRE:\n\n"COLOR_WARNING"- Entre 3 y 20 caracteres.\n- No debe contener espacios.\n- Solo letras y números.\n"COLOR_SUCCESS"- Usa nombres realistas para el rol.");
-    ShowPlayerDialog(playerid, DIALOG_REGISTER_PLAYER_NAME, DIALOG_STYLE_INPUT, _tempTitulo, _tempMessage, "Continuar", "Volver");
+    new titulo[128], msg[512];
+    format(titulo, sizeof(titulo), "{7FB3D5}» Registro de personaje");
+    format(msg, sizeof(msg), "{EAEAEA}Ingresá el {82E0AA}nombre{EAEAEA} de tu personaje.\n\n{A6ACAF}Reglas:\n{F5B041}» {EAEAEA}Entre 3 y 20 caracteres\n{F5B041}» {EAEAEA}Sin espacios ni símbolos\n{F5B041}» {EAEAEA}Debe parecer un nombre real\n\n{7FB3D5}Ejemplo:{EAEAEA} Mateo, Nicolás, Javier.");
+    ShowPlayerDialog(playerid, DIALOG_REGISTER_PLAYER_NAME, DIALOG_STYLE_INPUT, titulo, msg, "Continuar", "Volver");
     return 1;
 }
+
 forward _cuadroRegistroPlayerLastname(playerid);
 public _cuadroRegistroPlayerLastname(playerid){
-    new _tempTitulo[128], _tempMessage[256];
-    format(_tempTitulo, sizeof(_tempTitulo), COLOR_GOLD"Registro en %s", NAME_SERVER);
-    format(_tempMessage, sizeof(_tempMessage), COLOR_WHITE"Introduce tu "COLOR_CYAN"APELLIDO:\n\n"COLOR_WARNING"- Entre 3 y 20 caracteres.\n- No debe contener espacios.\n- Solo letras y números.\n"COLOR_SUCCESS"- Usa apellidos realistas para el rol.");
-    ShowPlayerDialog(playerid, DIALOG_REGISTER_PLAYER_LASTNAME, DIALOG_STYLE_INPUT, _tempTitulo, _tempMessage, "Continuar", "Volver");
+    new titulo[128], msg[512];
+    format(titulo, sizeof(titulo), "{7FB3D5}» Registro de personaje");
+    format(msg, sizeof(msg), "{EAEAEA}Ingresá el {82E0AA}apellido{EAEAEA} de tu personaje.\n\n{A6ACAF}Reglas:\n{F5B041}» {EAEAEA}Entre 3 y 20 caracteres\n{F5B041}» {EAEAEA}Sin espacios ni símbolos\n{F5B041}» {EAEAEA}Debe sonar realista\n\n{7FB3D5}Ejemplo:{EAEAEA} Ramírez, Gutiérrez, López.");
+    ShowPlayerDialog(playerid, DIALOG_REGISTER_PLAYER_LASTNAME, DIALOG_STYLE_INPUT, titulo, msg, "Continuar", "Volver");
     return 1;
 }
+
 forward _cuadroRegistroPlayerGender(playerid);
 public _cuadroRegistroPlayerGender(playerid){
-    new _tempTitulo[128], _tempMessage[256];
-    format(_tempTitulo, sizeof(_tempTitulo), COLOR_GOLD"Registro en %s", NAME_SERVER);
-    format(_tempMessage, sizeof(_tempMessage), COLOR_WHITE"Selecciona el "COLOR_CYAN"género de tu personaje:\n\n"COLOR_LIGHTBLUE"Masculino\n"COLOR_PINK"Femenino");
-    ShowPlayerDialog(playerid, DIALOG_REGISTER_PLAYER_GENDER, DIALOG_STYLE_LIST, _tempTitulo, _tempMessage, "Seleccionar", "Volver");
+    new titulo[128], msg[512];
+    format(titulo, sizeof(titulo), "{7FB3D5}» Registro de personaje");
+    format(msg, sizeof(msg), "{EAEAEA}Seleccioná el {82E0AA}género{EAEAEA} de tu personaje:\n\n{0000FF}Masculino\n{FFC0CB}Femenino");
+    ShowPlayerDialog(playerid, DIALOG_REGISTER_PLAYER_GENDER, DIALOG_STYLE_LIST, titulo, msg, "Seleccionar", "Volver");
     return 1;
 }
+
 forward _cuadroRegistroEmail(playerid);
 public _cuadroRegistroEmail(playerid){
-    new _tempTitulo[128], _tempMessage[256];
-    format(_tempTitulo, sizeof(_tempTitulo), COLOR_GOLD"Registro en %s", NAME_SERVER);
-    format(_tempMessage, sizeof(_tempMessage), COLOR_WHITE"Introduce tu "COLOR_CYAN"correo electrónico (opcional):\n\n"COLOR_WARNING"- Lo usaremos solo para recuperar tu cuenta en caso de olvido.");
-    ShowPlayerDialog(playerid, DIALOG_REGISTER_EMAIL, DIALOG_STYLE_INPUT, _tempTitulo, _tempMessage, "Registrar", "Volver");
+    new titulo[128], msg[512];
+    format(titulo, sizeof(titulo), "{7FB3D5}» Registro de cuenta");
+    format(msg, sizeof(msg), "{EAEAEA}Ingresá tu {82E0AA}correo electrónico{EAEAEA} (opcional).\n\n{A6ACAF}Recomendado para:\n{F5B041}» {EAEAEA}Recuperar tu cuenta\n{F5B041}» {EAEAEA}Recibir avisos del servidor\n\n{7FB3D5}Ejemplo:{EAEAEA} jugador@email.com");
+    ShowPlayerDialog(playerid, DIALOG_REGISTER_EMAIL, DIALOG_STYLE_INPUT, titulo, msg, "Registrar", "Volver");
     return 1;
 }
+
 forward _cuadroRegistroPlayerAge(playerid);
 public _cuadroRegistroPlayerAge(playerid){
-    new _tempTitulo[128], _tempMessage[256];
-    format(_tempTitulo, sizeof(_tempTitulo), COLOR_GOLD"Registro en %s", NAME_SERVER);
-    format(_tempMessage, sizeof(_tempMessage), COLOR_WHITE"Introduce tu "COLOR_CYAN"edad:\n\n"COLOR_WARNING"- Tu personaje debe ser mayor de 18 años.\n- No es necesario que sea tu edad real, pero sí mayor de 18.");
-    ShowPlayerDialog(playerid, DIALOG_REGISTER_PLAYER_AGE, DIALOG_STYLE_INPUT, _tempTitulo, _tempMessage, "Continuar", "Volver");
+    new titulo[128], msg[512];
+    format(titulo, sizeof(titulo), "{7FB3D5}» Registro de personaje");
+    format(msg, sizeof(msg), "{EAEAEA}Ingresá la {82E0AA}edad{EAEAEA} de tu personaje.\n\n{A6ACAF}Requisitos:\n{F5B041}» {EAEAEA}Debe ser mayor de 18 años\n{F5B041}» {EAEAEA}Máximo 100 años\n\n{7FB3D5}Nota:{EAEAEA} No tiene que ser tu edad real, pero sí coherente con el rol.");
+    ShowPlayerDialog(playerid, DIALOG_REGISTER_PLAYER_AGE, DIALOG_STYLE_INPUT, titulo, msg, "Continuar", "Volver");
     return 1;
 }
-forward _cuadroLogeoPassword(playerid,attempts);
-public _cuadroLogeoPassword(playerid,attempts){
-    new _tempTitulo[128], _tempMessage[256];
-    format(_tempTitulo, sizeof(_tempTitulo), COLOR_GOLD"Iniciar sesión en %s", NAME_SERVER);
-    format(_tempMessage, sizeof(_tempMessage), COLOR_WHITE"Introduce tu contraseña:\n\n"COLOR_WARNING"- Tienes %d intentos.",attempts);
-    ShowPlayerDialog(playerid, DIALOG_LOGIN_PASSWORD, DIALOG_STYLE_PASSWORD, _tempTitulo, _tempMessage, "Continuar", "Volver");
-    return 1; //TERMINAR DIALOGO DE LOGEO 02/10/2025
+
+forward _cuadroLogeoPassword(playerid, attempts);
+public _cuadroLogeoPassword(playerid, attempts){
+    new titulo[128], msg[512];
+    format(titulo, sizeof(titulo), "{7FB3D5}» Iniciar sesión");
+    format(msg, sizeof(msg), "{EAEAEA}Ingresá tu {82E0AA}contraseña{EAEAEA} para acceder a tu cuenta.\n\n{A6ACAF}Intentos restantes: {F5B041}%d\n\n{7FB3D5}Consejo:{EAEAEA} revisá si tenés las mayúsculas activadas.", attempts);
+    ShowPlayerDialog(playerid, DIALOG_LOGIN_PASSWORD, DIALOG_STYLE_PASSWORD, titulo, msg, "Continuar", "Volver");
+    return 1;
 }
+
 
 forward _cuadroSeleccionPersonaje(playerid);
 public _cuadroSeleccionPersonaje(playerid)
@@ -806,10 +882,10 @@ public _cuadroSeleccionPersonaje(playerid)
 
 forward _cuadroPreguntaSalir(playerid);
 public _cuadroPreguntaSalir(playerid){
-    new _tempTitulo[128], _tempMessage[256];
-    format(_tempTitulo, sizeof(_tempTitulo), COLOR_WARNING"¿Salir de %s?", NAME_SERVER);
-    format(_tempMessage, sizeof(_tempMessage), COLOR_WHITE"¿Estás seguro que deseas salir del servidor?");
-    ShowPlayerDialog(playerid, DIALOG_EXIT, DIALOG_STYLE_MSGBOX, _tempTitulo, _tempMessage, "Sí", "No");
+    new titulo[128], msg[512];
+    format(titulo, sizeof(titulo), "{F5B041}» Confirmar salida");
+    format(msg, sizeof(msg), "{EAEAEA}¿Deseás salir del servidor?\n\n{A6ACAF}Tu progreso se guardará automáticamente si estás logueado.");
+    ShowPlayerDialog(playerid, DIALOG_EXIT, DIALOG_STYLE_MSGBOX, titulo, msg, "Sí", "No");
     return 1;
 }
 
