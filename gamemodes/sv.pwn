@@ -367,7 +367,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[]){
 
             if(cache_num_rows()) // ? Contraseña correcta
             {
-                cache_get_value_name_int(0, "ID_sql", userInfo[playerid][uIdSQL]);
+                cache_get_value_name_int(0, "user_id", userInfo[playerid][uIdSQL]);
                 userInfo[playerid][isLoggedIn] = 1;
                 userInfo[playerid][spawnState] = SPAWN_INITIAL;
 

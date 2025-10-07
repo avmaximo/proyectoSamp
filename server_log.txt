@@ -15519,3 +15519,250 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 
 [12:58:47] DEBUG: OnCharacterList llamado para player maximon: cache_num_rows()=1
 [13:04:06] [part] maximon has left the server (3:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[16:57:30] 
+[16:57:30] Server Plugins
+[16:57:30] --------------
+[16:57:30]  Loading plugin: sscanf.dll
+[16:57:30] 
+[16:57:30]  ===============================
+[16:57:30] 
+[16:57:30]       sscanf plugin loaded.     
+[16:57:30] 
+[16:57:30]          Version: 2.13.8
+[16:57:30] 
+[16:57:30]    (c) 2022 Alex "Y_Less" Cole  
+[16:57:30] 
+[16:57:30]  ===============================
+[16:57:30] 
+[16:57:30]   Loaded.
+[16:57:30]  Loading plugin: streamer.dll
+[16:57:30] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[16:57:30]   Loaded.
+[16:57:30]  Loading plugin: mysql.dll
+[16:57:32]  >> plugin.mysql: R41-4 successfully loaded.
+[16:57:32]   Loaded.
+[16:57:32]  Loaded 3 plugins.
+
+[16:57:32] 
+[16:57:32] Filterscripts
+[16:57:32] ---------------
+[16:57:32]   Loading filterscript 'gl_realtime.amx'...
+[16:57:32]   Loading filterscript 'npc_record.amx'...
+[16:57:32]   Loading filterscript 'gl_npcs.amx'...
+[16:57:34]   Loaded 3 filterscripts.
+
+[16:57:34] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[16:57:34] Number of vehicle models: 2
+[16:57:35] [connection] incoming connection: 127.0.0.1:56097 id: 0
+[16:57:35] [connection] incoming connection: 127.0.0.1:56098 id: 1
+[16:57:35] [connection] incoming connection: 127.0.0.1:56099 id: 2
+[16:57:35] [npc:join] TrainDriverLV has joined the server (0:127.0.0.1)
+[16:57:35] NPC: Connection from 127.0.0.1 is allowed.
+[16:57:35] [npc:join] TrainDriverLS has joined the server (1:127.0.0.1)
+[16:57:35] NPC: Connection from 127.0.0.1 is allowed.
+[16:57:35] [npc:join] TrainDriverSF has joined the server (2:127.0.0.1)
+[16:57:35] NPC: Connection from 127.0.0.1 is allowed.
+[16:58:19] [connection] incoming connection: 127.0.0.1:50652 id: 3
+[16:58:19] [join] max has joined the server (3:127.0.0.1)
+[16:58:46] Depuracion password: Cocacola2
+
+[16:58:46] Depuracion mezcla: XyZz7y12*abCocacola2
+
+[16:58:46] Depuracion salt: UhnnBLgNZQjtxA2E
+
+[16:58:46] Depuracion hash: C2AD0732CA505C3F999D0325DD84D5BA24D8720FEC400074D9C9D6E662EB7918
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:03:26] 
+[17:03:26] Server Plugins
+[17:03:26] --------------
+[17:03:26]  Loading plugin: sscanf.dll
+[17:03:26] 
+[17:03:26]  ===============================
+[17:03:26] 
+[17:03:26]       sscanf plugin loaded.     
+[17:03:26] 
+[17:03:26]          Version: 2.13.8
+[17:03:26] 
+[17:03:26]    (c) 2022 Alex "Y_Less" Cole  
+[17:03:26] 
+[17:03:26]  ===============================
+[17:03:26] 
+[17:03:26]   Loaded.
+[17:03:26]  Loading plugin: streamer.dll
+[17:03:26] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[17:03:26]   Loaded.
+[17:03:26]  Loading plugin: mysql.dll
+[17:03:26]  >> plugin.mysql: R41-4 successfully loaded.
+[17:03:26]   Loaded.
+[17:03:26]  Loaded 3 plugins.
+
+[17:03:27] 
+[17:03:27] Filterscripts
+[17:03:27] ---------------
+[17:03:27]   Loading filterscript 'gl_realtime.amx'...
+[17:03:27]   Loading filterscript 'npc_record.amx'...
+[17:03:27]   Loading filterscript 'gl_npcs.amx'...
+[17:03:27]   Loaded 3 filterscripts.
+
+[17:03:27] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[17:03:27] Number of vehicle models: 2
+[17:03:28] [connection] incoming connection: 127.0.0.1:53870 id: 0
+[17:03:28] [connection] incoming connection: 127.0.0.1:53871 id: 1
+[17:03:28] [connection] incoming connection: 127.0.0.1:53872 id: 2
+[17:03:28] [npc:join] TrainDriverLV has joined the server (0:127.0.0.1)
+[17:03:28] NPC: Connection from 127.0.0.1 is allowed.
+[17:03:28] [npc:join] TrainDriverLS has joined the server (1:127.0.0.1)
+[17:03:28] NPC: Connection from 127.0.0.1 is allowed.
+[17:03:28] [npc:join] TrainDriverSF has joined the server (2:127.0.0.1)
+[17:03:28] NPC: Connection from 127.0.0.1 is allowed.
+[17:03:45] [connection] incoming connection: 127.0.0.1:59790 id: 3
+[17:03:45] [join] max has joined the server (3:127.0.0.1)
+[17:04:05] Depuracion password: Cocacola1
+
+[17:04:05] Depuracion mezcla: XyZz7y12*abCocacola1
+
+[17:04:05] Depuracion salt: UhnnBLgNZQjtxA2E
+
+[17:04:05] Depuracion hash: BFA8BE66933B6B67D22EA11AB862897D8A3B5F156B76B2056B636A106FCFC1B1
+
+[17:04:07] Depuracion password: Cocacola1
+
+[17:04:07] Depuracion mezcla: XyZz7y12*abCocacola1
+
+[17:04:07] Depuracion salt: UhnnBLgNZQjtxA2E
+
+[17:04:07] Depuracion hash: BFA8BE66933B6B67D22EA11AB862897D8A3B5F156B76B2056B636A106FCFC1B1
+
+[17:04:09] Depuracion password: Cocacola2
+
+[17:04:09] Depuracion mezcla: XyZz7y12*abCocacola2
+
+[17:04:09] Depuracion salt: UhnnBLgNZQjtxA2E
+
+[17:04:09] Depuracion hash: C2AD0732CA505C3F999D0325DD84D5BA24D8720FEC400074D9C9D6E662EB7918
+
+[17:04:09] DEBUG: OnCharacterList llamado para player max: cache_num_rows()=0
+[17:04:12] [part] max has left the server (3:1)
+Console input: exit
+[17:06:37] --- Server Shutting Down.
+[17:06:37] [npc:part] TrainDriverLV has left the server (0:0)
+[17:06:37] [npc:part] TrainDriverLS has left the server (1:0)
+[17:06:37] [npc:part] TrainDriverSF has left the server (2:0)
+[17:06:37] 
+[17:06:37]  ===============================
+[17:06:37] 
+[17:06:37]      sscanf plugin unloaded.    
+[17:06:37] 
+[17:06:37]  ===============================
+[17:06:37] 
+[17:06:37] 
+
+*** Streamer Plugin v2.9.6 by Incognito unloaded ***
+
+[17:06:37] plugin.mysql: Unloading plugin...
+[17:06:37] plugin.mysql: Plugin unloaded.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:06:44] 
+[17:06:44] Server Plugins
+[17:06:44] --------------
+[17:06:44]  Loading plugin: sscanf.dll
+[17:06:44] 
+[17:06:44]  ===============================
+[17:06:44] 
+[17:06:44]       sscanf plugin loaded.     
+[17:06:44] 
+[17:06:44]          Version: 2.13.8
+[17:06:44] 
+[17:06:44]    (c) 2022 Alex "Y_Less" Cole  
+[17:06:44] 
+[17:06:44]  ===============================
+[17:06:44] 
+[17:06:44]   Loaded.
+[17:06:44]  Loading plugin: streamer.dll
+[17:06:44] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[17:06:44]   Loaded.
+[17:06:44]  Loading plugin: mysql.dll
+[17:06:44]  >> plugin.mysql: R41-4 successfully loaded.
+[17:06:44]   Loaded.
+[17:06:44]  Loaded 3 plugins.
+
+[17:06:44] 
+[17:06:44] Filterscripts
+[17:06:44] ---------------
+[17:06:44]   Loading filterscript 'gl_realtime.amx'...
+[17:06:44]   Loading filterscript 'npc_record.amx'...
+[17:06:44]   Loading filterscript 'gl_npcs.amx'...
+[17:06:44]   Loaded 3 filterscripts.
+
+[17:06:44] 
+
+[MySQL]: Conexión con la base de datos MySQL concretada con éxito.
+[MySQL]: ON
+
+
+[17:06:44] Number of vehicle models: 2
+[17:06:45] [connection] incoming connection: 127.0.0.1:59835 id: 0
+[17:06:45] [connection] incoming connection: 127.0.0.1:59836 id: 1
+[17:06:45] [connection] incoming connection: 127.0.0.1:59837 id: 2
+[17:06:45] [npc:join] TrainDriverLV has joined the server (0:127.0.0.1)
+[17:06:45] NPC: Connection from 127.0.0.1 is allowed.
+[17:06:45] [npc:join] TrainDriverLS has joined the server (1:127.0.0.1)
+[17:06:45] NPC: Connection from 127.0.0.1 is allowed.
+[17:06:45] [npc:join] TrainDriverSF has joined the server (2:127.0.0.1)
+[17:06:45] NPC: Connection from 127.0.0.1 is allowed.
+[17:07:05] [connection] incoming connection: 127.0.0.1:57654 id: 3
+[17:07:05] [join] maxe has joined the server (3:127.0.0.1)
+[17:07:19] Depuracion password: Cocacola1
+
+[17:07:19] Depuracion mezcla: XyZz7y12*abCocacola1
+
+[17:07:19] Depuracion salt: jUw2Nh9lPvOv9GrF
+
+[17:07:19] Depuracion hash: 8B0F1F11CCB3193A8B0182D414981E6B23A8A38F45EC4E0AFFA5046DAD8E25B9
+
+[17:08:54] [part] maxe has left the server (3:1)
