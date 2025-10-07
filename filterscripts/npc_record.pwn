@@ -21,7 +21,6 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	new idx;
 	cmd = strtok(cmdtext, idx);
 	
-	if(!IsPlayerAdmin(playerid)) return 0; // this is an admin only script
 	
 	// Start recording vehicle data (/vrecord recording_name[])
 	// Find the recording_name[] file in /scriptfiles/

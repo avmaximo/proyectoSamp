@@ -141,6 +141,7 @@ enum pData {
 
 new characterInfo[MAX_PLAYERS][pData], userInfo[MAX_PLAYERS][uData];
 
+
 main(){
     DatabaseConnect();
     SetGameModeText(GAMEMODE_SERVER);
@@ -148,7 +149,9 @@ main(){
 public OnGameModeInit(){
     return 1;
 }
+
 public OnPlayerConnect(playerid){
+    if(IsPlayerNPC(playerid)) return 1;
     modoLobby(playerid, 1);
     userInfo[playerid][spawnState] = SPAWN_NONE;
     loginAttempts[playerid] = 3;
@@ -942,7 +945,7 @@ CMD:xyz(playerid, params[])
         GetVehicleZAngle(vehicleid, angle);
 
         SendClientMessage(playerid, -1, "Tu posición en vehículo:");
-        printf("Veh[%d] PosX: %f PosY: %f PosZ: %f Rot: %f", vehicleid, x, y, z, angle);
+        printf("Veh[%d] PosXYZR: %f, %f, %f, %f", vehicleid, x, y, z, angle);
         new msg[144];
         format(msg, sizeof(msg), "X: %.2f, Y: %.2f, Z: %.2f, Rot: %.2f", x, y, z, angle);
         SendClientMessage(playerid, -1, msg);
@@ -953,7 +956,7 @@ CMD:xyz(playerid, params[])
         GetPlayerFacingAngle(playerid, angle);
 
         SendClientMessage(playerid, -1, "Tu posición a pie:");
-        printf("Player[%d] PosX: %f PosY: %f PosZ: %f Rot: %f", playerid, x, y, z, angle);
+        printf("Player[%d] PosXYZR: %f, %f, %f, %f", playerid, x, y, z, angle);
         new msg[144];
         format(msg, sizeof(msg), "X: %.2f, Y: %.2f, Z: %.2f, Rot: %.2f", x, y, z, angle);
         SendClientMessage(playerid, -1, msg);
@@ -973,5 +976,78 @@ CMD:guardar(playerid, params[])
     new _cacheMessage[128];
     format(_cacheMessage, sizeof(_cacheMessage), "DEBUG: Dinero: %d, Salud: %f, Armadura: %f, Interior: %d, Dimensión: %d", characterInfo[playerid][pMoney], characterInfo[playerid][pHealth], characterInfo[playerid][pArmor], characterInfo[playerid][pInterior], characterInfo[playerid][pDimension]);
     SendClientMessage(playerid, -1, _cacheMessage);
+    return 1;
+}
+CMD:veh(playerid, params[])
+{
+    new modelid;
+    if(sscanf(params, "i", modelid))
+        return SendClientMessage(playerid, -1, "{F5B041}Uso:{EAEAEA} /veh [ID del modelo]");
+
+    new Float:x, Float:y, Float:z, Float:a;
+    GetPlayerPos(playerid, x, y, z);
+    GetPlayerFacingAngle(playerid, a);
+
+    CreateVehicle(modelid, x, y, z+1, a, random(126), random(126), -1);
+    //PutPlayerInVehicle(playerid, vehicleid, 0);
+    SetPlayerPos(playerid, x, y, z+3);
+
+    new msg[64];
+    format(msg, sizeof(msg), "{82E0AA}Vehículo creado ID %d", modelid);
+    SendClientMessage(playerid, -1, msg);
+
+    return 1;
+}
+
+CMD:tp(playerid, params[])
+{
+    new targetid;
+    if(sscanf(params, "i", targetid))
+    {
+        SendClientMessage(playerid, -1, "Uso: /tp [id]");
+        return 1;
+    }
+
+    if(targetid < 0 || targetid >= MAX_PLAYERS)
+    {
+        SendClientMessage(playerid, -1, "ID inválido.");
+        return 1;
+    }
+
+    if(!IsPlayerConnected(targetid) && !IsPlayerNPC(targetid))
+    {
+        SendClientMessage(playerid, -1, "Ese ID no está conectado.");
+        return 1;
+    }
+
+    new Float:x, Float:y, Float:z, Float:angle;
+    new interior, vw;
+
+    interior = GetPlayerInterior(targetid);
+    vw = GetPlayerVirtualWorld(targetid);
+    SetPlayerInterior(playerid, interior);
+    SetPlayerVirtualWorld(playerid, vw);
+
+    if(IsPlayerInAnyVehicle(targetid))
+    {
+        new veh = GetPlayerVehicleID(targetid);
+        GetVehiclePos(veh, x, y, z);
+        GetVehicleZAngle(veh, angle);
+        z += 1.5; // elevar un poco para no quedar pegado
+    }
+    else
+    {
+        GetPlayerPos(targetid, x, y, z);
+        GetPlayerFacingAngle(targetid, angle);
+        z += 1.0;
+    }
+
+    SetPlayerPos(playerid, x, y, z);
+    SetPlayerFacingAngle(playerid, angle);
+
+    new msg[64];
+    format(msg, sizeof(msg), "Teleportado a ID %d (%.2f, %.2f, %.2f).", targetid, x, y, z);
+    SendClientMessage(playerid, -1, msg);
+
     return 1;
 }
