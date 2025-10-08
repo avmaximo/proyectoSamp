@@ -440,3 +440,20 @@
 [13:30:09] [ERROR] error #1054 while executing query "INSERT INTO users (username,password,ph,email,last_login,ip,register_date) VALUES ('maximo','B5C36B507102872FC957D07A15C8BCC5504A16616A34347916C01A9DF3572DF2','Z1sSZHU3LifAoeAc','fracolapinto2@gmail.com',NOW(),'127.0.0.1',NOW())": Unknown column 'register_date' in 'field list'
 [19:40:38] [ERROR] error #1364 while executing query "INSERT INTO characters (user_id,name,lastname,gender,age,skin,level,money,bank,posX,posY,posZ,rot,health,armor,interior,dimension) VALUES (14,'Maximo','Avila',0,23,7,1,1000,0,1765.93,-1949.81,14.61,271.04,100,0,0,0)": Field 'levelUp' doesn't have a default value
 [19:42:29] [ERROR] error #1364 while executing query "INSERT INTO characters (user_id,name,lastname,gender,age,skin,level,money,bank,posX,posY,posZ,rot,health,armor,interior,dimension) VALUES (15,'Maximo','Avila',0,23,7,1,1000,0,1765.93,-1949.81,14.61,271.04,100,0,0,0)": Field 'levelUp' doesn't have a default value
+[19:47:34] [ERROR] cache_get_value_name_int: field 'ID_sql' not found
+[12:18:18] [ERROR] cache_get_value_name_int: field 'level' not found
+[12:18:18] [ERROR] cache_get_value_name_int: field 'exp' not found
+[12:18:18] [ERROR] cache_get_value_name_int: field 'levelUp' not found
+[12:18:18] [ERROR] cache_get_value_name_int: field 'money' not found
+[12:18:36] [ERROR] cache_get_value_name_int: field 'level' not found
+[12:18:36] [ERROR] cache_get_value_name_int: field 'exp' not found
+[12:18:36] [ERROR] cache_get_value_name_int: field 'levelUp' not found
+[12:18:36] [ERROR] cache_get_value_name_int: field 'money' not found
+[12:20:28] [ERROR] cache_get_value_name_int: field 'level' not found
+[12:20:28] [ERROR] cache_get_value_name_int: field 'exp' not found
+[12:20:28] [ERROR] cache_get_value_name_int: field 'levelUp' not found
+[12:20:28] [ERROR] cache_get_value_name_int: field 'money' not found
+[12:26:28] [ERROR] cache_get_value_name_int: field 'level' not found
+[12:26:28] [ERROR] cache_get_value_name_int: field 'exp' not found
+[12:26:28] [ERROR] cache_get_value_name_int: field 'levelUp' not found
+[12:26:28] [ERROR] cache_get_value_name_int: field 'money' not found

@@ -9,50 +9,62 @@
 #define SSCANF_NO_NICE_FEATURES
 #include <sscanf2>
 
+// ==========================================
+// ?? PALETA DE COLORES CIUDAD LIBERTAD RP
+// ==========================================
+
 // Colores básicos
-#define COLOR_WHITE        "{FFFFFF}"
-#define COLOR_BLACK        "{000000}"
-#define COLOR_RED          "{FF0000}"
-#define COLOR_GREEN        "{00FF00}"
-#define COLOR_BLUE         "{0000FF}"
-#define COLOR_YELLOW       "{FFFF00}"
-#define COLOR_CYAN         "{00FFFF}"
-#define COLOR_MAGENTA      "{FF00FF}"
-#define COLOR_ORANGE       "{FFA500}"
-#define COLOR_SILVER       "{C0C0C0}"
+#define COLOR_WHITE         "{FFFFFF}"
+#define COLOR_BLACK         "{000000}"
+#define COLOR_RED           "{FF0000}"
+#define COLOR_GREEN         "{00FF00}"
+#define COLOR_BLUE          "{0000FF}"
+#define COLOR_YELLOW        "{FFFF00}"
+#define COLOR_CYAN          "{00FFFF}"
+#define COLOR_MAGENTA       "{FF00FF}"
+#define COLOR_ORANGE        "{FFA500}"
+#define COLOR_SILVER        "{C0C0C0}"
 
-#define COLOR_PRIMARY     "{E8C547}" // dorado suave
-#define COLOR_ACCENT      "{7FB3D5}" // azul pastel
-#define COLOR_TEXT        "{EAEAEA}" // blanco grisáceo
-#define COLOR_WARNING     "{F5B041}" // ámbar cálido
-#define COLOR_ERROR       "{EC7063}" // rojo suave
-#define COLOR_SUCCESS     "{82E0AA}" // verde menta
-#define COLOR_GRAY        "{A6ACAF}" // gris medio
+// Metálicos y neutros
+#define COLOR_BRONZE        "{CD7F32}" // bronce metálico cálido
+#define COLOR_GOLD          "{FFD700}" // dorado intenso
+#define COLOR_GOLD_SOFT     "{E1C16E}" // dorado suave y elegante
+#define COLOR_GRAY          "{A6ACAF}" // gris medio neutro
+#define COLOR_GRAY_SOFT     "{BDBDBD}" // gris claro tenue
 
-// Colores extra comunes
-#define COLOR_PINK         "{FFC0CB}"
-#define COLOR_VIOLET       "{8A2BE2}"
-#define COLOR_BROWN        "{8B4513}"
-#define COLOR_GOLD         "{ffd700}"
-#define COLOR_DARKGREEN    "{006400}"
-#define COLOR_DARKRED      "{8B0000}"
-#define COLOR_DARKBLUE     "{00008B}"
-#define COLOR_LIGHTBLUE    "{ADD8E6}"
-#define COLOR_LIGHTGREEN   "{90EE90}"
+// Estilo visual principal
+#define COLOR_PRIMARY       "{E8C547}" // dorado pálido (color primario)
+#define COLOR_ACCENT        "{7FB3D5}" // azul pastel
+#define COLOR_TEXT          "{EAEAEA}" // blanco grisáceo para texto principal
+#define COLOR_WARNING       "{F5B041}" // ámbar cálido (avisos)
+#define COLOR_ERROR         "{EC7063}" // rojo suave (errores)
+#define COLOR_SUCCESS       "{82E0AA}" // verde menta (éxitos)
+#define COLOR_GREEN_MINT    "{98FB98}" // verde menta brillante
 
-// Roles
-#define COLOR_ADMIN        "{FF6347}" // rojo tomate
-#define COLOR_MOD          "{1E90FF}" // azul dodger
-#define COLOR_VIP          "{DAA520}" // goldenrod
-#define COLOR_PLAYER       "{87CEEB}" // sky blue
-#define COLOR_SYSTEM       "{B22222}" // firebrick
+// Tonos adicionales
+#define COLOR_PINK          "{FFC0CB}"
+#define COLOR_VIOLET        "{8A2BE2}"
+#define COLOR_BROWN         "{8B4513}"
+#define COLOR_DARKGREEN     "{006400}"
+#define COLOR_DARKRED       "{8B0000}"
+#define COLOR_DARKBLUE      "{00008B}"
+#define COLOR_LIGHTBLUE     "{ADD8E6}"
+#define COLOR_LIGHTGREEN    "{90EE90}"
 
-// Contrastes
-#define COLOR_DARKGRAY     "{A9A9A9}"
-#define COLOR_LIGHTGRAY    "{D3D3D3}"
-#define COLOR_NAVY         "{191970}"
-#define COLOR_TEAL         "{008080}"
-#define COLOR_MAROON       "{800000}"
+// Roles / categorías
+#define COLOR_ADMIN         "{FF6347}" // rojo tomate
+#define COLOR_MOD           "{1E90FF}" // azul dodger
+#define COLOR_VIP           "{DAA520}" // dorado opaco
+#define COLOR_PLAYER        "{87CEEB}" // azul cielo
+#define COLOR_SYSTEM        "{B22222}" // rojo oscuro (sistema)
+
+// Contrastes y bases oscuras
+#define COLOR_DARKGRAY      "{A9A9A9}"
+#define COLOR_LIGHTGRAY     "{D3D3D3}"
+#define COLOR_NAVY          "{191970}"
+#define COLOR_TEAL          "{008080}"
+#define COLOR_MAROON        "{800000}"
+
 
 
 new MySQL:database;
@@ -96,6 +108,7 @@ new loginAttempts[MAX_PLAYERS];
 
 new Text:TD_Fondo[MAX_PLAYERS];
 new Text:TD_Logo[MAX_PLAYERS];
+new Text:TD_Subtitulo[MAX_PLAYERS];
 
 
 enum uData {
@@ -105,6 +118,7 @@ enum uData {
     ph[19],
     uMail[60],
     uIp[16],
+    uCharactersAmount,
     
     uLevel,
     uExp,
@@ -161,16 +175,17 @@ public OnPlayerConnect(playerid){
     new DB_Query[256],Cache:ResultCache_;
     format(DB_Query, sizeof(DB_Query), "SELECT * FROM users WHERE username='%s' LIMIT 1", userInfo[playerid][uName]);
     ResultCache_ = mysql_query(database, DB_Query);
+    printf("[LOGIN] Jugador conectado: %s (%s)", userInfo[playerid][uName], userInfo[playerid][uIp]);
     if(cache_num_rows()){//-------------------------------------------------------------El usuario existe
-        cache_get_value_name(0, "ph", userInfo[playerid][ph], 17);
+        printf("[LOGIN] Cuenta encontrada para %s. Iniciando autenticación...", userInfo[playerid][uName]);
 
+        cache_get_value_name(0, "ph", userInfo[playerid][ph], 17);
         SetTimerEx("_mensajeBienvenida", 400, false, "ii", playerid,1);
         SetTimerEx("_cuadroLogeoPassword", 5000, false, "ii", playerid,loginAttempts[playerid]); // playerid, attempts
 
-
-
-
     }else{ //---------------------------------------------------------------------------El usuario no existe
+        printf("[REGISTER] No existe cuenta para %s. Iniciando registro...", userInfo[playerid][uName]);
+
         SetTimerEx("_mensajeBienvenida", 400, false, "ii", playerid,0);
 
         SetTimerEx("_cuadroRegistroPassword", 5000, false, "i", playerid); 
@@ -318,7 +333,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[]){
 
 
             userInfo[playerid][spawnState] = SPAWN_INITIAL;
-            SetTimerEx("modoLobby", 500, false, "ii", playerid,0);
+            SetTimerEx("modoLobby", 1000, false, "ii", playerid,0);
             
             characterInfo[playerid][pMoney] = 1000;
             characterInfo[playerid][pLevel] = 1;
@@ -332,7 +347,6 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[]){
             characterInfo[playerid][pInterior] = 0;
             characterInfo[playerid][pDimension] = 0;
 
-            SetTimerEx("SpawnPlayerEx", 600, false, "i", playerid);
             SendClientMessage(playerid, -1, COLOR_SUCCESS"¡Registro completado! Bienvenido a "COLOR_GOLD""NAME_SERVER"!");
             return 1;
         }
@@ -367,7 +381,9 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[]){
 
             if(cache_num_rows()) // ? Contraseña correcta
             {
-                cache_get_value_name_int(0, "ID_sql", userInfo[playerid][uIdSQL]);
+                printf("[LOGIN] %s ha iniciado sesión correctamente (user_id=%d).", userInfo[playerid][uName], userInfo[playerid][uIdSQL]);
+
+                cache_get_value_name_int(0, "user_id", userInfo[playerid][uIdSQL]);
                 userInfo[playerid][isLoggedIn] = 1;
                 userInfo[playerid][spawnState] = SPAWN_INITIAL;
 
@@ -384,9 +400,13 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[]){
             }
             else // ? Contraseña incorrecta
             {
+                printf("[LOGIN][ERROR] Contraseña incorrecta para %s. Intentos restantes: %d", userInfo[playerid][uName], loginAttempts[playerid]);
+
                 loginAttempts[playerid]--;
                 if(loginAttempts[playerid] <= 0)
                 {
+                    printf("[LOGIN][BLOCK] %s expulsado por intentos fallidos.", userInfo[playerid][uName]);
+
                     SendClientMessage(playerid, -1, COLOR_ERROR"Has agotado tus intentos de inicio de sesión.");
                     SetTimerEx("kickPlayer", 1000, false, "i", playerid);
                     cache_delete(ResultCache_);
@@ -414,7 +434,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[]){
     }
     else if(dialogid == DIALOG_CHARACTER_SELECT)
     {
-        if(!response)
+        if(!response || listitem == userInfo[playerid][uCharactersAmount])
         {
             SendClientMessage(playerid, -1, COLOR_ERROR"No has seleccionado ningún personaje.");
             _cuadroSeleccionPersonaje(playerid); // vuelve a mostrar el cuadro
@@ -454,7 +474,9 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[]){
 forward OnUserInsert(playerid);
 public OnUserInsert(playerid)
 {
+    printf("[REGISTER] Nuevo usuario insertado: ID_SQL=%d, Nombre=%s", cache_insert_id(), userInfo[playerid][uName]);
     userInfo[playerid][uIdSQL] = cache_insert_id(); // acá sí lo obtenés bien
+    printf("[REGISTER] Insertando personaje para %s %s (user_id=%d)...", characterInfo[playerid][pName], characterInfo[playerid][pLastname], userInfo[playerid][uIdSQL]);
 
     // Ahora podés usarlo en el insert de characters
     new q2[512];
@@ -488,7 +510,6 @@ public OnCharacterList(playerid)
 {   
     
     new rows = cache_num_rows();
-    printf("DEBUG: OnCharacterList llamado para player %s: cache_num_rows()=%d", userInfo[playerid][uName], rows);
     if(rows == 0)
     {
         
@@ -500,15 +521,27 @@ public OnCharacterList(playerid)
 
     
 
-
+    userInfo[playerid][uCharactersAmount] = rows;
     new dialogContent[512];
-    new name[32], lastname[32];
+    new name[32], lastname[32], p_nivel, p_bank, p_gender, p_Dinero;
     for(new i = 0; i < rows; i++)
     {
         cache_get_value_name(i, "name", name, sizeof(name));
         cache_get_value_name(i, "lastname", lastname, sizeof(lastname));
+        cache_get_value_name_int(i, "level", p_nivel);
+        cache_get_value_name_int(i, "money", p_Dinero);
+        cache_get_value_name_int(i, "bank", p_bank);
+        cache_get_value_name_int(i, "gender", p_gender);
 
-        format(dialogContent, sizeof(dialogContent), "%s%s %s\n", dialogContent, name, lastname);
+        //format(dialogContent, sizeof(dialogContent), "%s"#COLOR_BRONZE"%s %s "#COLOR_WHITE"| "#COLOR_BRONZE"Nivel %d"#COLOR_WHITE"("#COLOR_BRONZE"%d"#COLOR_WHITE"/"#COLOR_BRONZE"%d"#COLOR_WHITE") | "#COLOR_LIGHTGREEN"$%d\n", dialogContent, name, lastname,p_nivel,p_exp,p_LevelUp,p_Dinero);
+        if(p_gender == 0){ // Male
+            new cache_genero[20] = "{0000AA}Masculino";
+        }else{ // Female
+            new cache_genero[20] = "{FFC0CB}Femenino";
+        }
+
+        format(dialogContent, sizeof(dialogContent), "%s"#COLOR_BRONZE"%s %s "#COLOR_GRAY"| "#COLOR_BRONZE"Nivel "#COLOR_GOLD"%d "#COLOR_GRAY"| "#COLOR_BRONZE"Efectivo: "#COLOR_SUCCESS"$%d "#COLOR_GRAY"-"#COLOR_BRONZE" Banco: $%d "#COLOR_GRAY"-"#COLOR_BRONZE"\n", dialogContent, name, lastname, p_nivel, p_Dinero);
+
     }
 
     // Línea gris final
@@ -543,7 +576,8 @@ public OnCharacterSelect(playerid)
     cache_get_value_name_int(0, "money", characterInfo[playerid][pMoney]);
     cache_get_value_name_int(0, "bank", characterInfo[playerid][pBank]);
 
-    SendClientMessage(playerid, -1, COLOR_SUCCESS"Has seleccionado tu personaje correctamente.");
+    printf("[CHARACTER] %s %s (char_id=%d) cargado correctamente para %s.", characterInfo[playerid][pName], characterInfo[playerid][pLastname], userInfo[playerid][currentCharacterIdSQL], userInfo[playerid][uName]);
+
     userInfo[playerid][spawnState] = SPAWN_INITIAL;
     modoLobby(playerid, 0);
     SetTimerEx("SpawnPlayerEx", 500, false, "i", playerid);
@@ -553,11 +587,14 @@ public OnCharacterSelect(playerid)
 
 
 public OnPlayerSpawn(playerid){
-    if(!IsPlayerLoggedIn(playerid)){ // Si el jugador no está logueado, lo sacamos
-        SendClientMessage(playerid, -1, COLOR_ERROR"Error.");
-        return 0;
+    if(!IsPlayerLoggedIn(playerid) && !IsPlayerNPC(playerid)){ // Si el jugador no está logueado, lo sacamos
+        printf("[SPAWN][ERROR] %s intentó spawnear sin estar logueado.", userInfo[playerid][uName]);
+        SetTimerEx("kickPlayer", 1000, false, "i", playerid);
+        return 1;
     }else{ // Si está logueado, lo dejamos spawnear
         if(userInfo[playerid][spawnState] == SPAWN_INITIAL){
+            printf("[SPAWN] %s spawneado correctamente en (%.2f, %.2f, %.2f)", userInfo[playerid][uName], characterInfo[playerid][pPosX], characterInfo[playerid][pPosY], characterInfo[playerid][pPosZ]);
+
             SetPlayerPos(playerid, characterInfo[playerid][pPosX], characterInfo[playerid][pPosY], characterInfo[playerid][pPosZ]);
             SetPlayerFacingAngle(playerid, characterInfo[playerid][pRot]);
             SetPlayerSkin(playerid, characterInfo[playerid][pSkin]);
@@ -591,11 +628,12 @@ public DatabaseConnect(){
     database = mysql_connect(DB_HOST, DB_USER, DB_PASS, DB_DATABASE);
 
     if(database == MYSQL_INVALID_HANDLE || mysql_errno(database) != 0){ // Conexión fallida a la base de datos
-        print("\n\n[MySQL]: Error al establecer conexión con la base de datos.\n\n");
+        printf("[MySQL][ERROR] Conexión fallida. Código de error: %d", mysql_errno(database));
         SetTimer("CerrarServidor", 10000, false);
     }
     else{ // Conexión establecida correctamente
-        print("\n\n[MySQL]: Conexión con la base de datos MySQL concretada con éxito.\n[MySQL]: ON\n\n");
+        printf("[MySQL][OK] Conectado a %s:%d (DB: %s, User: %s)", DB_HOST, DB_PORT, DB_DATABASE, DB_USER);
+
         return 1;
     }
     return 0;
@@ -674,6 +712,9 @@ public guardarCuenta(playerid){
         userInfo[playerid][uIp],
         userInfo[playerid][uIdSQL]
     );
+
+    printf("[SAVE] Datos guardados: user_id=%d, char_id=%d, Pos(%.2f, %.2f, %.2f), Dinero=%d", userInfo[playerid][uIdSQL], userInfo[playerid][currentCharacterIdSQL], characterInfo[playerid][pPosX], characterInfo[playerid][pPosY], characterInfo[playerid][pPosZ], characterInfo[playerid][pMoney]);
+
     return 1;
 }
 
@@ -722,7 +763,7 @@ public modoLobby(playerid, onOff)
 
         GameTextForPlayer(playerid, "~y~Conectando a~n~~w~Ciudad Libertad Roleplay...", 5000, 3);
 
-        // Cámara panorámica
+        /* Cámara panorámica ls
         SetPlayerCameraPos(playerid, 1741.497436, -736.675598, 167.170059);
         SetPlayerCameraLookAt(playerid, 1687.005126, -847.056640, 134.222259);
         InterpolateCameraPos(playerid,
@@ -730,10 +771,19 @@ public modoLobby(playerid, onOff)
             1687.005126, -847.056640, 134.222259,
             16000, CAMERA_MOVE
         );
+        */
+        SetPlayerCameraPos(playerid, 2256.980468, 1285.469970, 62.301094);
+        SetPlayerCameraLookAt(playerid, 2175.718261, 1286.025024, 62.687934);
+        InterpolateCameraPos(playerid,
+            2256.980468, 1285.469970, 62.301094,
+            2097.629638, 1285.348999, 83.135856,
+            16000, CAMERA_MOVE
+        );
 
 
         // Esperar 100 ms y reproducir música
         SetTimerEx("PlayAudioLobby", 100, false, "i", playerid);
+        
     }
     else if(onOff == 0)
     {
@@ -743,9 +793,12 @@ public modoLobby(playerid, onOff)
 
         TextDrawHideForPlayer(playerid, TD_Fondo[playerid]);
         TextDrawHideForPlayer(playerid, TD_Logo[playerid]);
+        TextDrawHideForPlayer(playerid, TD_Subtitulo[playerid]);
 
         TextDrawDestroy(TD_Fondo[playerid]);
         TextDrawDestroy(TD_Logo[playerid]);
+        TextDrawDestroy(TD_Subtitulo[playerid]);
+        SetTimerEx("SpawnPlayerEx", 500, false, "i", playerid);
 
     }
     return 1;
@@ -768,13 +821,22 @@ public PlayAudioLobby(playerid)
 
     // Logo / nombre del servidor
     TD_Logo[playerid] = TextDrawCreate(320.0, 80.0, NAME_SERVER);
-    TextDrawLetterSize(TD_Logo[playerid], 0.8, 3.0);
+    TextDrawLetterSize(TD_Logo[playerid], 0.7, 2.5);
     TextDrawAlignment(TD_Logo[playerid], 2);
-    TextDrawColor(TD_Logo[playerid], 0xFFD700FF); // dorado
-    TextDrawSetOutline(TD_Logo[playerid], 1);
-    TextDrawSetShadow(TD_Logo[playerid], 1);
-    TextDrawFont(TD_Logo[playerid], 2);
+    TextDrawColor(TD_Logo[playerid], 0xE8C547FF); // dorado
+    TextDrawSetOutline(TD_Logo[playerid], 2);
+    TextDrawSetShadow(TD_Logo[playerid], 0);
+    TextDrawFont(TD_Logo[playerid], 1);
     TextDrawShowForPlayer(playerid, TD_Logo[playerid]);
+
+    TD_Subtitulo[playerid] = TextDrawCreate(320.0, 115.0, "Tu historia. Tu libertad.");
+    TextDrawLetterSize(TD_Subtitulo[playerid], 0.35, 1.2);
+    TextDrawAlignment(TD_Subtitulo[playerid], 2);
+    TextDrawColor(TD_Subtitulo[playerid], 0xEAEAEAFF);
+    TextDrawSetOutline(TD_Subtitulo[playerid], 1);
+    TextDrawFont(TD_Subtitulo[playerid], 1);
+    TextDrawShowForPlayer(playerid, TD_Subtitulo[playerid]);
+
     PlayAudioStreamForPlayer(playerid, "https://raw.githubusercontent.com/avmaximo/server-sound_/main/intro2.mp3");
     return 1;
 }
@@ -927,10 +989,6 @@ stock HashConPepper(password[], salt[], ret_hash[], ret_hash_len)
     // Hasheás usando la nativa, pasando también el salt del usuario
     SHA256_PassHash(mezcla, salt, ret_hash, ret_hash_len);
 
-    printf("Depuracion password: %s\n", password);
-    printf("Depuracion mezcla: %s\n", mezcla);
-    printf("Depuracion salt: %s\n", salt);
-    printf("Depuracion hash: %s\n", ret_hash);
     return 1;
 }
 
