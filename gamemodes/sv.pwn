@@ -381,8 +381,11 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[]){
 
             if(cache_num_rows()) // ? Contraseña correcta
             {
+<<<<<<< HEAD
                 printf("[LOGIN] %s ha iniciado sesión correctamente (user_id=%d).", userInfo[playerid][uName], userInfo[playerid][uIdSQL]);
 
+=======
+>>>>>>> 37bf9b112cd03a13de79cda59e8e0580937dd064
                 cache_get_value_name_int(0, "user_id", userInfo[playerid][uIdSQL]);
                 userInfo[playerid][isLoggedIn] = 1;
                 userInfo[playerid][spawnState] = SPAWN_INITIAL;
@@ -534,15 +537,17 @@ public OnCharacterList(playerid)
         cache_get_value_name_int(i, "gender", p_gender);
 
         //format(dialogContent, sizeof(dialogContent), "%s"#COLOR_BRONZE"%s %s "#COLOR_WHITE"| "#COLOR_BRONZE"Nivel %d"#COLOR_WHITE"("#COLOR_BRONZE"%d"#COLOR_WHITE"/"#COLOR_BRONZE"%d"#COLOR_WHITE") | "#COLOR_LIGHTGREEN"$%d\n", dialogContent, name, lastname,p_nivel,p_exp,p_LevelUp,p_Dinero);
+        new cache_genero[25]
         if(p_gender == 0){ // Male
-            new cache_genero[20] = "{0000AA}Masculino";
+            format(cache_genero, sizeof(cache_genero),"{0000AA}Masculino");
         }else{ // Female
-            new cache_genero[20] = "{FFC0CB}Femenino";
+            format(cache_genero, sizeof(cache_genero),"{FFC0CB}Femenino");
         }
 
-        format(dialogContent, sizeof(dialogContent), "%s"#COLOR_BRONZE"%s %s "#COLOR_GRAY"| "#COLOR_BRONZE"Nivel "#COLOR_GOLD"%d "#COLOR_GRAY"| "#COLOR_BRONZE"Efectivo: "#COLOR_SUCCESS"$%d "#COLOR_GRAY"-"#COLOR_BRONZE" Banco: $%d "#COLOR_GRAY"-"#COLOR_BRONZE"\n", dialogContent, name, lastname, p_nivel, p_Dinero);
-
-    }
+        format(dialogContent, sizeof(dialogContent),
+            "%s"#COLOR_BRONZE"%s %s "#COLOR_GRAY"? %s "#COLOR_GRAY"? "#COLOR_WHITE"Nivel "#COLOR_GOLD"%d "#COLOR_GRAY"? "#COLOR_WHITE"Efectivo "#COLOR_SUCCESS"$%d "#COLOR_GRAY"? "#COLOR_WHITE"Banco"#COLOR_SUCCESS"$%d\n",
+            dialogContent, name, lastname, cache_genero,p_nivel, p_Dinero, p_Banco);
+        }
 
     // Línea gris final
     format(dialogContent, sizeof(dialogContent), "%s%sCrea tu siguiente personaje con VIP", dialogContent, COLOR_GRAY);
