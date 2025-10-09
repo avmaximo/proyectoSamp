@@ -381,11 +381,8 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[]){
 
             if(cache_num_rows()) // ? Contraseña correcta
             {
-<<<<<<< HEAD
                 printf("[LOGIN] %s ha iniciado sesión correctamente (user_id=%d).", userInfo[playerid][uName], userInfo[playerid][uIdSQL]);
 
-=======
->>>>>>> 37bf9b112cd03a13de79cda59e8e0580937dd064
                 cache_get_value_name_int(0, "user_id", userInfo[playerid][uIdSQL]);
                 userInfo[playerid][isLoggedIn] = 1;
                 userInfo[playerid][spawnState] = SPAWN_INITIAL;
@@ -486,8 +483,8 @@ public OnUserInsert(playerid)
     mysql_format(database, q2, sizeof(q2),
         "INSERT INTO characters (user_id,name,lastname,gender,age,skin,level,money,bank,posX,posY,posZ,rot,health,armor,interior,dimension) VALUES (%d,'%e','%e',%d,%d,%d,1,1000,0,%.2f,%.2f,%.2f,%.2f,100,0,0,0)",
         userInfo[playerid][uIdSQL],
-        characterInfo[playerid][pName],
-        characterInfo[playerid][pLastname],
+        CapitalizarPrimeraLetra(characterInfo[playerid][pName]),
+        CapitalizarPrimeraLetra(characterInfo[playerid][pLastname]),
         characterInfo[playerid][pGender],
         characterInfo[playerid][pAge],
         characterInfo[playerid][pSkin],
@@ -510,54 +507,32 @@ public OnPlayerInsert(playerid)
 
 forward OnCharacterList(playerid);
 public OnCharacterList(playerid)
-{   
-    
+{
     new rows = cache_num_rows();
     if(rows == 0)
     {
-        
         SendClientMessage(playerid, -1, COLOR_ERROR"No tienes personajes creados. Contacta con un administrador.");
         SetTimerEx("kickPlayer", 3000, false, "i", playerid);
         return 1;
     }
-    
-
-    
 
     userInfo[playerid][uCharactersAmount] = rows;
     new dialogContent[512];
-    new name[32], lastname[32], p_nivel, p_bank, p_gender, p_Dinero;
+    new c_name[32], c_lastname[32], c_level, c_money, c_bank;
     for(new i = 0; i < rows; i++)
     {
-        cache_get_value_name(i, "name", name, sizeof(name));
-        cache_get_value_name(i, "lastname", lastname, sizeof(lastname));
-        cache_get_value_name_int(i, "level", p_nivel);
-        cache_get_value_name_int(i, "money", p_Dinero);
-        cache_get_value_name_int(i, "bank", p_bank);
-        cache_get_value_name_int(i, "gender", p_gender);
-
-        //format(dialogContent, sizeof(dialogContent), "%s"#COLOR_BRONZE"%s %s "#COLOR_WHITE"| "#COLOR_BRONZE"Nivel %d"#COLOR_WHITE"("#COLOR_BRONZE"%d"#COLOR_WHITE"/"#COLOR_BRONZE"%d"#COLOR_WHITE") | "#COLOR_LIGHTGREEN"$%d\n", dialogContent, name, lastname,p_nivel,p_exp,p_LevelUp,p_Dinero);
-        new cache_genero[25]
-        if(p_gender == 0){ // Male
-            format(cache_genero, sizeof(cache_genero),"{0000AA}Masculino");
-        }else{ // Female
-            format(cache_genero, sizeof(cache_genero),"{FFC0CB}Femenino");
-        }
-
-        format(dialogContent, sizeof(dialogContent),
-            "%s"#COLOR_BRONZE"%s %s "#COLOR_GRAY"? %s "#COLOR_GRAY"? "#COLOR_WHITE"Nivel "#COLOR_GOLD"%d "#COLOR_GRAY"? "#COLOR_WHITE"Efectivo "#COLOR_SUCCESS"$%d "#COLOR_GRAY"? "#COLOR_WHITE"Banco"#COLOR_SUCCESS"$%d\n",
-            dialogContent, name, lastname, cache_genero,p_nivel, p_Dinero, p_Banco);
-        }
-
+        cache_get_value_name(i, "name", c_name, sizeof(c_name));
+        cache_get_value_name(i, "lastname", c_lastname, sizeof(c_lastname));
+        cache_get_value_name_int(i, "level", c_level);
+        cache_get_value_name_int(i, "money", c_money);
+        cache_get_value_name_int(i, "bank", c_bank);
+        c_money = c_money + c_bank;
+        format(dialogContent, sizeof(dialogContent), "%s"#COLOR_BRONZE"%s %s "#COLOR_GRAY"| "#COLOR_BRONZE"Dinero: "#COLOR_SUCCESS"$%d "#COLOR_GRAY"| "#COLOR_BRONZE"Nivel "#COLOR_SUCCESS"%d\n", dialogContent, c_name, c_lastname, c_money,c_level);
+    }
     // Línea gris final
-    format(dialogContent, sizeof(dialogContent), "%s%sCrea tu siguiente personaje con VIP", dialogContent, COLOR_GRAY);
-
-    new title[64];
-    format(title, sizeof(title), COLOR_GOLD"Selecciona tu personaje");
-    ShowPlayerDialog(playerid, DIALOG_CHARACTER_SELECT, DIALOG_STYLE_LIST, title, dialogContent, "Seleccionar", "Cancelar");
-
-    return 1;
+    format(dialogContent, sizeof(dialogContent), "%s%sCrea tu siguiente personaje con VIP", dialogContent, COLOR_GRAY); new title[64]; format(title, sizeof(title), COLOR_GOLD"Selecciona tu personaje"); ShowPlayerDialog(playerid, DIALOG_CHARACTER_SELECT, DIALOG_STYLE_LIST, title, dialogContent, "Seleccionar", "Cancelar"); return 1;
 }
+
 
 forward OnCharacterSelect(playerid);
 public OnCharacterSelect(playerid)
@@ -997,6 +972,29 @@ stock HashConPepper(password[], salt[], ret_hash[], ret_hash_len)
     return 1;
 }
 
+stock CapitalizarPrimeraLetra(input[])
+{
+    new output[128];
+    format(output, sizeof(output), "%s", input);
+
+    // Si la cadena está vacía, devolvemos vacío
+    if(!strlen(output)) return output;
+
+    // Convertir todo a minúsculas primero (por seguridad)
+    for(new i = 0; output[i] != '\0'; i++)
+    {
+        if(output[i] >= 'A' && output[i] <= 'Z') output[i] += 32; // pasa a minúscula
+    }
+
+    // Si la primera letra es minúscula, la convertimos en mayúscula
+    if(output[0] >= 'a' && output[0] <= 'z') output[0] -= 32;
+
+    format(input, 128, "%s", output);
+
+    return output;
+}
+
+
 CMD:xyz(playerid, params[])
 {
     new Float:x, Float:y, Float:z, Float:angle;
@@ -1112,5 +1110,45 @@ CMD:tp(playerid, params[])
     format(msg, sizeof(msg), "Teleportado a ID %d (%.2f, %.2f, %.2f).", targetid, x, y, z);
     SendClientMessage(playerid, -1, msg);
 
+    return 1;
+}
+
+CMD:pdebug(playerid, params[])
+{
+    new titulo[64], msg[1024], temp[512];
+    format(titulo, sizeof(titulo), "{7FB3D5}Datos del Personaje");
+
+    format(msg, sizeof(msg),
+    "{EAEAEA}ID SQL: {FFD700}%d\n{EAEAEA}Nombre: {FFD700}%s %s\n{EAEAEA}Género: {FFD700}%s\n{EAEAEA}Edad: {FFD700}%d  {EAEAEA}Skin: {FFD700}%d\n{EAEAEA}Nivel: {FFD700}%d  {EAEAEA}Experiencia: {FFD700}%d",
+    characterInfo[playerid][pIdSQL],
+    characterInfo[playerid][pName],
+    characterInfo[playerid][pLastname],
+    (characterInfo[playerid][pGender] == 0) ? ("Masculino") : ("Femenino"),
+    characterInfo[playerid][pAge],
+    characterInfo[playerid][pSkin],
+    characterInfo[playerid][pLevel],
+    characterInfo[playerid][pExp]);
+
+    format(temp, sizeof(temp),
+    "\n{EAEAEA}Dinero: {82E0AA}$%d  {EAEAEA}Banco: {82E0AA}$%d\n{EAEAEA}Salud: {FFD700}%.1f  {EAEAEA}Armadura: {FFD700}%.1f\n{EAEAEA}Interior: {FFD700}%d  {EAEAEA}Mundo virtual: {FFD700}%d",
+    characterInfo[playerid][pMoney],
+    characterInfo[playerid][pBank],
+    characterInfo[playerid][pHealth],
+    characterInfo[playerid][pArmor],
+    characterInfo[playerid][pInterior],
+    characterInfo[playerid][pDimension]);
+    strcat(msg, temp);
+
+    format(temp, sizeof(temp),
+    "\n{EAEAEA}Posición: {7FB3D5}%.2f, %.2f, %.2f\n{EAEAEA}Rotación: {7FB3D5}%.2f\n{EAEAEA}Tiempo jugado: {FFD700}%d min\n{EAEAEA}Level Up disponible: {FFD700}%s",
+    characterInfo[playerid][pPosX],
+    characterInfo[playerid][pPosY],
+    characterInfo[playerid][pPosZ],
+    characterInfo[playerid][pRot],
+    characterInfo[playerid][pMinutesPlayed],
+    (characterInfo[playerid][pLevelUp]) ? ("Sí") : ("No"));
+    strcat(msg, temp);
+
+    ShowPlayerDialog(playerid, 9999, DIALOG_STYLE_MSGBOX, titulo, msg, "Cerrar", "");
     return 1;
 }

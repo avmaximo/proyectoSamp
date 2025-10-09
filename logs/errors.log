@@ -1,4 +1,3 @@
-[12:26:28] [plugins/mysql] cache_get_value_name_int: field 'level' not found
-[12:26:28] [plugins/mysql] cache_get_value_name_int: field 'exp' not found
-[12:26:28] [plugins/mysql] cache_get_value_name_int: field 'levelUp' not found
-[12:26:28] [plugins/mysql] cache_get_value_name_int: field 'money' not found
+[12:39:36] [plugins/mysql] cache_get_value_name_int: field 'level' not found
+[12:39:36] [plugins/mysql] cache_get_value_name_int: field 'money' not found
+[12:39:36] [plugins/mysql] cache_get_value_name_int: field 'bank' not found

@@ -31,13 +31,22 @@ public OnFilterScriptInit()
 
 	//AddStaticVehicle(577, 1462.0745,2630.8787,10.8203, 0.0, -1, -1); // at400_sf
 	//AddStaticVehicle(577, 1462.0745,2630.8787,10.8203, 0.0, -1, -1); // at400_lv
-	npc_vehicles[tren_ls] = AddStaticVehicle(538, 1700.7551,-1953.6531,14.8756, 0.0, -1, -1); // tren LS
-	npc_vehicles[tren_lv] = AddStaticVehicle(538, 2864.750000, 1323.227783, 12.125619, 0.0, -1, -1); // tren LV
-	npc_vehicles[tren_sf] = AddStaticVehicle(538, -1944.375000, 87.377807, 27.000619, 0.0, -1, -1); // tren SF
+	npc_vehicles[tren_ls] = AddStaticVehicle(538, 1700.7551,-1953.6531,14.8756, 0.0, 3, 3); // tren LS
+	npc_vehicles[tren_lv] = AddStaticVehicle(538, 2864.750000, 1330.446289, 12.125619, 0.0, 3, 3); // tren LV
+	npc_vehicles[tren_sf] = AddStaticVehicle(538, -1942.612182, 169.754943, 25.710937, 180.000015, 3, 3); // tren SF
+
 
 	return 1;
 }
 
+
+/* 
+Veh[1] PosXYZR: 2864.750000, 1330.446289, 12.125619, 0.000000 // ls lv1
+Veh[1] PosXYZR: 1384.571533, 2632.250000, 12.125619, 89.999992 // lv1 lv2
+Veh[1] PosXYZR: -1944.375000, 101.994277, 27.000619, 180.000015 // lv2 sf
+Veh[1] PosXYZR: 850.730529, -1399.783081, -0.161370, 226.575881 // sf unity
+Veh[1] PosXYZR: 1771.659179, -1953.800048, 14.875619, 269.938629 // unity ls
+*/
 //-------------------------------------------------
 // IMPORTANT: This restricts NPCs connecting from
 // an IP address outside this server. If you need
