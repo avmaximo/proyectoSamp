@@ -5,7 +5,7 @@
 #include <a_mysql>
 #include <vSyncALS>
 #include <vSyncYSI>
-
+#pragma dynamic 65536
 #define SSCANF_NO_NICE_FEATURES
 #include <sscanf2>
 
@@ -76,10 +76,11 @@ new MySQL:database;
 
 #define NAME_SERVER     "Ciudad Libertad Roleplay"
 #define GAMEMODE_SERVER "Roleplay en español"
+#define DISCORD_SERVER  "discord.gg/nvfkzQEHVg"
 
 #define PASSWORD_MAX_CHARACTERS    (78)
 #define INVALID_NUMBER             (999995)
-new const_pepper[20] = "XyZz7y12*ab";
+static const_pepper[20] = "XyZz7y12*ab";
 
 #define FIRST_SKIN_MALE            101
 #define FIRST_SKIN_FEMALE          56
@@ -109,6 +110,11 @@ new loginAttempts[MAX_PLAYERS];
 new Text:TD_Fondo[MAX_PLAYERS];
 new Text:TD_Logo[MAX_PLAYERS];
 new Text:TD_Subtitulo[MAX_PLAYERS];
+
+new Text:TD_ServerName[MAX_PLAYERS];
+new Text:TD_Socials[MAX_PLAYERS];
+new Text:TD_Hour[MAX_PLAYERS];
+new Text:TD_Date[MAX_PLAYERS];
 
 
 enum uData {
@@ -160,12 +166,42 @@ main(){
     DatabaseConnect();
     SetGameModeText(GAMEMODE_SERVER);
 }
-public OnGameModeInit(){
+
+new hora_actual, minuto_actual, segundo_actual;
+new dia_actual, mes_actual, anio_actual;
+new hora_str[16], fecha_str[32];
+
+forward ActualizarHoraYFecha();
+public ActualizarHoraYFecha()
+{
+    gettime(hora_actual, minuto_actual, segundo_actual);
+    getdate(anio_actual, mes_actual, dia_actual);
+
+    format(hora_str, sizeof(hora_str), "%02d:%02d", hora_actual, minuto_actual);
+    format(fecha_str, sizeof(fecha_str), "%02d/%02d/%04d", dia_actual, mes_actual, anio_actual);
+
+    for(new i = 0; i < MAX_PLAYERS; i++)
+    {
+        if(IsPlayerConnected(i))
+        {
+            TextDrawSetString(TD_Hour[i], hora_str);
+            TextDrawSetString(TD_Date[i], fecha_str);
+            SetPlayerTime(i, hora_actual, minuto_actual);
+        }
+    }
     return 1;
 }
 
+public OnGameModeInit(){
+    SetTimer("ActualizarHoraYFecha", 60000, true); // cada minuto
+    return 1;
+}
+
+
+
 public OnPlayerConnect(playerid){
     if(IsPlayerNPC(playerid)) return 1;
+    SetPlayerTime(playerid, hora_actual, minuto_actual);
     modoLobby(playerid, 1);
     userInfo[playerid][spawnState] = SPAWN_NONE;
     loginAttempts[playerid] = 3;
@@ -199,6 +235,8 @@ public OnPlayerConnect(playerid){
 }
 
 public OnPlayerDisconnect(playerid, reason){
+    activarLobbyVisual(playerid, false);
+    activarTextosPantalla(playerid, false);
     guardarCuenta(playerid);
     format(userInfo[playerid][uName], MAX_PLAYER_NAME, "");
     
@@ -527,7 +565,7 @@ public OnCharacterList(playerid)
         cache_get_value_name_int(i, "money", c_money);
         cache_get_value_name_int(i, "bank", c_bank);
         c_money = c_money + c_bank;
-        format(dialogContent, sizeof(dialogContent), "%s"#COLOR_BRONZE"%s %s "#COLOR_GRAY"| "#COLOR_BRONZE"Dinero: "#COLOR_SUCCESS"$%d "#COLOR_GRAY"| "#COLOR_BRONZE"Nivel "#COLOR_SUCCESS"%d\n", dialogContent, c_name, c_lastname, c_money,c_level);
+        format(dialogContent, sizeof(dialogContent), "%s"#COLOR_BRONZE"»"#COLOR_WHITE"%s %s "#COLOR_GRAY"| "#COLOR_WHITE"Dinero: "#COLOR_SUCCESS"$%d "#COLOR_GRAY"| "#COLOR_WHITE"Nivel "#COLOR_SUCCESS"%d\n", dialogContent, c_name, c_lastname, c_money,c_level);
     }
     // Línea gris final
     format(dialogContent, sizeof(dialogContent), "%s%sCrea tu siguiente personaje con VIP", dialogContent, COLOR_GRAY); new title[64]; format(title, sizeof(title), COLOR_GOLD"Selecciona tu personaje"); ShowPlayerDialog(playerid, DIALOG_CHARACTER_SELECT, DIALOG_STYLE_LIST, title, dialogContent, "Seleccionar", "Cancelar"); return 1;
@@ -771,13 +809,8 @@ public modoLobby(playerid, onOff)
         TogglePlayerSpectating(playerid, 0);
         userInfo[playerid][isLoggedIn] = 1;
 
-        TextDrawHideForPlayer(playerid, TD_Fondo[playerid]);
-        TextDrawHideForPlayer(playerid, TD_Logo[playerid]);
-        TextDrawHideForPlayer(playerid, TD_Subtitulo[playerid]);
-
-        TextDrawDestroy(TD_Fondo[playerid]);
-        TextDrawDestroy(TD_Logo[playerid]);
-        TextDrawDestroy(TD_Subtitulo[playerid]);
+        activarLobbyVisual(playerid, false);
+        activarTextosPantalla(playerid, true);
         SetTimerEx("SpawnPlayerEx", 500, false, "i", playerid);
 
     }
@@ -790,36 +823,127 @@ public PlayAudioLobby(playerid)
 {
     if(!IsPlayerConnected(playerid)) return 0;
     // Fondo negro translúcido
-    TD_Fondo[playerid] = TextDrawCreate(0.0, 0.0, "_");
-    TextDrawLetterSize(TD_Fondo[playerid], 0.0, 50.0);
-    TextDrawTextSize(TD_Fondo[playerid], 640.0, 480.0);
-    TextDrawAlignment(TD_Fondo[playerid], 1);
-    TextDrawColor(TD_Fondo[playerid], 0x00000099); // negro semitransparente
-    TextDrawUseBox(TD_Fondo[playerid], 1);
-    TextDrawBoxColor(TD_Fondo[playerid], 0x00000066);
-    TextDrawShowForPlayer(playerid, TD_Fondo[playerid]);
-
-    // Logo / nombre del servidor
-    TD_Logo[playerid] = TextDrawCreate(320.0, 80.0, NAME_SERVER);
-    TextDrawLetterSize(TD_Logo[playerid], 0.7, 2.5);
-    TextDrawAlignment(TD_Logo[playerid], 2);
-    TextDrawColor(TD_Logo[playerid], 0xE8C547FF); // dorado
-    TextDrawSetOutline(TD_Logo[playerid], 2);
-    TextDrawSetShadow(TD_Logo[playerid], 0);
-    TextDrawFont(TD_Logo[playerid], 1);
-    TextDrawShowForPlayer(playerid, TD_Logo[playerid]);
-
-    TD_Subtitulo[playerid] = TextDrawCreate(320.0, 115.0, "Tu historia. Tu libertad.");
-    TextDrawLetterSize(TD_Subtitulo[playerid], 0.35, 1.2);
-    TextDrawAlignment(TD_Subtitulo[playerid], 2);
-    TextDrawColor(TD_Subtitulo[playerid], 0xEAEAEAFF);
-    TextDrawSetOutline(TD_Subtitulo[playerid], 1);
-    TextDrawFont(TD_Subtitulo[playerid], 1);
-    TextDrawShowForPlayer(playerid, TD_Subtitulo[playerid]);
-
+    activarLobbyVisual(playerid, true);
     PlayAudioStreamForPlayer(playerid, "https://raw.githubusercontent.com/avmaximo/server-sound_/main/intro2.mp3");
     return 1;
 }
+
+// =========================================================
+// TEXTDRAWS DEL LOBBY (solo visibles durante conexión/login)
+// =========================================================
+forward activarLobbyVisual(playerid, bool:activado);
+public activarLobbyVisual(playerid, bool:activado)
+{
+    if (activado)
+    {
+        // Fondo negro translúcido
+        TD_Fondo[playerid] = TextDrawCreate(0.0, 0.0, "_");
+        TextDrawLetterSize(TD_Fondo[playerid], 0.0, 50.0);
+        TextDrawTextSize(TD_Fondo[playerid], 640.0, 480.0);
+        TextDrawAlignment(TD_Fondo[playerid], 1);
+        TextDrawColor(TD_Fondo[playerid], 0x00000099);
+        TextDrawUseBox(TD_Fondo[playerid], 1);
+        TextDrawBoxColor(TD_Fondo[playerid], 0x00000066);
+        TextDrawShowForPlayer(playerid, TD_Fondo[playerid]);
+
+        // Logo / nombre del servidor
+        TD_Logo[playerid] = TextDrawCreate(320.0, 80.0, NAME_SERVER);
+        TextDrawLetterSize(TD_Logo[playerid], 0.7, 2.5);
+        TextDrawAlignment(TD_Logo[playerid], 2);
+        TextDrawColor(TD_Logo[playerid], 0xE8C547FF);
+        TextDrawSetOutline(TD_Logo[playerid], 2);
+        TextDrawSetShadow(TD_Logo[playerid], 0);
+        TextDrawFont(TD_Logo[playerid], 1);
+        TextDrawShowForPlayer(playerid, TD_Logo[playerid]);
+
+        // Subtítulo o lema
+        TD_Subtitulo[playerid] = TextDrawCreate(320.0, 115.0, "Tu historia. Tu libertad.");
+        TextDrawLetterSize(TD_Subtitulo[playerid], 0.35, 1.2);
+        TextDrawAlignment(TD_Subtitulo[playerid], 2);
+        TextDrawColor(TD_Subtitulo[playerid], 0xEAEAEAFF);
+        TextDrawSetOutline(TD_Subtitulo[playerid], 1);
+        TextDrawFont(TD_Subtitulo[playerid], 1);
+        TextDrawShowForPlayer(playerid, TD_Subtitulo[playerid]);
+    }
+    else
+    {
+        TextDrawHideForPlayer(playerid, TD_Fondo[playerid]);
+        TextDrawDestroy(TD_Fondo[playerid]);
+        TextDrawHideForPlayer(playerid, TD_Subtitulo[playerid]);
+        TextDrawDestroy(TD_Subtitulo[playerid]);
+        TextDrawHideForPlayer(playerid, TD_Logo[playerid]);
+        TextDrawDestroy(TD_Logo[playerid]);
+    }
+
+    return 1;
+}
+
+
+
+// =========================================================
+// TEXTDRAWS PERMANENTES EN PANTALLA (siempre visibles)
+// =========================================================
+forward activarTextosPantalla(playerid, bool:activado);
+public activarTextosPantalla(playerid, bool:activado)
+{
+    if (activado)
+    {
+        TD_ServerName[playerid] = TextDrawCreate(540.0, 420.0, NAME_SERVER);
+        TextDrawLetterSize(TD_ServerName[playerid], 0.4, 1.5);
+        TextDrawAlignment(TD_ServerName[playerid], 2);
+        TextDrawColor(TD_ServerName[playerid], 0xE8C547FF);
+        TextDrawSetOutline(TD_ServerName[playerid], 1);
+        TextDrawFont(TD_ServerName[playerid], 1);
+        TextDrawShowForPlayer(playerid, TD_ServerName[playerid]);
+
+        TD_Socials[playerid] = TextDrawCreate(540.0, 435.0, DISCORD_SERVER);
+        TextDrawLetterSize(TD_Socials[playerid], 0.25, 1.0);
+        TextDrawAlignment(TD_Socials[playerid], 2);
+        TextDrawColor(TD_Socials[playerid], 0xEAEAEAFF);
+        TextDrawSetOutline(TD_Socials[playerid], 1);
+        TextDrawFont(TD_Socials[playerid], 1);
+        TextDrawShowForPlayer(playerid, TD_Socials[playerid]);
+
+        // === HORA Y FECHA EN HUD ===
+        TD_Date[playerid] = TextDrawCreate(605.0, 25.0, "00/00/0000");
+        TextDrawUseBox(TD_Date[playerid], 0);
+        TextDrawFont(TD_Date[playerid], 3);
+        TextDrawSetShadow(TD_Date[playerid], 0);
+        TextDrawSetOutline(TD_Date[playerid], 2);
+        TextDrawBackgroundColor(TD_Date[playerid], 0x000000FF);
+        TextDrawColor(TD_Date[playerid], 0xEAEAEAFF); // Blanco grisáceo
+        TextDrawAlignment(TD_Date[playerid], 3);
+        TextDrawLetterSize(TD_Date[playerid], 0.4, 1.2);
+        TextDrawShowForPlayer(playerid, TD_Date[playerid]);
+
+        TD_Hour[playerid] = TextDrawCreate(605.0, 45.0, "00:00");
+        TextDrawUseBox(TD_Hour[playerid], 0);
+        TextDrawFont(TD_Hour[playerid], 3);
+        TextDrawSetShadow(TD_Hour[playerid], 0);
+        TextDrawSetOutline(TD_Hour[playerid], 2);
+        TextDrawBackgroundColor(TD_Hour[playerid], 0x000000FF);
+        TextDrawColor(TD_Hour[playerid], 0xE8C547FF); // Dorado suave
+        TextDrawAlignment(TD_Hour[playerid], 3);
+        TextDrawLetterSize(TD_Hour[playerid], 0.5, 1.5);
+        TextDrawShowForPlayer(playerid, TD_Hour[playerid]);
+
+    }
+    else
+    {
+        TextDrawHideForPlayer(playerid, TD_ServerName[playerid]);
+        TextDrawDestroy(TD_ServerName[playerid]);
+        TextDrawHideForPlayer(playerid, TD_Socials[playerid]);
+        TextDrawDestroy(TD_Socials[playerid]);
+        TextDrawHideForPlayer(playerid, TD_Date[playerid]);
+        TextDrawDestroy(TD_Date[playerid]);
+        TextDrawHideForPlayer(playerid, TD_Hour[playerid]);
+        TextDrawDestroy(TD_Hour[playerid]);
+
+    }
+
+    return 1;
+}
+
 
 forward IsPlayerLoggedIn(playerid);
 public IsPlayerLoggedIn(playerid){

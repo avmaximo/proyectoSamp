@@ -18538,3 +18538,1174 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [12:39:38] [SPAWN] sdasd spawneado correctamente en (1765.93, -1949.81, 14.60)
 [12:42:03] [SAVE] Datos guardados: user_id=36, char_id=33, Pos(504.87, -73.53, 998.75), Dinero=1000
 [12:42:03] [part] sdasd has left the server (3:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:04:37] 
+[23:04:37] Server Plugins
+[23:04:37] --------------
+[23:04:37]  Loading plugin: sscanf.dll
+[23:04:37] 
+[23:04:37]  ===============================
+[23:04:37] 
+[23:04:37]       sscanf plugin loaded.     
+[23:04:37] 
+[23:04:37]          Version: 2.13.8
+[23:04:37] 
+[23:04:37]    (c) 2022 Alex "Y_Less" Cole  
+[23:04:37] 
+[23:04:37]  ===============================
+[23:04:37] 
+[23:04:37]   Loaded.
+[23:04:37]  Loading plugin: streamer.dll
+[23:04:37] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[23:04:37]   Loaded.
+[23:04:37]  Loading plugin: mysql.dll
+[23:04:37]  >> plugin.mysql: R41-4 successfully loaded.
+[23:04:37]   Loaded.
+[23:04:37]  Loaded 3 plugins.
+
+[23:04:37] 
+[23:04:37] Filterscripts
+[23:04:37] ---------------
+[23:04:37]   Loading filterscript 'gl_realtime.amx'...
+[23:04:37]   Loading filterscript 'npc_record.amx'...
+[23:04:37]   Loading filterscript 'gl_npcs.amx'...
+[23:04:37]   Loaded 3 filterscripts.
+
+[23:04:37] [MySQL][OK] Conectado a localhost:3306 (DB: sv-samp, User: samp-server)
+[23:04:37] Number of vehicle models: 2
+[23:04:38] [connection] incoming connection: 127.0.0.1:52744 id: 0
+[23:04:38] [connection] incoming connection: 127.0.0.1:52745 id: 1
+[23:04:38] [connection] incoming connection: 127.0.0.1:52746 id: 2
+[23:04:39] [npc:join] TrainDriverLV has joined the server (0:127.0.0.1)
+[23:04:39] NPC: Connection from 127.0.0.1 is allowed.
+[23:04:39] [npc:join] TrainDriverLS has joined the server (1:127.0.0.1)
+[23:04:39] NPC: Connection from 127.0.0.1 is allowed.
+[23:04:39] [npc:join] TrainDriverSF has joined the server (2:127.0.0.1)
+[23:04:39] NPC: Connection from 127.0.0.1 is allowed.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:05:22] 
+[23:05:22] Server Plugins
+[23:05:22] --------------
+[23:05:22]  Loading plugin: sscanf.dll
+[23:05:22] 
+[23:05:22]  ===============================
+[23:05:22] 
+[23:05:22]       sscanf plugin loaded.     
+[23:05:22] 
+[23:05:22]          Version: 2.13.8
+[23:05:22] 
+[23:05:22]    (c) 2022 Alex "Y_Less" Cole  
+[23:05:22] 
+[23:05:22]  ===============================
+[23:05:22] 
+[23:05:22]   Loaded.
+[23:05:22]  Loading plugin: streamer.dll
+[23:05:22] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[23:05:22]   Loaded.
+[23:05:22]  Loading plugin: mysql.dll
+[23:05:22]  >> plugin.mysql: R41-4 successfully loaded.
+[23:05:22]   Loaded.
+[23:05:22]  Loaded 3 plugins.
+
+[23:05:22] 
+[23:05:22] Filterscripts
+[23:05:22] ---------------
+[23:05:22]   Loading filterscript 'gl_realtime.amx'...
+[23:05:22]   Loading filterscript 'npc_record.amx'...
+[23:05:22]   Loading filterscript 'gl_npcs.amx'...
+[23:05:22]   Loaded 3 filterscripts.
+
+[23:05:22] [MySQL][OK] Conectado a localhost:3306 (DB: sv-samp, User: samp-server)
+[23:05:22] Number of vehicle models: 2
+[23:05:23] [connection] incoming connection: 127.0.0.1:57325 id: 0
+[23:05:23] [connection] incoming connection: 127.0.0.1:57326 id: 1
+[23:05:23] [connection] incoming connection: 127.0.0.1:57327 id: 2
+[23:05:23] [npc:join] TrainDriverLV has joined the server (0:127.0.0.1)
+[23:05:23] NPC: Connection from 127.0.0.1 is allowed.
+[23:05:23] [npc:join] TrainDriverLS has joined the server (1:127.0.0.1)
+[23:05:23] NPC: Connection from 127.0.0.1 is allowed.
+[23:05:23] [npc:join] TrainDriverSF has joined the server (2:127.0.0.1)
+[23:05:23] NPC: Connection from 127.0.0.1 is allowed.
+[23:06:31] [connection] incoming connection: 127.0.0.1:62433 id: 3
+[23:06:31] [join] avmaximo has joined the server (3:127.0.0.1)
+[23:06:31] [LOGIN] Jugador conectado: avmaximo (127.0.0.1)
+[23:06:31] [REGISTER] No existe cuenta para avmaximo. Iniciando registro...
+[23:08:12] [REGISTER] Nuevo usuario insertado: ID_SQL=37, Nombre=avmaximo
+[23:08:12] [REGISTER] Insertando personaje para Sergio MarquIna (user_id=37)...
+[23:08:14] [SPAWN] avmaximo spawneado correctamente en (1765.93, -1949.80, 14.60)
+[23:12:35] [SAVE] Datos guardados: user_id=37, char_id=34, Pos(-113.87, -1553.08, 2.61), Dinero=1000
+[23:13:16] [SAVE] Datos guardados: user_id=37, char_id=34, Pos(1481.39, -1790.22, 156.75), Dinero=1000
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:17:30] 
+[23:17:30] Server Plugins
+[23:17:30] --------------
+[23:17:30]  Loading plugin: sscanf.dll
+[23:17:30] 
+[23:17:30]  ===============================
+[23:17:30] 
+[23:17:30]       sscanf plugin loaded.     
+[23:17:30] 
+[23:17:30]          Version: 2.13.8
+[23:17:30] 
+[23:17:30]    (c) 2022 Alex "Y_Less" Cole  
+[23:17:30] 
+[23:17:30]  ===============================
+[23:17:30] 
+[23:17:30]   Loaded.
+[23:17:30]  Loading plugin: streamer.dll
+[23:17:30] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[23:17:30]   Loaded.
+[23:17:30]  Loading plugin: mysql.dll
+[23:17:30]  >> plugin.mysql: R41-4 successfully loaded.
+[23:17:30]   Loaded.
+[23:17:30]  Loaded 3 plugins.
+
+[23:17:30] 
+[23:17:30] Filterscripts
+[23:17:30] ---------------
+[23:17:30]   Loading filterscript 'gl_realtime.amx'...
+[23:17:30]   Loading filterscript 'npc_record.amx'...
+[23:17:30]   Loading filterscript 'gl_npcs.amx'...
+[23:17:31]   Loaded 3 filterscripts.
+
+[23:17:31] [MySQL][OK] Conectado a localhost:3306 (DB: sv-samp, User: samp-server)
+[23:17:31] Number of vehicle models: 2
+[23:17:32] [connection] incoming connection: 127.0.0.1:50755 id: 0
+[23:17:32] [connection] incoming connection: 127.0.0.1:50756 id: 1
+[23:17:32] [connection] incoming connection: 127.0.0.1:50757 id: 2
+[23:17:32] [npc:join] TrainDriverLV has joined the server (0:127.0.0.1)
+[23:17:32] NPC: Connection from 127.0.0.1 is allowed.
+[23:17:32] [npc:join] TrainDriverLS has joined the server (1:127.0.0.1)
+[23:17:32] NPC: Connection from 127.0.0.1 is allowed.
+[23:17:32] [npc:join] TrainDriverSF has joined the server (2:127.0.0.1)
+[23:17:32] NPC: Connection from 127.0.0.1 is allowed.
+[23:17:39] [connection] incoming connection: 127.0.0.1:57165 id: 3
+[23:17:39] [join] avmaximo has joined the server (3:127.0.0.1)
+[23:17:39] [LOGIN] Jugador conectado: avmaximo (127.0.0.1)
+[23:17:39] [REGISTER] No existe cuenta para avmaximo. Iniciando registro...
+[23:17:58] [REGISTER] Nuevo usuario insertado: ID_SQL=38, Nombre=avmaximo
+[23:17:58] [REGISTER] Insertando personaje para Maximo Avila (user_id=38)...
+[23:18:00] [SPAWN] avmaximo spawneado correctamente en (1765.93, -1949.80, 14.60)
+[23:18:04] [SAVE] Datos guardados: user_id=38, char_id=35, Pos(1766.18, -1948.44, 14.10), Dinero=1000
+[23:18:04] [SAVE] Datos guardados: user_id=38, char_id=35, Pos(1766.18, -1948.44, 14.10), Dinero=1000
+[23:18:04] [part] avmaximo has left the server (3:1)
+[23:18:18] [connection] incoming connection: 127.0.0.1:49946 id: 3
+[23:18:18] [join] avmaximo has joined the server (3:127.0.0.1)
+[23:18:18] [LOGIN] Jugador conectado: avmaximo (127.0.0.1)
+[23:18:18] [LOGIN] Cuenta encontrada para avmaximo. Iniciando autenticación...
+[23:18:24] [LOGIN] avmaximo ha iniciado sesión correctamente (user_id=38).
+[23:19:03] [CHARACTER] Maximo Avila (char_id=35) cargado correctamente para avmaximo.
+[23:19:03] [SPAWN] avmaximo spawneado correctamente en (1766.18, -1948.43, 14.10)
+[23:19:13] [SAVE] Datos guardados: user_id=38, char_id=35, Pos(0.00, 0.00, 0.36), Dinero=900
+[23:19:13] [part] avmaximo has left the server (3:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:21:07] 
+[23:21:07] Server Plugins
+[23:21:07] --------------
+[23:21:07]  Loading plugin: sscanf.dll
+[23:21:07] 
+[23:21:07]  ===============================
+[23:21:07] 
+[23:21:07]       sscanf plugin loaded.     
+[23:21:07] 
+[23:21:07]          Version: 2.13.8
+[23:21:07] 
+[23:21:07]    (c) 2022 Alex "Y_Less" Cole  
+[23:21:07] 
+[23:21:07]  ===============================
+[23:21:07] 
+[23:21:07]   Loaded.
+[23:21:07]  Loading plugin: streamer.dll
+[23:21:07] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[23:21:07]   Loaded.
+[23:21:07]  Loading plugin: mysql.dll
+[23:21:07]  >> plugin.mysql: R41-4 successfully loaded.
+[23:21:07]   Loaded.
+[23:21:07]  Loaded 3 plugins.
+
+[23:21:07] 
+[23:21:07] Filterscripts
+[23:21:07] ---------------
+[23:21:07]   Loading filterscript 'gl_realtime.amx'...
+[23:21:07]   Loading filterscript 'npc_record.amx'...
+[23:21:07]   Loading filterscript 'gl_npcs.amx'...
+[23:21:07]   Loaded 3 filterscripts.
+
+[23:21:07] [MySQL][OK] Conectado a localhost:3306 (DB: sv-samp, User: samp-server)
+[23:21:07] Number of vehicle models: 2
+[23:21:08] [connection] incoming connection: 127.0.0.1:54978 id: 0
+[23:21:08] [connection] incoming connection: 127.0.0.1:54979 id: 1
+[23:21:08] [connection] incoming connection: 127.0.0.1:54980 id: 2
+[23:21:08] [npc:join] TrainDriverLV has joined the server (0:127.0.0.1)
+[23:21:08] NPC: Connection from 127.0.0.1 is allowed.
+[23:21:08] [npc:join] TrainDriverLS has joined the server (1:127.0.0.1)
+[23:21:08] NPC: Connection from 127.0.0.1 is allowed.
+[23:21:08] [npc:join] TrainDriverSF has joined the server (2:127.0.0.1)
+[23:21:08] NPC: Connection from 127.0.0.1 is allowed.
+[23:21:17] [connection] incoming connection: 127.0.0.1:54981 id: 3
+[23:21:18] [join] avmaximo has joined the server (3:127.0.0.1)
+[23:21:18] [LOGIN] Jugador conectado: avmaximo (127.0.0.1)
+[23:21:18] [LOGIN] Cuenta encontrada para avmaximo. Iniciando autenticación...
+[23:21:30] [LOGIN][ERROR] Contraseña incorrecta para avmaximo. Intentos restantes: 3
+[23:21:33] [LOGIN][ERROR] Contraseña incorrecta para avmaximo. Intentos restantes: 2
+[23:21:41] [LOGIN] avmaximo ha iniciado sesión correctamente (user_id=0).
+[23:22:20] [CHARACTER] Maximo Avila (char_id=35) cargado correctamente para avmaximo.
+[23:22:21] [SPAWN] avmaximo spawneado correctamente en (0.00, 0.00, 0.36)
+[23:22:31] [SAVE] Datos guardados: user_id=38, char_id=35, Pos(119.36, -472.51, 14.47), Dinero=900
+[23:22:31] [part] avmaximo has left the server (3:1)
+Console input: exit
+[23:23:19] --- Server Shutting Down.
+[23:23:19] [npc:part] TrainDriverLV has left the server (0:0)
+[23:23:19] [npc:part] TrainDriverLS has left the server (1:0)
+[23:23:19] [npc:part] TrainDriverSF has left the server (2:0)
+[23:23:19] 
+[23:23:19]  ===============================
+[23:23:19] 
+[23:23:19]      sscanf plugin unloaded.    
+[23:23:19] 
+[23:23:19]  ===============================
+[23:23:19] 
+[23:23:19] 
+
+*** Streamer Plugin v2.9.6 by Incognito unloaded ***
+
+[23:23:19] plugin.mysql: Unloading plugin...
+[23:23:19] plugin.mysql: Plugin unloaded.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:29:32] 
+[23:29:32] Server Plugins
+[23:29:32] --------------
+[23:29:32]  Loading plugin: sscanf.dll
+[23:29:32] 
+[23:29:32]  ===============================
+[23:29:32] 
+[23:29:32]       sscanf plugin loaded.     
+[23:29:32] 
+[23:29:32]          Version: 2.13.8
+[23:29:32] 
+[23:29:32]    (c) 2022 Alex "Y_Less" Cole  
+[23:29:32] 
+[23:29:32]  ===============================
+[23:29:32] 
+[23:29:32]   Loaded.
+[23:29:32]  Loading plugin: streamer.dll
+[23:29:32] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[23:29:32]   Loaded.
+[23:29:32]  Loading plugin: mysql.dll
+[23:29:32]  >> plugin.mysql: R41-4 successfully loaded.
+[23:29:32]   Loaded.
+[23:29:32]  Loaded 3 plugins.
+
+[23:29:32] 
+[23:29:32] Filterscripts
+[23:29:32] ---------------
+[23:29:32]   Loading filterscript 'gl_realtime.amx'...
+[23:29:32]   Loading filterscript 'npc_record.amx'...
+[23:29:32]   Loading filterscript 'gl_npcs.amx'...
+[23:29:32]   Loaded 3 filterscripts.
+
+[23:29:32] [MySQL][OK] Conectado a localhost:3306 (DB: sv-samp, User: samp-server)
+[23:29:32] Number of vehicle models: 2
+[23:29:33] [connection] incoming connection: 127.0.0.1:52452 id: 0
+[23:29:33] [connection] incoming connection: 127.0.0.1:52453 id: 1
+[23:29:33] [connection] incoming connection: 127.0.0.1:52454 id: 2
+[23:29:33] [npc:join] TrainDriverLV has joined the server (0:127.0.0.1)
+[23:29:33] NPC: Connection from 127.0.0.1 is allowed.
+[23:29:33] [npc:join] TrainDriverLS has joined the server (1:127.0.0.1)
+[23:29:33] NPC: Connection from 127.0.0.1 is allowed.
+[23:29:33] [npc:join] TrainDriverSF has joined the server (2:127.0.0.1)
+[23:29:33] NPC: Connection from 127.0.0.1 is allowed.
+[23:29:43] [connection] incoming connection: 127.0.0.1:54301 id: 3
+[23:29:43] [join] avmaximo has joined the server (3:127.0.0.1)
+[23:29:43] [LOGIN] Jugador conectado: avmaximo (127.0.0.1)
+[23:29:43] [LOGIN] Cuenta encontrada para avmaximo. Iniciando autenticación...
+[23:29:51] [LOGIN][ERROR] Contraseña incorrecta para avmaximo. Intentos restantes: 3
+[23:29:52] [LOGIN][ERROR] Contraseña incorrecta para avmaximo. Intentos restantes: 2
+[23:29:52] [LOGIN][ERROR] Contraseña incorrecta para avmaximo. Intentos restantes: 1
+[23:29:52] [LOGIN][BLOCK] avmaximo expulsado por intentos fallidos.
+[23:29:53] [part] avmaximo has left the server (3:2)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:35:25] 
+[23:35:25] Server Plugins
+[23:35:25] --------------
+[23:35:25]  Loading plugin: sscanf.dll
+[23:35:25] 
+[23:35:25]  ===============================
+[23:35:25] 
+[23:35:25]       sscanf plugin loaded.     
+[23:35:25] 
+[23:35:25]          Version: 2.13.8
+[23:35:25] 
+[23:35:25]    (c) 2022 Alex "Y_Less" Cole  
+[23:35:25] 
+[23:35:25]  ===============================
+[23:35:25] 
+[23:35:25]   Loaded.
+[23:35:25]  Loading plugin: streamer.dll
+[23:35:25] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[23:35:25]   Loaded.
+[23:35:25]  Loading plugin: mysql.dll
+[23:35:25]  >> plugin.mysql: R41-4 successfully loaded.
+[23:35:25]   Loaded.
+[23:35:25]  Loaded 3 plugins.
+
+[23:35:25] 
+[23:35:25] Filterscripts
+[23:35:25] ---------------
+[23:35:25]   Loading filterscript 'gl_realtime.amx'...
+[23:35:25]   Loading filterscript 'npc_record.amx'...
+[23:35:25]   Loading filterscript 'gl_npcs.amx'...
+[23:35:25]   Loaded 3 filterscripts.
+
+[23:35:25] [MySQL][OK] Conectado a localhost:3306 (DB: sv-samp, User: samp-server)
+[23:35:25] Number of vehicle models: 2
+[23:35:26] [connection] incoming connection: 127.0.0.1:59143 id: 0
+[23:35:26] [connection] incoming connection: 127.0.0.1:59144 id: 1
+[23:35:26] [connection] incoming connection: 127.0.0.1:59145 id: 2
+[23:35:26] [npc:join] TrainDriverLV has joined the server (0:127.0.0.1)
+[23:35:26] NPC: Connection from 127.0.0.1 is allowed.
+[23:35:26] [npc:join] TrainDriverLS has joined the server (1:127.0.0.1)
+[23:35:26] NPC: Connection from 127.0.0.1 is allowed.
+[23:35:26] [npc:join] TrainDriverSF has joined the server (2:127.0.0.1)
+[23:35:26] NPC: Connection from 127.0.0.1 is allowed.
+[23:35:47] [connection] incoming connection: 127.0.0.1:65094 id: 3
+[23:35:47] [join] avmaximo has joined the server (3:127.0.0.1)
+[23:35:47] [LOGIN] Jugador conectado: avmaximo (127.0.0.1)
+[23:35:47] [REGISTER] No existe cuenta para avmaximo. Iniciando registro...
+[23:36:54] [REGISTER] Nuevo usuario insertado: ID_SQL=39, Nombre=avmaximo
+[23:36:54] [REGISTER] Insertando personaje para Maximo Avila (user_id=39)...
+[23:36:56] [SPAWN] avmaximo spawneado correctamente en (1765.93, -1949.80, 14.60)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:38:08] 
+[23:38:08] Server Plugins
+[23:38:08] --------------
+[23:38:08]  Loading plugin: sscanf.dll
+[23:38:08] 
+[23:38:08]  ===============================
+[23:38:08] 
+[23:38:08]       sscanf plugin loaded.     
+[23:38:08] 
+[23:38:08]          Version: 2.13.8
+[23:38:08] 
+[23:38:08]    (c) 2022 Alex "Y_Less" Cole  
+[23:38:08] 
+[23:38:08]  ===============================
+[23:38:08] 
+[23:38:08]   Loaded.
+[23:38:08]  Loading plugin: streamer.dll
+[23:38:08] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[23:38:08]   Loaded.
+[23:38:08]  Loading plugin: mysql.dll
+[23:38:08]  >> plugin.mysql: R41-4 successfully loaded.
+[23:38:08]   Loaded.
+[23:38:08]  Loaded 3 plugins.
+
+[23:38:08] 
+[23:38:08] Filterscripts
+[23:38:08] ---------------
+[23:38:08]   Loading filterscript 'gl_realtime.amx'...
+[23:38:08]   Loading filterscript 'npc_record.amx'...
+[23:38:08]   Loading filterscript 'gl_npcs.amx'...
+[23:38:08]   Loaded 3 filterscripts.
+
+[23:38:08] [MySQL][OK] Conectado a localhost:3306 (DB: sv-samp, User: samp-server)
+[23:38:08] Number of vehicle models: 2
+[23:38:09] [connection] incoming connection: 127.0.0.1:61185 id: 4
+[23:38:09] [connection] incoming connection: 127.0.0.1:61186 id: 5
+[23:38:09] [connection] incoming connection: 127.0.0.1:61187 id: 6
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:38:12] 
+[23:38:12] Server Plugins
+[23:38:12] --------------
+[23:38:12]  Loading plugin: sscanf.dll
+[23:38:12] 
+[23:38:12]  ===============================
+[23:38:12] 
+[23:38:12]       sscanf plugin loaded.     
+[23:38:12] 
+[23:38:12]          Version: 2.13.8
+[23:38:12] 
+[23:38:12]    (c) 2022 Alex "Y_Less" Cole  
+[23:38:12] 
+[23:38:12]  ===============================
+[23:38:12] 
+[23:38:12]   Loaded.
+[23:38:12]  Loading plugin: streamer.dll
+[23:38:12] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[23:38:12]   Loaded.
+[23:38:12]  Loading plugin: mysql.dll
+[23:38:12]  >> plugin.mysql: R41-4 successfully loaded.
+[23:38:12]   Loaded.
+[23:38:12]  Loaded 3 plugins.
+
+[23:38:12] 
+[23:38:12] Filterscripts
+[23:38:12] ---------------
+[23:38:12]   Loading filterscript 'gl_realtime.amx'...
+[23:38:12]   Loading filterscript 'npc_record.amx'...
+[23:38:12]   Loading filterscript 'gl_npcs.amx'...
+[23:38:12]   Loaded 3 filterscripts.
+
+[23:38:12] [MySQL][OK] Conectado a localhost:3306 (DB: sv-samp, User: samp-server)
+[23:38:12] Number of vehicle models: 2
+[23:38:13] [connection] incoming connection: 127.0.0.1:61188 id: 0
+[23:38:13] [connection] incoming connection: 127.0.0.1:61189 id: 1
+[23:38:13] [connection] incoming connection: 127.0.0.1:61190 id: 2
+[23:38:13] [npc:join] TrainDriverLV has joined the server (0:127.0.0.1)
+[23:38:13] NPC: Connection from 127.0.0.1 is allowed.
+[23:38:13] [npc:join] TrainDriverLS has joined the server (1:127.0.0.1)
+[23:38:13] NPC: Connection from 127.0.0.1 is allowed.
+[23:38:13] [npc:join] TrainDriverSF has joined the server (2:127.0.0.1)
+[23:38:13] NPC: Connection from 127.0.0.1 is allowed.
+[23:38:27] [connection] incoming connection: 127.0.0.1:61191 id: 3
+[23:38:27] [join] avmaximo has joined the server (3:127.0.0.1)
+[23:38:27] [LOGIN] Jugador conectado: avmaximo (127.0.0.1)
+[23:38:27] [LOGIN] Cuenta encontrada para avmaximo. Iniciando autenticación...
+[23:38:36] [LOGIN] avmaximo ha iniciado sesión correctamente (user_id=0).
+[23:38:37] [CHARACTER] Maximo Avila (char_id=36) cargado correctamente para avmaximo.
+[23:38:38] [SPAWN] avmaximo spawneado correctamente en (1765.93, -1949.81, 14.60)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:39:10] 
+[23:39:10] Server Plugins
+[23:39:10] --------------
+[23:39:10]  Loading plugin: sscanf.dll
+[23:39:10] 
+[23:39:10]  ===============================
+[23:39:10] 
+[23:39:10]       sscanf plugin loaded.     
+[23:39:10] 
+[23:39:10]          Version: 2.13.8
+[23:39:10] 
+[23:39:10]    (c) 2022 Alex "Y_Less" Cole  
+[23:39:10] 
+[23:39:10]  ===============================
+[23:39:10] 
+[23:39:10]   Loaded.
+[23:39:10]  Loading plugin: streamer.dll
+[23:39:10] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[23:39:10]   Loaded.
+[23:39:10]  Loading plugin: mysql.dll
+[23:39:10]  >> plugin.mysql: R41-4 successfully loaded.
+[23:39:10]   Loaded.
+[23:39:10]  Loaded 3 plugins.
+
+[23:39:10] 
+[23:39:10] Filterscripts
+[23:39:10] ---------------
+[23:39:10]   Loading filterscript 'gl_realtime.amx'...
+[23:39:10]   Loading filterscript 'npc_record.amx'...
+[23:39:10]   Loading filterscript 'gl_npcs.amx'...
+[23:39:10]   Loaded 3 filterscripts.
+
+[23:39:10] [MySQL][OK] Conectado a localhost:3306 (DB: sv-samp, User: samp-server)
+[23:39:10] Number of vehicle models: 2
+[23:39:11] [connection] incoming connection: 127.0.0.1:51978 id: 0
+[23:39:11] [connection] incoming connection: 127.0.0.1:51979 id: 1
+[23:39:11] [connection] incoming connection: 127.0.0.1:51980 id: 2
+[23:39:11] [npc:join] TrainDriverLV has joined the server (0:127.0.0.1)
+[23:39:11] NPC: Connection from 127.0.0.1 is allowed.
+[23:39:11] [npc:join] TrainDriverLS has joined the server (1:127.0.0.1)
+[23:39:11] NPC: Connection from 127.0.0.1 is allowed.
+[23:39:12] [npc:join] TrainDriverSF has joined the server (2:127.0.0.1)
+[23:39:12] NPC: Connection from 127.0.0.1 is allowed.
+[23:39:13] [connection] incoming connection: 127.0.0.1:51981 id: 3
+[23:39:13] [join] avmaximo has joined the server (3:127.0.0.1)
+[23:39:13] [LOGIN] Jugador conectado: avmaximo (127.0.0.1)
+[23:39:13] [LOGIN] Cuenta encontrada para avmaximo. Iniciando autenticación...
+[23:39:23] [LOGIN] avmaximo ha iniciado sesión correctamente (user_id=0).
+[23:39:24] [CHARACTER] Maximo Avila (char_id=36) cargado correctamente para avmaximo.
+[23:39:24] [SPAWN] avmaximo spawneado correctamente en (1765.93, -1949.81, 14.60)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:48:28] 
+[23:48:28] Server Plugins
+[23:48:28] --------------
+[23:48:28]  Loading plugin: sscanf.dll
+[23:48:28] 
+[23:48:28]  ===============================
+[23:48:28] 
+[23:48:28]       sscanf plugin loaded.     
+[23:48:28] 
+[23:48:28]          Version: 2.13.8
+[23:48:28] 
+[23:48:28]    (c) 2022 Alex "Y_Less" Cole  
+[23:48:28] 
+[23:48:28]  ===============================
+[23:48:28] 
+[23:48:28]   Loaded.
+[23:48:28]  Loading plugin: streamer.dll
+[23:48:28] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[23:48:28]   Loaded.
+[23:48:28]  Loading plugin: mysql.dll
+[23:48:28]  >> plugin.mysql: R41-4 successfully loaded.
+[23:48:28]   Loaded.
+[23:48:28]  Loaded 3 plugins.
+
+[23:48:28] 
+[23:48:28] Filterscripts
+[23:48:28] ---------------
+[23:48:28]   Loading filterscript 'gl_realtime.amx'...
+[23:48:28]   Loading filterscript 'npc_record.amx'...
+[23:48:28]   Loading filterscript 'gl_npcs.amx'...
+[23:48:28]   Loaded 3 filterscripts.
+
+[23:48:28] [MySQL][OK] Conectado a localhost:3306 (DB: sv-samp, User: samp-server)
+[23:48:28] Number of vehicle models: 2
+[23:48:29] [connection] incoming connection: 127.0.0.1:64451 id: 4
+[23:48:29] [connection] incoming connection: 127.0.0.1:64452 id: 5
+[23:48:29] [connection] incoming connection: 127.0.0.1:64453 id: 6
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:48:35] 
+[23:48:35] Server Plugins
+[23:48:35] --------------
+[23:48:35]  Loading plugin: sscanf.dll
+[23:48:35] 
+[23:48:35]  ===============================
+[23:48:35] 
+[23:48:35]       sscanf plugin loaded.     
+[23:48:35] 
+[23:48:35]          Version: 2.13.8
+[23:48:35] 
+[23:48:35]    (c) 2022 Alex "Y_Less" Cole  
+[23:48:35] 
+[23:48:35]  ===============================
+[23:48:35] 
+[23:48:35]   Loaded.
+[23:48:35]  Loading plugin: streamer.dll
+[23:48:35] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[23:48:35]   Loaded.
+[23:48:35]  Loading plugin: mysql.dll
+[23:48:35]  >> plugin.mysql: R41-4 successfully loaded.
+[23:48:35]   Loaded.
+[23:48:35]  Loaded 3 plugins.
+
+[23:48:35] 
+[23:48:35] Filterscripts
+[23:48:35] ---------------
+[23:48:35]   Loading filterscript 'gl_realtime.amx'...
+[23:48:35]   Loading filterscript 'npc_record.amx'...
+[23:48:35]   Loading filterscript 'gl_npcs.amx'...
+[23:48:35]   Loaded 3 filterscripts.
+
+[23:48:35] [MySQL][OK] Conectado a localhost:3306 (DB: sv-samp, User: samp-server)
+[23:48:35] Number of vehicle models: 2
+[23:48:36] [connection] incoming connection: 127.0.0.1:63131 id: 0
+[23:48:36] [connection] incoming connection: 127.0.0.1:63132 id: 1
+[23:48:36] [connection] incoming connection: 127.0.0.1:63133 id: 2
+[23:48:37] [npc:join] TrainDriverLV has joined the server (0:127.0.0.1)
+[23:48:37] NPC: Connection from 127.0.0.1 is allowed.
+[23:48:37] [npc:join] TrainDriverLS has joined the server (1:127.0.0.1)
+[23:48:37] NPC: Connection from 127.0.0.1 is allowed.
+[23:48:37] [npc:join] TrainDriverSF has joined the server (2:127.0.0.1)
+[23:48:37] NPC: Connection from 127.0.0.1 is allowed.
+[23:48:56] [connection] incoming connection: 127.0.0.1:64627 id: 3
+[23:48:56] [join] avmaximo has joined the server (3:127.0.0.1)
+[23:48:56] [LOGIN] Jugador conectado: avmaximo (127.0.0.1)
+[23:48:56] [LOGIN] Cuenta encontrada para avmaximo. Iniciando autenticación...
+[23:49:05] [LOGIN] avmaximo ha iniciado sesión correctamente (user_id=0).
+[23:49:15] [CHARACTER] Maximo Avila (char_id=36) cargado correctamente para avmaximo.
+[23:49:16] [SPAWN] avmaximo spawneado correctamente en (1765.93, -1949.81, 14.60)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:50:00] 
+[23:50:00] Server Plugins
+[23:50:00] --------------
+[23:50:00]  Loading plugin: sscanf.dll
+[23:50:00] 
+[23:50:00]  ===============================
+[23:50:00] 
+[23:50:00]       sscanf plugin loaded.     
+[23:50:00] 
+[23:50:00]          Version: 2.13.8
+[23:50:00] 
+[23:50:00]    (c) 2022 Alex "Y_Less" Cole  
+[23:50:00] 
+[23:50:00]  ===============================
+[23:50:00] 
+[23:50:00]   Loaded.
+[23:50:00]  Loading plugin: streamer.dll
+[23:50:00] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[23:50:00]   Loaded.
+[23:50:00]  Loading plugin: mysql.dll
+[23:50:00]  >> plugin.mysql: R41-4 successfully loaded.
+[23:50:00]   Loaded.
+[23:50:00]  Loaded 3 plugins.
+
+[23:50:00] 
+[23:50:00] Filterscripts
+[23:50:00] ---------------
+[23:50:00]   Loading filterscript 'gl_realtime.amx'...
+[23:50:00]   Loading filterscript 'npc_record.amx'...
+[23:50:00]   Loading filterscript 'gl_npcs.amx'...
+[23:50:00]   Loaded 3 filterscripts.
+
+[23:50:00] [MySQL][OK] Conectado a localhost:3306 (DB: sv-samp, User: samp-server)
+[23:50:00] Number of vehicle models: 2
+[23:50:01] [connection] incoming connection: 127.0.0.1:50145 id: 0
+[23:50:01] [connection] incoming connection: 127.0.0.1:50146 id: 1
+[23:50:01] [connection] incoming connection: 127.0.0.1:50147 id: 2
+[23:50:01] [npc:join] TrainDriverLV has joined the server (0:127.0.0.1)
+[23:50:01] NPC: Connection from 127.0.0.1 is allowed.
+[23:50:01] [npc:join] TrainDriverLS has joined the server (1:127.0.0.1)
+[23:50:01] NPC: Connection from 127.0.0.1 is allowed.
+[23:50:01] [npc:join] TrainDriverSF has joined the server (2:127.0.0.1)
+[23:50:01] NPC: Connection from 127.0.0.1 is allowed.
+[23:50:04] [connection] incoming connection: 127.0.0.1:50878 id: 3
+[23:50:05] [join] avmaximo has joined the server (3:127.0.0.1)
+[23:50:05] [LOGIN] Jugador conectado: avmaximo (127.0.0.1)
+[23:50:05] [LOGIN] Cuenta encontrada para avmaximo. Iniciando autenticación...
+[23:50:14] [LOGIN] avmaximo ha iniciado sesión correctamente (user_id=0).
+[23:50:14] [CHARACTER] Maximo Avila (char_id=36) cargado correctamente para avmaximo.
+[23:50:15] [SPAWN] avmaximo spawneado correctamente en (1765.93, -1949.81, 14.60)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:52:08] 
+[23:52:08] Server Plugins
+[23:52:08] --------------
+[23:52:08]  Loading plugin: sscanf.dll
+[23:52:08] 
+[23:52:08]  ===============================
+[23:52:08] 
+[23:52:08]       sscanf plugin loaded.     
+[23:52:08] 
+[23:52:08]          Version: 2.13.8
+[23:52:08] 
+[23:52:08]    (c) 2022 Alex "Y_Less" Cole  
+[23:52:08] 
+[23:52:08]  ===============================
+[23:52:08] 
+[23:52:08]   Loaded.
+[23:52:08]  Loading plugin: streamer.dll
+[23:52:08] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[23:52:08]   Loaded.
+[23:52:08]  Loading plugin: mysql.dll
+[23:52:08]  >> plugin.mysql: R41-4 successfully loaded.
+[23:52:08]   Loaded.
+[23:52:08]  Loaded 3 plugins.
+
+[23:52:08] 
+[23:52:08] Filterscripts
+[23:52:08] ---------------
+[23:52:08]   Loading filterscript 'gl_realtime.amx'...
+[23:52:08]   Loading filterscript 'npc_record.amx'...
+[23:52:08]   Loading filterscript 'gl_npcs.amx'...
+[23:52:08]   Loaded 3 filterscripts.
+
+[23:52:08] [MySQL][OK] Conectado a localhost:3306 (DB: sv-samp, User: samp-server)
+[23:52:08] Number of vehicle models: 2
+[23:52:09] [connection] incoming connection: 127.0.0.1:64844 id: 0
+[23:52:09] [connection] incoming connection: 127.0.0.1:64845 id: 1
+[23:52:09] [connection] incoming connection: 127.0.0.1:64846 id: 2
+[23:52:10] [npc:join] TrainDriverLV has joined the server (0:127.0.0.1)
+[23:52:10] NPC: Connection from 127.0.0.1 is allowed.
+[23:52:10] [npc:join] TrainDriverLS has joined the server (1:127.0.0.1)
+[23:52:10] NPC: Connection from 127.0.0.1 is allowed.
+[23:52:10] [npc:join] TrainDriverSF has joined the server (2:127.0.0.1)
+[23:52:10] NPC: Connection from 127.0.0.1 is allowed.
+[23:52:13] [connection] incoming connection: 127.0.0.1:53572 id: 3
+[23:52:13] [join] avmaximo has joined the server (3:127.0.0.1)
+[23:52:13] [LOGIN] Jugador conectado: avmaximo (127.0.0.1)
+[23:52:13] [LOGIN] Cuenta encontrada para avmaximo. Iniciando autenticación...
+[23:52:21] [LOGIN] avmaximo ha iniciado sesión correctamente (user_id=0).
+[23:52:21] [CHARACTER] Maximo Avila (char_id=36) cargado correctamente para avmaximo.
+[23:52:22] [SPAWN] avmaximo spawneado correctamente en (1765.93, -1949.81, 14.60)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:53:16] 
+[23:53:16] Server Plugins
+[23:53:16] --------------
+[23:53:16]  Loading plugin: sscanf.dll
+[23:53:16] 
+[23:53:16]  ===============================
+[23:53:16] 
+[23:53:16]       sscanf plugin loaded.     
+[23:53:16] 
+[23:53:16]          Version: 2.13.8
+[23:53:16] 
+[23:53:16]    (c) 2022 Alex "Y_Less" Cole  
+[23:53:16] 
+[23:53:16]  ===============================
+[23:53:16] 
+[23:53:16]   Loaded.
+[23:53:16]  Loading plugin: streamer.dll
+[23:53:16] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[23:53:16]   Loaded.
+[23:53:16]  Loading plugin: mysql.dll
+[23:53:16]  >> plugin.mysql: R41-4 successfully loaded.
+[23:53:16]   Loaded.
+[23:53:16]  Loaded 3 plugins.
+
+[23:53:16] 
+[23:53:16] Filterscripts
+[23:53:16] ---------------
+[23:53:16]   Loading filterscript 'gl_realtime.amx'...
+[23:53:16]   Loading filterscript 'npc_record.amx'...
+[23:53:16]   Loading filterscript 'gl_npcs.amx'...
+[23:53:16]   Loaded 3 filterscripts.
+
+[23:53:16] [MySQL][OK] Conectado a localhost:3306 (DB: sv-samp, User: samp-server)
+[23:53:16] Number of vehicle models: 2
+[23:53:17] [connection] incoming connection: 127.0.0.1:64720 id: 0
+[23:53:17] [connection] incoming connection: 127.0.0.1:64721 id: 1
+[23:53:17] [connection] incoming connection: 127.0.0.1:64722 id: 2
+[23:53:18] [npc:join] TrainDriverLV has joined the server (0:127.0.0.1)
+[23:53:18] NPC: Connection from 127.0.0.1 is allowed.
+[23:53:18] [npc:join] TrainDriverLS has joined the server (1:127.0.0.1)
+[23:53:18] NPC: Connection from 127.0.0.1 is allowed.
+[23:53:18] [npc:join] TrainDriverSF has joined the server (2:127.0.0.1)
+[23:53:18] NPC: Connection from 127.0.0.1 is allowed.
+[23:53:20] [connection] incoming connection: 127.0.0.1:64723 id: 3
+[23:53:20] [join] avmaximo has joined the server (3:127.0.0.1)
+[23:53:20] [LOGIN] Jugador conectado: avmaximo (127.0.0.1)
+[23:53:20] [LOGIN] Cuenta encontrada para avmaximo. Iniciando autenticación...
+[23:53:28] [LOGIN] avmaximo ha iniciado sesión correctamente (user_id=0).
+[23:53:29] [CHARACTER] Maximo Avila (char_id=36) cargado correctamente para avmaximo.
+[23:53:30] [SPAWN] avmaximo spawneado correctamente en (1765.93, -1949.81, 14.60)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[00:02:44] 
+[00:02:44] Server Plugins
+[00:02:44] --------------
+[00:02:44]  Loading plugin: sscanf.dll
+[00:02:44] 
+[00:02:44]  ===============================
+[00:02:44] 
+[00:02:44]       sscanf plugin loaded.     
+[00:02:44] 
+[00:02:44]          Version: 2.13.8
+[00:02:44] 
+[00:02:44]    (c) 2022 Alex "Y_Less" Cole  
+[00:02:44] 
+[00:02:44]  ===============================
+[00:02:44] 
+[00:02:44]   Loaded.
+[00:02:44]  Loading plugin: streamer.dll
+[00:02:44] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[00:02:44]   Loaded.
+[00:02:44]  Loading plugin: mysql.dll
+[00:02:44]  >> plugin.mysql: R41-4 successfully loaded.
+[00:02:44]   Loaded.
+[00:02:44]  Loaded 3 plugins.
+
+[00:02:44] 
+[00:02:44] Filterscripts
+[00:02:44] ---------------
+[00:02:44]   Loading filterscript 'gl_realtime.amx'...
+[00:02:45]   Loading filterscript 'npc_record.amx'...
+[00:02:45]   Loading filterscript 'gl_npcs.amx'...
+[00:02:45]   Loaded 3 filterscripts.
+
+[00:02:45] [MySQL][OK] Conectado a localhost:3306 (DB: sv-samp, User: samp-server)
+[00:02:45] Number of vehicle models: 2
+[00:02:46] [connection] incoming connection: 127.0.0.1:50355 id: 0
+[00:02:46] [connection] incoming connection: 127.0.0.1:50356 id: 1
+[00:02:46] [connection] incoming connection: 127.0.0.1:50357 id: 2
+[00:02:46] [npc:join] TrainDriverLV has joined the server (0:127.0.0.1)
+[00:02:46] NPC: Connection from 127.0.0.1 is allowed.
+[00:02:46] [npc:join] TrainDriverLS has joined the server (1:127.0.0.1)
+[00:02:46] NPC: Connection from 127.0.0.1 is allowed.
+[00:02:46] [npc:join] TrainDriverSF has joined the server (2:127.0.0.1)
+[00:02:46] NPC: Connection from 127.0.0.1 is allowed.
+[00:03:01] [connection] incoming connection: 127.0.0.1:62643 id: 3
+[00:03:01] [join] avmaximo has joined the server (3:127.0.0.1)
+[00:03:01] [LOGIN] Jugador conectado: avmaximo (127.0.0.1)
+[00:03:01] [LOGIN] Cuenta encontrada para avmaximo. Iniciando autenticación...
+[00:03:13] [part] avmaximo has left the server (3:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[00:07:10] 
+[00:07:10] Server Plugins
+[00:07:10] --------------
+[00:07:10]  Loading plugin: sscanf.dll
+[00:07:10] 
+[00:07:10]  ===============================
+[00:07:10] 
+[00:07:10]       sscanf plugin loaded.     
+[00:07:10] 
+[00:07:10]          Version: 2.13.8
+[00:07:10] 
+[00:07:10]    (c) 2022 Alex "Y_Less" Cole  
+[00:07:10] 
+[00:07:10]  ===============================
+[00:07:10] 
+[00:07:10]   Loaded.
+[00:07:10]  Loading plugin: streamer.dll
+[00:07:10] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[00:07:10]   Loaded.
+[00:07:10]  Loading plugin: mysql.dll
+[00:07:10]  >> plugin.mysql: R41-4 successfully loaded.
+[00:07:10]   Loaded.
+[00:07:10]  Loaded 3 plugins.
+
+[00:07:10] 
+[00:07:10] Filterscripts
+[00:07:10] ---------------
+[00:07:10]   Loading filterscript 'npc_record.amx'...
+[00:07:10]   Loading filterscript 'gl_npcs.amx'...
+[00:07:10]   Loaded 2 filterscripts.
+
+[00:07:10] [MySQL][OK] Conectado a localhost:3306 (DB: sv-samp, User: samp-server)
+[00:07:10] Number of vehicle models: 2
+[00:07:11] [connection] incoming connection: 127.0.0.1:56221 id: 0
+[00:07:11] [connection] incoming connection: 127.0.0.1:56222 id: 1
+[00:07:11] [connection] incoming connection: 127.0.0.1:56223 id: 2
+[00:07:11] [npc:join] TrainDriverLV has joined the server (0:127.0.0.1)
+[00:07:11] NPC: Connection from 127.0.0.1 is allowed.
+[00:07:11] [npc:join] TrainDriverLS has joined the server (1:127.0.0.1)
+[00:07:11] NPC: Connection from 127.0.0.1 is allowed.
+[00:07:12] [npc:join] TrainDriverSF has joined the server (2:127.0.0.1)
+[00:07:12] NPC: Connection from 127.0.0.1 is allowed.
+[00:07:21] [connection] incoming connection: 127.0.0.1:59577 id: 3
+[00:07:21] [join] avmaximo has joined the server (3:127.0.0.1)
+[00:07:21] [LOGIN] Jugador conectado: avmaximo (127.0.0.1)
+[00:07:21] [LOGIN] Cuenta encontrada para avmaximo. Iniciando autenticación...
+[00:07:36] [part] avmaximo has left the server (3:1)
+[00:08:49] [connection] incoming connection: 127.0.0.1:63500 id: 3
+[00:08:49] [join] avmaximo has joined the server (3:127.0.0.1)
+[00:08:49] [LOGIN] Jugador conectado: avmaximo (127.0.0.1)
+[00:08:49] [LOGIN] Cuenta encontrada para avmaximo. Iniciando autenticación...
+[00:09:08] [LOGIN] avmaximo ha iniciado sesión correctamente (user_id=0).
+[00:09:08] [CHARACTER] Maximo Avila (char_id=36) cargado correctamente para avmaximo.
+[00:09:09] [SPAWN] avmaximo spawneado correctamente en (1765.93, -1949.81, 14.60)
+[00:09:43] [SAVE] Datos guardados: user_id=39, char_id=36, Pos(1825.12, -1878.36, 14.24), Dinero=1000
+[00:09:43] [part] avmaximo has left the server (3:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[00:11:57] 
+[00:11:57] Server Plugins
+[00:11:57] --------------
+[00:11:57]  Loading plugin: sscanf.dll
+[00:11:57] 
+[00:11:57]  ===============================
+[00:11:57] 
+[00:11:57]       sscanf plugin loaded.     
+[00:11:57] 
+[00:11:57]          Version: 2.13.8
+[00:11:57] 
+[00:11:57]    (c) 2022 Alex "Y_Less" Cole  
+[00:11:57] 
+[00:11:57]  ===============================
+[00:11:57] 
+[00:11:57]   Loaded.
+[00:11:57]  Loading plugin: streamer.dll
+[00:11:57] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[00:11:57]   Loaded.
+[00:11:57]  Loading plugin: mysql.dll
+[00:11:57]  >> plugin.mysql: R41-4 successfully loaded.
+[00:11:57]   Loaded.
+[00:11:57]  Loaded 3 plugins.
+
+[00:11:57] 
+[00:11:57] Filterscripts
+[00:11:57] ---------------
+[00:11:57]   Loading filterscript 'npc_record.amx'...
+[00:11:57]   Loading filterscript 'gl_npcs.amx'...
+[00:11:57]   Loaded 2 filterscripts.
+
+[00:11:57] [MySQL][OK] Conectado a localhost:3306 (DB: sv-samp, User: samp-server)
+[00:11:57] Number of vehicle models: 2
+[00:11:58] [connection] incoming connection: 127.0.0.1:49966 id: 0
+[00:11:58] [connection] incoming connection: 127.0.0.1:49967 id: 1
+[00:11:58] [connection] incoming connection: 127.0.0.1:49968 id: 2
+[00:11:58] [npc:join] TrainDriverLV has joined the server (0:127.0.0.1)
+[00:11:58] NPC: Connection from 127.0.0.1 is allowed.
+[00:11:58] [npc:join] TrainDriverLS has joined the server (1:127.0.0.1)
+[00:11:58] NPC: Connection from 127.0.0.1 is allowed.
+[00:11:58] [npc:join] TrainDriverSF has joined the server (2:127.0.0.1)
+[00:11:58] NPC: Connection from 127.0.0.1 is allowed.
+[00:12:09] [connection] incoming connection: 127.0.0.1:61804 id: 3
+[00:12:09] [join] avmaximo has joined the server (3:127.0.0.1)
+[00:12:09] [LOGIN] Jugador conectado: avmaximo (127.0.0.1)
+[00:12:09] [LOGIN] Cuenta encontrada para avmaximo. Iniciando autenticación...
+[00:12:20] [LOGIN] avmaximo ha iniciado sesión correctamente (user_id=0).
+[00:12:21] [CHARACTER] Maximo Avila (char_id=36) cargado correctamente para avmaximo.
+[00:12:22] [SPAWN] avmaximo spawneado correctamente en (1825.13, -1878.36, 14.24)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[00:13:37] 
+[00:13:37] Server Plugins
+[00:13:37] --------------
+[00:13:37]  Loading plugin: sscanf.dll
+[00:13:37] 
+[00:13:37]  ===============================
+[00:13:37] 
+[00:13:37]       sscanf plugin loaded.     
+[00:13:37] 
+[00:13:37]          Version: 2.13.8
+[00:13:37] 
+[00:13:37]    (c) 2022 Alex "Y_Less" Cole  
+[00:13:37] 
+[00:13:37]  ===============================
+[00:13:37] 
+[00:13:37]   Loaded.
+[00:13:37]  Loading plugin: streamer.dll
+[00:13:37] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[00:13:37]   Loaded.
+[00:13:37]  Loading plugin: mysql.dll
+[00:13:37]  >> plugin.mysql: R41-4 successfully loaded.
+[00:13:37]   Loaded.
+[00:13:37]  Loaded 3 plugins.
+
+[00:13:37] 
+[00:13:37] Filterscripts
+[00:13:37] ---------------
+[00:13:37]   Loading filterscript 'npc_record.amx'...
+[00:13:37]   Loading filterscript 'gl_npcs.amx'...
+[00:13:37]   Loaded 2 filterscripts.
+
+[00:13:37] [MySQL][OK] Conectado a localhost:3306 (DB: sv-samp, User: samp-server)
+[00:13:37] Number of vehicle models: 2
+[00:13:38] [connection] incoming connection: 127.0.0.1:52741 id: 0
+[00:13:38] [connection] incoming connection: 127.0.0.1:52742 id: 1
+[00:13:38] [connection] incoming connection: 127.0.0.1:52743 id: 2
+[00:13:38] [npc:join] TrainDriverLV has joined the server (0:127.0.0.1)
+[00:13:38] NPC: Connection from 127.0.0.1 is allowed.
+[00:13:38] [npc:join] TrainDriverLS has joined the server (1:127.0.0.1)
+[00:13:38] NPC: Connection from 127.0.0.1 is allowed.
+[00:13:38] [connection] incoming connection: 127.0.0.1:52740 id: 3
+[00:13:38] [npc:join] TrainDriverSF has joined the server (2:127.0.0.1)
+[00:13:38] NPC: Connection from 127.0.0.1 is allowed.
+[00:13:38] [join] avmaximo has joined the server (3:127.0.0.1)
+[00:13:38] [LOGIN] Jugador conectado: avmaximo (127.0.0.1)
+[00:13:38] [LOGIN] Cuenta encontrada para avmaximo. Iniciando autenticación...
+[00:13:49] [LOGIN] avmaximo ha iniciado sesión correctamente (user_id=0).
+[00:13:50] [CHARACTER] Maximo Avila (char_id=36) cargado correctamente para avmaximo.
+[00:13:51] [SPAWN] avmaximo spawneado correctamente en (1825.13, -1878.36, 14.24)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[00:18:44] 
+[00:18:44] Server Plugins
+[00:18:44] --------------
+[00:18:44]  Loading plugin: sscanf.dll
+[00:18:44] 
+[00:18:44]  ===============================
+[00:18:44] 
+[00:18:44]       sscanf plugin loaded.     
+[00:18:44] 
+[00:18:44]          Version: 2.13.8
+[00:18:44] 
+[00:18:44]    (c) 2022 Alex "Y_Less" Cole  
+[00:18:44] 
+[00:18:44]  ===============================
+[00:18:44] 
+[00:18:44]   Loaded.
+[00:18:44]  Loading plugin: streamer.dll
+[00:18:44] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[00:18:44]   Loaded.
+[00:18:44]  Loading plugin: mysql.dll
+[00:18:44]  >> plugin.mysql: R41-4 successfully loaded.
+[00:18:44]   Loaded.
+[00:18:44]  Loaded 3 plugins.
+
+[00:18:44] 
+[00:18:44] Filterscripts
+[00:18:44] ---------------
+[00:18:44]   Loading filterscript 'npc_record.amx'...
+[00:18:44]   Loading filterscript 'gl_npcs.amx'...
+[00:18:44]   Loaded 2 filterscripts.
+
+[00:18:44] [MySQL][OK] Conectado a localhost:3306 (DB: sv-samp, User: samp-server)
+[00:18:44] Number of vehicle models: 2
+[00:18:45] [connection] incoming connection: 127.0.0.1:50199 id: 4
+[00:18:45] [connection] incoming connection: 127.0.0.1:50200 id: 5
+[00:18:45] [connection] incoming connection: 127.0.0.1:50201 id: 6
