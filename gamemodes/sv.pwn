@@ -194,6 +194,17 @@ public ActualizarHoraYFecha()
 
 public OnGameModeInit(){
     SetTimer("ActualizarHoraYFecha", 60000, true); // cada minuto
+    for (new i = 0; i < MAX_PLAYERS; i++){
+
+        TD_ServerName[i] = Text:INVALID_TEXT_DRAW;
+        TD_Date[i] = Text:INVALID_TEXT_DRAW;
+        TD_Hour[i] = Text:INVALID_TEXT_DRAW;
+        TD_Socials[i] = Text:INVALID_TEXT_DRAW;
+
+        TD_Fondo[i] = Text:INVALID_TEXT_DRAW;
+        TD_Logo[i] = Text:INVALID_TEXT_DRAW;
+        TD_Subtitulo[i] = Text:INVALID_TEXT_DRAW;
+    }
     return 1;
 }
 
@@ -203,11 +214,9 @@ public OnPlayerConnect(playerid){
     if(IsPlayerNPC(playerid)) return 1;
     SetPlayerTime(playerid, hora_actual, minuto_actual);
     modoLobby(playerid, 1);
-    userInfo[playerid][spawnState] = SPAWN_NONE;
-    loginAttempts[playerid] = 3;
     GetPlayerName(playerid, userInfo[playerid][uName], MAX_PLAYER_NAME);
     GetPlayerIp(playerid, userInfo[playerid][uIp], 16);
-    SetTimerEx("ClearChat", 400, false, "i", playerid);
+    
     new DB_Query[256],Cache:ResultCache_;
     format(DB_Query, sizeof(DB_Query), "SELECT * FROM users WHERE username='%s' LIMIT 1", userInfo[playerid][uName]);
     ResultCache_ = mysql_query(database, DB_Query);
@@ -427,11 +436,12 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[]){
 
                 SendClientMessage(playerid, -1, COLOR_SUCCESS"¡Has iniciado sesión correctamente!");
                 mysql_format(database, DB_Query, sizeof(DB_Query),
-                    "SELECT character_id, name, lastname FROM characters WHERE user_id=%d",
+                    "SELECT character_id, name, lastname, level, money, bank FROM characters WHERE user_id=%d",
                     userInfo[playerid][uIdSQL]
                 );
                 ResultCache_ = mysql_query(database, DB_Query);
                 OnCharacterList(playerid);
+
 
 
 
@@ -568,7 +578,9 @@ public OnCharacterList(playerid)
         format(dialogContent, sizeof(dialogContent), "%s"#COLOR_BRONZE"»"#COLOR_WHITE"%s %s "#COLOR_GRAY"| "#COLOR_WHITE"Dinero: "#COLOR_SUCCESS"$%d "#COLOR_GRAY"| "#COLOR_WHITE"Nivel "#COLOR_SUCCESS"%d\n", dialogContent, c_name, c_lastname, c_money,c_level);
     }
     // Línea gris final
-    format(dialogContent, sizeof(dialogContent), "%s%sCrea tu siguiente personaje con VIP", dialogContent, COLOR_GRAY); new title[64]; format(title, sizeof(title), COLOR_GOLD"Selecciona tu personaje"); ShowPlayerDialog(playerid, DIALOG_CHARACTER_SELECT, DIALOG_STYLE_LIST, title, dialogContent, "Seleccionar", "Cancelar"); return 1;
+    format(dialogContent, sizeof(dialogContent), "%s%sCrea tu siguiente personaje con VIP", dialogContent, COLOR_GRAY); new title[64]; format(title, sizeof(title), COLOR_GOLD"Selecciona tu personaje");
+    ShowPlayerDialog(playerid, DIALOG_CHARACTER_SELECT, DIALOG_STYLE_LIST, title, dialogContent, "Seleccionar", "Cancelar");
+    return 1;
 }
 
 
@@ -598,7 +610,6 @@ public OnCharacterSelect(playerid)
 
     userInfo[playerid][spawnState] = SPAWN_INITIAL;
     modoLobby(playerid, 0);
-    SetTimerEx("SpawnPlayerEx", 500, false, "i", playerid);
 
     return 1;
 }
@@ -695,7 +706,6 @@ public guardarCuenta(playerid){
     if(!IsPlayerLoggedIn(playerid)) return 0;
     GetPlayerPos(playerid, characterInfo[playerid][pPosX], characterInfo[playerid][pPosY], characterInfo[playerid][pPosZ]);
     GetPlayerFacingAngle(playerid, characterInfo[playerid][pRot]);
-    characterInfo[playerid][pMoney] = GetPlayerMoney(playerid);
     GetPlayerHealth(playerid, characterInfo[playerid][pHealth]);
     GetPlayerArmour(playerid, characterInfo[playerid][pArmor]);
     characterInfo[playerid][pInterior] = GetPlayerInterior(playerid);
@@ -774,6 +784,10 @@ public modoLobby(playerid, onOff)
 
     if(onOff == 1)
     {
+        SetTimerEx("activarLobbyVisual", 800, false, "il", playerid, true);
+        userInfo[playerid][spawnState] = SPAWN_NONE;
+        loginAttempts[playerid] = 3;
+        SetTimerEx("ClearChat", 400, false, "i", playerid);
         TogglePlayerSpectating(playerid, 1);
         userInfo[playerid][isLoggedIn] = 0;
         SetPlayerVirtualWorld(playerid, 0);
@@ -809,9 +823,9 @@ public modoLobby(playerid, onOff)
         TogglePlayerSpectating(playerid, 0);
         userInfo[playerid][isLoggedIn] = 1;
 
-        activarLobbyVisual(playerid, false);
-        activarTextosPantalla(playerid, true);
-        SetTimerEx("SpawnPlayerEx", 500, false, "i", playerid);
+        SetTimerEx("activarLobbyVisual", 800, false, "il", playerid, false);
+        SetTimerEx("activarTextosPantalla", 1000, false, "il", playerid, true);
+        SetTimerEx("SpawnPlayerEx", 300, false, "i", playerid);
 
     }
     return 1;
@@ -822,8 +836,6 @@ forward PlayAudioLobby(playerid);
 public PlayAudioLobby(playerid)
 {
     if(!IsPlayerConnected(playerid)) return 0;
-    // Fondo negro translúcido
-    activarLobbyVisual(playerid, true);
     PlayAudioStreamForPlayer(playerid, "https://raw.githubusercontent.com/avmaximo/server-sound_/main/intro2.mp3");
     return 1;
 }
@@ -836,6 +848,9 @@ public activarLobbyVisual(playerid, bool:activado)
 {
     if (activado)
     {
+        if (TD_Fondo[playerid] != Text:INVALID_TEXT_DRAW){ TextDrawDestroy(TD_Fondo[playerid]);}
+        if (TD_Logo[playerid] != Text:INVALID_TEXT_DRAW) {TextDrawDestroy(TD_Logo[playerid]);}
+        if (TD_Subtitulo[playerid] != Text:INVALID_TEXT_DRAW){ TextDrawDestroy(TD_Subtitulo[playerid]);}
         // Fondo negro translúcido
         TD_Fondo[playerid] = TextDrawCreate(0.0, 0.0, "_");
         TextDrawLetterSize(TD_Fondo[playerid], 0.0, 50.0);
@@ -888,6 +903,11 @@ public activarTextosPantalla(playerid, bool:activado)
 {
     if (activado)
     {
+        if (TD_ServerName[playerid] != Text:INVALID_TEXT_DRAW){ TextDrawDestroy(TD_ServerName[playerid]);}
+        if (TD_Date[playerid] != Text:INVALID_TEXT_DRAW) {TextDrawDestroy(TD_Date[playerid]);}
+        if (TD_Hour[playerid] != Text:INVALID_TEXT_DRAW) {TextDrawDestroy(TD_Hour[playerid]);}
+        if (TD_Socials[playerid] != Text:INVALID_TEXT_DRAW) {TextDrawDestroy(TD_Socials[playerid]);}
+
         TD_ServerName[playerid] = TextDrawCreate(540.0, 420.0, NAME_SERVER);
         TextDrawLetterSize(TD_ServerName[playerid], 0.4, 1.5);
         TextDrawAlignment(TD_ServerName[playerid], 2);
@@ -1041,7 +1061,7 @@ public _cuadroSeleccionPersonaje(playerid)
 {
     new DB_Query[256];
     mysql_format(database, DB_Query, sizeof(DB_Query),
-        "SELECT character_id, name, lastname FROM characters WHERE user_id=%d",
+        "SELECT character_id, name, lastname, level, money, bank FROM characters WHERE user_id=%d",
         userInfo[playerid][uIdSQL]
     );
     mysql_tquery(database, DB_Query, "OnCharacterList", "i", playerid);

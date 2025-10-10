@@ -33,7 +33,7 @@ public OnFilterScriptInit()
 	//AddStaticVehicle(577, 1462.0745,2630.8787,10.8203, 0.0, -1, -1); // at400_lv
 	npc_vehicles[tren_ls] = AddStaticVehicle(538, 1700.7551,-1953.6531,14.8756, 0.0, 3, 3); // tren LS
 	npc_vehicles[tren_lv] = AddStaticVehicle(538, 2864.750000, 1330.446289, 12.125619, 0.0, 3, 3); // tren LV
-	npc_vehicles[tren_sf] = AddStaticVehicle(538, -1942.612182, 169.754943, 25.710937, 180.000015, 3, 3); // tren SF
+	npc_vehicles[tren_sf] = AddStaticVehicle(538, -1942.621459, 172.916992, 25.710937, 175.778152, 3, 3); // tren SF
 
 
 	return 1;

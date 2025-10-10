@@ -537,3 +537,16 @@
 [00:19:26] [ERROR] cache_get_value_name_int: field 'level' not found
 [00:19:26] [ERROR] cache_get_value_name_int: field 'money' not found
 [00:19:26] [ERROR] cache_get_value_name_int: field 'bank' not found
+[11:38:44] [ERROR] cache_get_value_name_int: field 'level' not found
+[11:38:44] [ERROR] cache_get_value_name_int: field 'money' not found
+[11:38:44] [ERROR] cache_get_value_name_int: field 'bank' not found
+[11:45:58] [ERROR] cache_get_value_name_int: field 'level' not found
+[11:45:58] [ERROR] cache_get_value_name_int: field 'money' not found
+[11:45:58] [ERROR] cache_get_value_name_int: field 'bank' not found
+[11:49:29] [ERROR] cache_get_value_name_int: field 'level' not found
+[11:49:29] [ERROR] cache_get_value_name_int: field 'money' not found
+[11:49:29] [ERROR] cache_get_value_name_int: field 'bank' not found
+[11:59:11] [ERROR] cache_delete: invalid cache id '2'
+[11:59:15] [ERROR] cache_get_value_name_int: field 'level' not found
+[11:59:15] [ERROR] cache_get_value_name_int: field 'money' not found
+[11:59:15] [ERROR] cache_get_value_name_int: field 'bank' not found
