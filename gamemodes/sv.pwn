@@ -176,7 +176,6 @@ public ActualizarHoraYFecha()
 {
     gettime(hora_actual, minuto_actual, segundo_actual);
     getdate(anio_actual, mes_actual, dia_actual);
-
     format(hora_str, sizeof(hora_str), "%02d:%02d", hora_actual, minuto_actual);
     format(fecha_str, sizeof(fecha_str), "%02d/%02d/%04d", dia_actual, mes_actual, anio_actual);
 
@@ -193,6 +192,8 @@ public ActualizarHoraYFecha()
 }
 
 public OnGameModeInit(){
+    gettime(hora_actual, minuto_actual, segundo_actual);
+    getdate(anio_actual, mes_actual, dia_actual);
     SetTimer("ActualizarHoraYFecha", 60000, true); // cada minuto
     for (new i = 0; i < MAX_PLAYERS; i++){
 
@@ -212,7 +213,6 @@ public OnGameModeInit(){
 
 public OnPlayerConnect(playerid){
     if(IsPlayerNPC(playerid)) return 1;
-    SetPlayerTime(playerid, hora_actual, minuto_actual);
     modoLobby(playerid, 1);
     GetPlayerName(playerid, userInfo[playerid][uName], MAX_PLAYER_NAME);
     GetPlayerIp(playerid, userInfo[playerid][uIp], 16);
@@ -225,13 +225,10 @@ public OnPlayerConnect(playerid){
         printf("[LOGIN] Cuenta encontrada para %s. Iniciando autenticación...", userInfo[playerid][uName]);
 
         cache_get_value_name(0, "ph", userInfo[playerid][ph], 17);
-        SetTimerEx("_mensajeBienvenida", 400, false, "ii", playerid,1);
         SetTimerEx("_cuadroLogeoPassword", 5000, false, "ii", playerid,loginAttempts[playerid]); // playerid, attempts
 
     }else{ //---------------------------------------------------------------------------El usuario no existe
         printf("[REGISTER] No existe cuenta para %s. Iniciando registro...", userInfo[playerid][uName]);
-
-        SetTimerEx("_mensajeBienvenida", 400, false, "ii", playerid,0);
 
         SetTimerEx("_cuadroRegistroPassword", 5000, false, "i", playerid); 
 
@@ -442,7 +439,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[]){
                 ResultCache_ = mysql_query(database, DB_Query);
                 OnCharacterList(playerid);
 
-
+                _mensajeBienvenida(playerid,1);
 
 
             }
@@ -784,7 +781,7 @@ public modoLobby(playerid, onOff)
 
     if(onOff == 1)
     {
-        SetTimerEx("activarLobbyVisual", 800, false, "il", playerid, true);
+        SetTimerEx("activarLobbyVisual", 300, false, "il", playerid, true);
         userInfo[playerid][spawnState] = SPAWN_NONE;
         loginAttempts[playerid] = 3;
         SetTimerEx("ClearChat", 400, false, "i", playerid);
@@ -793,7 +790,6 @@ public modoLobby(playerid, onOff)
         SetPlayerVirtualWorld(playerid, 0);
 
 
-        GameTextForPlayer(playerid, "~y~Conectando a~n~~w~Ciudad Libertad Roleplay...", 5000, 3);
 
         /* Cámara panorámica ls
         SetPlayerCameraPos(playerid, 1741.497436, -736.675598, 167.170059);
@@ -848,6 +844,10 @@ public activarLobbyVisual(playerid, bool:activado)
 {
     if (activado)
     {
+
+        GameTextForPlayer(playerid, "~y~Conectando a~n~~w~Ciudad Libertad Roleplay...", 5000, 3);
+
+
         if (TD_Fondo[playerid] != Text:INVALID_TEXT_DRAW){ TextDrawDestroy(TD_Fondo[playerid]);}
         if (TD_Logo[playerid] != Text:INVALID_TEXT_DRAW) {TextDrawDestroy(TD_Logo[playerid]);}
         if (TD_Subtitulo[playerid] != Text:INVALID_TEXT_DRAW){ TextDrawDestroy(TD_Subtitulo[playerid]);}
@@ -858,7 +858,7 @@ public activarLobbyVisual(playerid, bool:activado)
         TextDrawAlignment(TD_Fondo[playerid], 1);
         TextDrawColor(TD_Fondo[playerid], 0x00000099);
         TextDrawUseBox(TD_Fondo[playerid], 1);
-        TextDrawBoxColor(TD_Fondo[playerid], 0x00000066);
+        TextDrawBoxColor(TD_Fondo[playerid], 0x00000055);
         TextDrawShowForPlayer(playerid, TD_Fondo[playerid]);
 
         // Logo / nombre del servidor
@@ -879,6 +879,8 @@ public activarLobbyVisual(playerid, bool:activado)
         TextDrawSetOutline(TD_Subtitulo[playerid], 1);
         TextDrawFont(TD_Subtitulo[playerid], 1);
         TextDrawShowForPlayer(playerid, TD_Subtitulo[playerid]);
+
+        SetPlayerTime(playerid, hora_actual, minuto_actual);
     }
     else
     {
@@ -925,7 +927,12 @@ public activarTextosPantalla(playerid, bool:activado)
         TextDrawShowForPlayer(playerid, TD_Socials[playerid]);
 
         // === HORA Y FECHA EN HUD ===
-        TD_Date[playerid] = TextDrawCreate(605.0, 25.0, "00/00/0000");
+        new cache_fecha[32],cache_hora[16];
+        format(cache_hora, sizeof(cache_hora), "%02d:%02d", hora_actual, minuto_actual);
+        format(cache_fecha, sizeof(cache_fecha), "%02d/%02d/%04d", dia_actual, mes_actual, anio_actual);
+
+        new Float:cache_x = 635.0, Float:cache_y = 5.0;
+        TD_Date[playerid] = TextDrawCreate(cache_x, cache_y, cache_fecha);
         TextDrawUseBox(TD_Date[playerid], 0);
         TextDrawFont(TD_Date[playerid], 3);
         TextDrawSetShadow(TD_Date[playerid], 0);
@@ -936,7 +943,8 @@ public activarTextosPantalla(playerid, bool:activado)
         TextDrawLetterSize(TD_Date[playerid], 0.4, 1.2);
         TextDrawShowForPlayer(playerid, TD_Date[playerid]);
 
-        TD_Hour[playerid] = TextDrawCreate(605.0, 45.0, "00:00");
+
+        TD_Hour[playerid] = TextDrawCreate(cache_x-85, cache_y, cache_hora);
         TextDrawUseBox(TD_Hour[playerid], 0);
         TextDrawFont(TD_Hour[playerid], 3);
         TextDrawSetShadow(TD_Hour[playerid], 0);
@@ -944,7 +952,7 @@ public activarTextosPantalla(playerid, bool:activado)
         TextDrawBackgroundColor(TD_Hour[playerid], 0x000000FF);
         TextDrawColor(TD_Hour[playerid], 0xE8C547FF); // Dorado suave
         TextDrawAlignment(TD_Hour[playerid], 3);
-        TextDrawLetterSize(TD_Hour[playerid], 0.5, 1.5);
+        TextDrawLetterSize(TD_Hour[playerid], 0.4, 1.2);
         TextDrawShowForPlayer(playerid, TD_Hour[playerid]);
 
     }
