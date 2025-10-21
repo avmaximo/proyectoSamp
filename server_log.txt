@@ -20325,3 +20325,142 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [12:38:30] [SPAWN] avMaximo_ spawneado correctamente en (-95.78, -1015.15, 14.70)
 [13:09:41] [SAVE] Datos guardados: user_id=42, char_id=39, Pos(1823.70, -1943.85, 13.54), Dinero=1000
 [13:09:41] [part] avMaximo_ has left the server (3:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[14:45:25] 
+[14:45:25] Server Plugins
+[14:45:25] --------------
+[14:45:25]  Loading plugin: sscanf.dll
+[14:45:25] 
+[14:45:25]  ===============================
+[14:45:25] 
+[14:45:25]       sscanf plugin loaded.     
+[14:45:25] 
+[14:45:25]          Version: 2.13.8
+[14:45:25] 
+[14:45:25]    (c) 2022 Alex "Y_Less" Cole  
+[14:45:25] 
+[14:45:25]  ===============================
+[14:45:25] 
+[14:45:25]   Loaded.
+[14:45:25]  Loading plugin: streamer.dll
+[14:45:25] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[14:45:25]   Loaded.
+[14:45:25]  Loading plugin: mysql.dll
+[14:45:25]  >> plugin.mysql: R41-4 successfully loaded.
+[14:45:25]   Loaded.
+[14:45:25]  Loaded 3 plugins.
+
+[14:45:25] I couldn't load any gamemode scripts. Please verify your server.cfg
+[14:45:25] It needs a gamemode0 line at the very least.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[14:45:29] 
+[14:45:29] Server Plugins
+[14:45:29] --------------
+[14:45:29]  Loading plugin: sscanf.dll
+[14:45:29] 
+[14:45:29]  ===============================
+[14:45:29] 
+[14:45:29]       sscanf plugin loaded.     
+[14:45:29] 
+[14:45:29]          Version: 2.13.8
+[14:45:29] 
+[14:45:29]    (c) 2022 Alex "Y_Less" Cole  
+[14:45:29] 
+[14:45:29]  ===============================
+[14:45:29] 
+[14:45:29]   Loaded.
+[14:45:29]  Loading plugin: streamer.dll
+[14:45:29] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[14:45:29]   Loaded.
+[14:45:29]  Loading plugin: mysql.dll
+[14:45:29]  >> plugin.mysql: R41-4 successfully loaded.
+[14:45:29]   Loaded.
+[14:45:29]  Loaded 3 plugins.
+
+[14:45:29] I couldn't load any gamemode scripts. Please verify your server.cfg
+[14:45:29] It needs a gamemode0 line at the very least.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[14:45:46] 
+[14:45:46] Server Plugins
+[14:45:46] --------------
+[14:45:46]  Loading plugin: sscanf.dll
+[14:45:46] 
+[14:45:46]  ===============================
+[14:45:46] 
+[14:45:46]       sscanf plugin loaded.     
+[14:45:46] 
+[14:45:46]          Version: 2.13.8
+[14:45:46] 
+[14:45:46]    (c) 2022 Alex "Y_Less" Cole  
+[14:45:46] 
+[14:45:46]  ===============================
+[14:45:46] 
+[14:45:46]   Loaded.
+[14:45:46]  Loading plugin: streamer.dll
+[14:45:46] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[14:45:46]   Loaded.
+[14:45:46]  Loading plugin: mysql.dll
+[14:45:46]  >> plugin.mysql: R41-4 successfully loaded.
+[14:45:46]   Loaded.
+[14:45:46]  Loaded 3 plugins.
+
+[14:45:47] 
+[14:45:47] Filterscripts
+[14:45:47] ---------------
+[14:45:47]   Loading filterscript 'npc_record.amx'...
+[14:45:47]   Loading filterscript 'gl_npcs.amx'...
+[14:45:47]   Loaded 2 filterscripts.
+
+[14:45:47] [MySQL][OK] Conectado a localhost:3306 (DB: sv-samp, User: samp-server)
+[14:45:47] Number of vehicle models: 2
+[14:45:48] [connection] incoming connection: 127.0.0.1:63352 id: 0
+[14:45:48] [connection] incoming connection: 127.0.0.1:63353 id: 1
+[14:45:48] [connection] incoming connection: 127.0.0.1:63354 id: 2
+[14:45:48] [npc:join] TrainDriverLS has joined the server (1:127.0.0.1)
+[14:45:48] NPC: Connection from 127.0.0.1 is allowed.
+[14:45:48] [npc:join] TrainDriverLV has joined the server (0:127.0.0.1)
+[14:45:48] NPC: Connection from 127.0.0.1 is allowed.
+[14:45:48] [npc:join] TrainDriverSF has joined the server (2:127.0.0.1)
+[14:45:48] NPC: Connection from 127.0.0.1 is allowed.
+[14:48:09] [connection] incoming connection: 127.0.0.1:53858 id: 3
+[14:48:10] [join] maxeji has joined the server (3:127.0.0.1)
+[14:48:10] [LOGIN] Jugador conectado: maxeji (127.0.0.1)
+[14:48:10] [REGISTER] No existe cuenta para maxeji. Iniciando registro...
+[14:48:38] [REGISTER] Nuevo usuario insertado: ID_SQL=7, Nombre=maxeji
+[14:48:38] [REGISTER] Insertando personaje para Maximo Avila (user_id=7)...
+[14:48:40] [SPAWN] maxeji spawneado correctamente en (1765.93, -1949.80, 14.60)
+[14:49:08] [SAVE] Datos guardados: user_id=7, char_id=7, Pos(1766.28, -1976.34, 13.54), Dinero=1000
+[14:49:08] [part] maxeji has left the server (3:1)
