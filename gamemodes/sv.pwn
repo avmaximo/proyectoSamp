@@ -206,6 +206,10 @@ public OnGameModeInit(){
         TD_Logo[i] = Text:INVALID_TEXT_DRAW;
         TD_Subtitulo[i] = Text:INVALID_TEXT_DRAW;
     }
+
+    DisableInteriorEnterExits();
+    EnableStuntBonusForAll(false);
+
     return 1;
 }
 
@@ -631,11 +635,6 @@ public OnPlayerSpawn(playerid){
             SetPlayerInterior(playerid, characterInfo[playerid][pInterior]);
             userInfo[playerid][spawnState] = SPAWN_NORMAL;
 
-            new _cacheMessage[128];
-            format(_cacheMessage, sizeof(_cacheMessage), "DEBUG: ID Usuario: %d, ID Personaje: %d", userInfo[playerid][uIdSQL], characterInfo[playerid][pIdSQL]);
-            SendClientMessage(playerid, -1, _cacheMessage);
-            format(_cacheMessage, sizeof(_cacheMessage), "DEBUG: IsLoggedIn: %d, SpawnState: %d", userInfo[playerid][isLoggedIn], userInfo[playerid][spawnState]);
-            SendClientMessage(playerid, -1, _cacheMessage);
         }
         else if(userInfo[playerid][spawnState] == SPAWN_HOSPITAL){
             userInfo[playerid][spawnState] = SPAWN_NORMAL;
@@ -1031,7 +1030,7 @@ forward _cuadroRegistroPlayerGender(playerid);
 public _cuadroRegistroPlayerGender(playerid){
     new titulo[128], msg[512];
     format(titulo, sizeof(titulo), "{7FB3D5}» Registro de personaje");
-    format(msg, sizeof(msg), "{EAEAEA}Seleccioná el {82E0AA}género{EAEAEA} de tu personaje:\n\n{0000FF}Masculino\n{FFC0CB}Femenino");
+    format(msg, sizeof(msg), "{EAEAEA}Seleccioná el {82E0AA}género{EAEAEA} de tu personaje:\n\n"#COLOR_LIGHTBLUE"Masculino\n"#COLOR_PINK"Femenino");
     ShowPlayerDialog(playerid, DIALOG_REGISTER_PLAYER_GENDER, DIALOG_STYLE_LIST, titulo, msg, "Seleccionar", "Volver");
     return 1;
 }

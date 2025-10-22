@@ -21089,3 +21089,276 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [20:39:03] [SPAWN] maximoav spawneado correctamente en (1835.15, -1479.84, 12.99)
 [20:39:08] [SAVE] Datos guardados: user_id=8, char_id=8, Pos(1828.99, -1474.05, 13.28), Dinero=1000
 [20:39:08] [part] maximoav has left the server (3:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[16:40:31] 
+[16:40:31] Server Plugins
+[16:40:31] --------------
+[16:40:31]  Loading plugin: sscanf.dll
+[16:40:31] 
+[16:40:31]  ===============================
+[16:40:31] 
+[16:40:31]       sscanf plugin loaded.     
+[16:40:31] 
+[16:40:31]          Version: 2.13.8
+[16:40:31] 
+[16:40:31]    (c) 2022 Alex "Y_Less" Cole  
+[16:40:31] 
+[16:40:31]  ===============================
+[16:40:31] 
+[16:40:31]   Loaded.
+[16:40:31]  Loading plugin: streamer.dll
+[16:40:31] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[16:40:31]   Loaded.
+[16:40:31]  Loading plugin: mysql.dll
+[16:40:31]  >> plugin.mysql: R41-4 successfully loaded.
+[16:40:31]   Loaded.
+[16:40:31]  Loaded 3 plugins.
+
+[16:40:31] 
+[16:40:31] Filterscripts
+[16:40:31] ---------------
+[16:40:31]   Loading filterscript 'npc_record.amx'...
+[16:40:31]   Loading filterscript 'gl_npcs.amx'...
+[16:40:31]   Loaded 2 filterscripts.
+
+[16:40:31] [MySQL][OK] Conectado a localhost:3306 (DB: sv-samp, User: samp-server)
+[16:40:31] Number of vehicle models: 2
+[16:40:32] [connection] incoming connection: 127.0.0.1:58316 id: 0
+[16:40:32] [connection] incoming connection: 127.0.0.1:58317 id: 1
+[16:40:32] [connection] incoming connection: 127.0.0.1:58318 id: 2
+[16:40:32] [npc:join] TrainDriverLV has joined the server (0:127.0.0.1)
+[16:40:32] NPC: Connection from 127.0.0.1 is allowed.
+[16:40:32] [npc:join] TrainDriverLS has joined the server (1:127.0.0.1)
+[16:40:32] NPC: Connection from 127.0.0.1 is allowed.
+[16:40:32] [npc:join] TrainDriverSF has joined the server (2:127.0.0.1)
+[16:40:32] NPC: Connection from 127.0.0.1 is allowed.
+[16:41:27] [connection] incoming connection: 127.0.0.1:64520 id: 3
+[16:41:27] [join] maximoav has joined the server (3:127.0.0.1)
+[16:41:27] [LOGIN] Jugador conectado: maximoav (127.0.0.1)
+[16:41:27] [REGISTER] No existe cuenta para maximoav. Iniciando registro...
+[16:43:00] [REGISTER] Nuevo usuario insertado: ID_SQL=9, Nombre=maximoav
+[16:43:00] [REGISTER] Insertando personaje para Maximo Carpenter (user_id=9)...
+[16:43:02] [SPAWN] maximoav spawneado correctamente en (1765.93, -1949.80, 14.60)
+[16:48:36] [SAVE] Datos guardados: user_id=9, char_id=9, Pos(2069.02, -1766.00, 13.56), Dinero=1000
+[16:48:36] [part] maximoav has left the server (3:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[16:49:19] 
+[16:49:19] Server Plugins
+[16:49:19] --------------
+[16:49:19]  Loading plugin: sscanf.dll
+[16:49:19] 
+[16:49:19]  ===============================
+[16:49:19] 
+[16:49:19]       sscanf plugin loaded.     
+[16:49:19] 
+[16:49:19]          Version: 2.13.8
+[16:49:19] 
+[16:49:19]    (c) 2022 Alex "Y_Less" Cole  
+[16:49:19] 
+[16:49:19]  ===============================
+[16:49:19] 
+[16:49:19]   Loaded.
+[16:49:19]  Loading plugin: streamer.dll
+[16:49:19] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[16:49:19]   Loaded.
+[16:49:19]  Loading plugin: mysql.dll
+[16:49:19]  >> plugin.mysql: R41-4 successfully loaded.
+[16:49:19]   Loaded.
+[16:49:19]  Loaded 3 plugins.
+
+[16:49:19] 
+[16:49:19] Filterscripts
+[16:49:19] ---------------
+[16:49:19]   Loading filterscript 'npc_record.amx'...
+[16:49:19]   Loading filterscript 'gl_npcs.amx'...
+[16:49:19]   Loaded 2 filterscripts.
+
+[16:49:19] [MySQL][OK] Conectado a localhost:3306 (DB: sv-samp, User: samp-server)
+[16:49:19] Number of vehicle models: 2
+[16:49:20] [connection] incoming connection: 127.0.0.1:49665 id: 0
+[16:49:20] [connection] incoming connection: 127.0.0.1:49667 id: 1
+[16:49:20] [connection] incoming connection: 127.0.0.1:49668 id: 2
+[16:49:20] [npc:join] TrainDriverLV has joined the server (0:127.0.0.1)
+[16:49:20] NPC: Connection from 127.0.0.1 is allowed.
+[16:49:20] [npc:join] TrainDriverLS has joined the server (1:127.0.0.1)
+[16:49:20] NPC: Connection from 127.0.0.1 is allowed.
+[16:49:20] [npc:join] TrainDriverSF has joined the server (2:127.0.0.1)
+[16:49:20] NPC: Connection from 127.0.0.1 is allowed.
+[16:49:42] [connection] incoming connection: 127.0.0.1:50812 id: 3
+[16:49:43] [join] maximoav has joined the server (3:127.0.0.1)
+[16:49:43] [LOGIN] Jugador conectado: maximoav (127.0.0.1)
+[16:49:43] [LOGIN] Cuenta encontrada para maximoav. Iniciando autenticación...
+[16:49:51] [LOGIN] maximoav ha iniciado sesión correctamente (user_id=0).
+[16:50:00] [CHARACTER] Maximo Carpenter (char_id=9) cargado correctamente para maximoav.
+[16:50:00] [SPAWN] maximoav spawneado correctamente en (2069.02, -1766.01, 13.56)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[16:56:03] 
+[16:56:03] Server Plugins
+[16:56:03] --------------
+[16:56:03]  Loading plugin: sscanf.dll
+[16:56:03] 
+[16:56:03]  ===============================
+[16:56:03] 
+[16:56:03]       sscanf plugin loaded.     
+[16:56:03] 
+[16:56:03]          Version: 2.13.8
+[16:56:03] 
+[16:56:03]    (c) 2022 Alex "Y_Less" Cole  
+[16:56:03] 
+[16:56:03]  ===============================
+[16:56:03] 
+[16:56:03]   Loaded.
+[16:56:03]  Loading plugin: streamer.dll
+[16:56:03] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[16:56:03]   Loaded.
+[16:56:03]  Loading plugin: mysql.dll
+[16:56:03]  >> plugin.mysql: R41-4 successfully loaded.
+[16:56:03]   Loaded.
+[16:56:03]  Loaded 3 plugins.
+
+[16:56:03] 
+[16:56:03] Filterscripts
+[16:56:03] ---------------
+[16:56:03]   Loading filterscript 'npc_record.amx'...
+[16:56:03]   Loading filterscript 'gl_npcs.amx'...
+[16:56:03]   Loaded 2 filterscripts.
+
+[16:56:03] [MySQL][OK] Conectado a localhost:3306 (DB: sv-samp, User: samp-server)
+[16:56:03] Number of vehicle models: 2
+[16:56:05] [connection] incoming connection: 127.0.0.1:63840 id: 0
+[16:56:05] [connection] incoming connection: 127.0.0.1:63841 id: 1
+[16:56:05] [connection] incoming connection: 127.0.0.1:63842 id: 2
+[16:56:05] [npc:join] TrainDriverLV has joined the server (0:127.0.0.1)
+[16:56:05] NPC: Connection from 127.0.0.1 is allowed.
+[16:56:05] [npc:join] TrainDriverLS has joined the server (1:127.0.0.1)
+[16:56:05] NPC: Connection from 127.0.0.1 is allowed.
+[16:56:05] [npc:join] TrainDriverSF has joined the server (2:127.0.0.1)
+[16:56:05] NPC: Connection from 127.0.0.1 is allowed.
+[16:56:15] [connection] incoming connection: 127.0.0.1:52892 id: 3
+[16:56:16] [join] maximoav has joined the server (3:127.0.0.1)
+[16:56:16] [LOGIN] Jugador conectado: maximoav (127.0.0.1)
+[16:56:16] [LOGIN] Cuenta encontrada para maximoav. Iniciando autenticación...
+[16:56:25] [LOGIN] maximoav ha iniciado sesión correctamente (user_id=0).
+[16:56:26] [CHARACTER] Maximo Carpenter (char_id=9) cargado correctamente para maximoav.
+[16:56:27] [SPAWN] maximoav spawneado correctamente en (2069.02, -1766.01, 13.56)
+[16:56:47] [SAVE] Datos guardados: user_id=9, char_id=9, Pos(2070.76, -1755.30, 13.39), Dinero=1000
+[16:56:47] [part] maximoav has left the server (3:1)
+[16:57:11] [connection] incoming connection: 127.0.0.1:52243 id: 3
+[16:57:11] [join] elixir23 has joined the server (3:127.0.0.1)
+[16:57:11] [LOGIN] Jugador conectado: elixir23 (127.0.0.1)
+[16:57:11] [REGISTER] No existe cuenta para elixir23. Iniciando registro...
+[16:57:32] [part] elixir23 has left the server (3:2)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[16:58:09] 
+[16:58:09] Server Plugins
+[16:58:09] --------------
+[16:58:09]  Loading plugin: sscanf.dll
+[16:58:09] 
+[16:58:09]  ===============================
+[16:58:09] 
+[16:58:09]       sscanf plugin loaded.     
+[16:58:09] 
+[16:58:09]          Version: 2.13.8
+[16:58:09] 
+[16:58:09]    (c) 2022 Alex "Y_Less" Cole  
+[16:58:09] 
+[16:58:09]  ===============================
+[16:58:09] 
+[16:58:09]   Loaded.
+[16:58:09]  Loading plugin: streamer.dll
+[16:58:09] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[16:58:09]   Loaded.
+[16:58:09]  Loading plugin: mysql.dll
+[16:58:09]  >> plugin.mysql: R41-4 successfully loaded.
+[16:58:09]   Loaded.
+[16:58:09]  Loaded 3 plugins.
+
+[16:58:09] 
+[16:58:09] Filterscripts
+[16:58:09] ---------------
+[16:58:09]   Loading filterscript 'npc_record.amx'...
+[16:58:09]   Loading filterscript 'gl_npcs.amx'...
+[16:58:09]   Loaded 2 filterscripts.
+
+[16:58:09] [MySQL][OK] Conectado a localhost:3306 (DB: sv-samp, User: samp-server)
+[16:58:09] Number of vehicle models: 2
+[16:58:10] [connection] incoming connection: 127.0.0.1:53047 id: 0
+[16:58:10] [connection] incoming connection: 127.0.0.1:53048 id: 1
+[16:58:10] [connection] incoming connection: 127.0.0.1:53049 id: 2
+[16:58:10] [npc:join] TrainDriverLV has joined the server (0:127.0.0.1)
+[16:58:10] NPC: Connection from 127.0.0.1 is allowed.
+[16:58:10] [npc:join] TrainDriverLS has joined the server (1:127.0.0.1)
+[16:58:10] NPC: Connection from 127.0.0.1 is allowed.
+[16:58:10] [npc:join] TrainDriverSF has joined the server (2:127.0.0.1)
+[16:58:10] NPC: Connection from 127.0.0.1 is allowed.
+[16:58:27] [connection] incoming connection: 127.0.0.1:49313 id: 3
+[16:58:27] [join] elixir23 has joined the server (3:127.0.0.1)
+[16:58:27] [LOGIN] Jugador conectado: elixir23 (127.0.0.1)
+[16:58:27] [REGISTER] No existe cuenta para elixir23. Iniciando registro...
+[16:58:52] [REGISTER] Nuevo usuario insertado: ID_SQL=10, Nombre=elixir23
+[16:58:52] [REGISTER] Insertando personaje para Elena Carpenter (user_id=10)...
+[16:58:53] [SPAWN] elixir23 spawneado correctamente en (1765.93, -1949.80, 14.60)
+[17:04:46] [SAVE] Datos guardados: user_id=10, char_id=10, Pos(1811.04, -1886.28, 13.40), Dinero=1000
+[17:04:46] [part] elixir23 has left the server (3:1)
+Console input: exit
+[17:04:52] --- Server Shutting Down.
+[17:04:52] [npc:part] TrainDriverLV has left the server (0:0)
+[17:04:52] [npc:part] TrainDriverLS has left the server (1:0)
+[17:04:52] [npc:part] TrainDriverSF has left the server (2:0)
+[17:04:52] 
+[17:04:52]  ===============================
+[17:04:52] 
+[17:04:52]      sscanf plugin unloaded.    
+[17:04:52] 
+[17:04:52]  ===============================
+[17:04:52] 
+[17:04:52] 
+
+*** Streamer Plugin v2.9.6 by Incognito unloaded ***
+
+[17:04:52] plugin.mysql: Unloading plugin...
+[17:04:52] plugin.mysql: Plugin unloaded.
